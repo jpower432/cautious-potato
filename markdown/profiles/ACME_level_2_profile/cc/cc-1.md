@@ -8,7 +8,7 @@ x-trestle-global:
 
 ## Control Statement
 
-All services should report energy consumed by their service.
+All services should report energy consumed by their service at a {{ insert: param, ac-1_prm_1 }} cadence
 
 # Editable Content
 
