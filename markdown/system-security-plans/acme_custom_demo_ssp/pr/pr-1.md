@@ -6,7 +6,7 @@ x-trestle-comp-def-rules:
 x-trestle-global:
   profile:
     title: ACME Inc. internal controls profile.
-    href: trestle://profiles/ACME_internal_profile/profile.json
+    href: trestle://profiles/ACME_level_1_profile/profile.json
 ---
 
 # pr-1 - \[Privilege Rating\] Right to access and deletion of records
