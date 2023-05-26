@@ -15,7 +15,7 @@ x-trestle-set-params:
       - privileged
   ac-2_prm_2:
     values:
-      - ACME interal method
+      - ACME internal method
   ac-2_prm_3:
     values:
       - standard operations
@@ -37,7 +37,7 @@ x-trestle-set-params:
 x-trestle-global:
   profile:
     title: ACME Inc. internal controls profile.
-    href: trestle://profiles/ACME_internal_profile/profile.json
+    href: trestle://profiles/ACME_level_1_profile/profile.json
   sort-id: ac-02
 ---
 
@@ -55,7 +55,7 @@ x-trestle-global:
 
   - \[1.\] Authorized users of the system;
   - \[2.\] Group and role membership; and
-  - \[3.\] Access authorizations (i.e., privileges) and [ACME interal method] for each account;
+  - \[3.\] Access authorizations (i.e., privileges) and [ACME internal method] for each account;
 
 - \[e.\] Require approvals by [standard operations] for requests to create accounts;
 

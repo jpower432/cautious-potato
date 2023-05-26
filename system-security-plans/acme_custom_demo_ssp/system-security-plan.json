@@ -3,12 +3,12 @@
     "uuid": "cadffb4d-5fce-46f6-9a83-c213d1297721",
     "metadata": {
       "title": "REPLACE_ME",
-      "last-modified": "2023-05-04T00:35:04.930340+00:00",
+      "last-modified": "2023-05-26T21:16:01.841678+00:00",
       "version": "REPLACE_ME",
       "oscal-version": "1.0.2"
     },
     "import-profile": {
-      "href": "trestle://profiles/ACME_internal_profile/profile.json"
+      "href": "trestle://profiles/ACME_level_1_profile/profile.json"
     },
     "system-characteristics": {
       "system-ids": [
