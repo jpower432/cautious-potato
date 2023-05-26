@@ -17,7 +17,7 @@ update-subtree:
 .PHONY: update-subtree
 
 demo-build:
-	${CMD} build -t localhost:5000/trestle-demo:latest -f Containerfile automation
+	${CMD} build -t localhost:5000/trestle-demo:latest -f Containerfile vendor
 .PHONY: demo-build
 
 sandbox-run:
@@ -114,7 +114,7 @@ generate-hl-ssp-word: generate-hl-ssp-markdown
 ## Custom Workflow
 ############################################################################
 generate-custom-ssp:
-	@source $(SCRIPTS_DIR)/trestle.sh && trestle author ssp-generate -p ACME_internal_profile --compdefs hello-world-custom -o markdown/system-security-plans/acme_custom_demo_ssp -f
+	@source $(SCRIPTS_DIR)/trestle.sh && trestle author ssp-generate -p ACME_level_1_profile --compdefs hello-world-custom -o markdown/system-security-plans/acme_custom_demo_ssp -f
 .PHONY: generate-custom-ssp
 
 assemble-custom-ssp:

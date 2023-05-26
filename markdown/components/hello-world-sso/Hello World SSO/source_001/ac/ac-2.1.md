@@ -7,7 +7,7 @@ x-trestle-param-values:
   ac-2.1_prm_1:
 x-trestle-global:
   profile:
-    title: ACME Inc. internal controls profile.
+    title: ACME Inc. official controls profile.
     href: profiles/ACME_internal_profile/profile.json
   sort-id: ac-02.01
 ---
@@ -16,7 +16,7 @@ x-trestle-global:
 
 ## Control Statement
 
-Support the management of system accounts using organization-defined automated mechanisms.
+Support the management of system accounts using {{ insert: param, ac-2.1_prm_1 }}.
 
 ## Control guidance
 

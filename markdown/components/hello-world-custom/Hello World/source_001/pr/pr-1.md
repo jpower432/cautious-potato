@@ -5,7 +5,7 @@ x-trestle-comp-def-rules:
       description: Ensure all of the services are running this test
 x-trestle-global:
   profile:
-    title: ACME Inc. internal controls profile.
+    title: ACME Inc. official controls profile.
     href: profiles/ACME_internal_profile/profile.json
 ---
 

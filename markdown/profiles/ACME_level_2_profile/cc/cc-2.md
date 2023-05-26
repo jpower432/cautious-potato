@@ -1,12 +1,14 @@
 ---
 x-trestle-global:
   profile:
-    title: ACME Inc. official controls profile.
+    title: ACME Inc. internal controls profile.
 ---
 
-# pr-2 - \[Privilege Rating\] Registering exemptions to right to delete
+# cc-2 - \[Custom Controls\] Carbon reporting
 
 ## Control Statement
+
+All services must calculate and report total scope 3 energy consumption.
 
 # Editable Content
 

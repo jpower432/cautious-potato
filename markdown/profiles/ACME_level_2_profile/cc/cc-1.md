@@ -1,41 +1,14 @@
 ---
-x-trestle-set-params:
-  # You may set values for parameters in the assembled Profile by adding
-  #
-  # profile-values:
-  #   - value 1
-  #   - value 2
-  #
-  # below a section of values:
-  # The values list refers to the values in the catalog, and the profile-values represent values
-  # in SetParameters of the Profile.
-  #
-  ac-4.4_prm_1:
-    profile-values:
-      - blocking the flow of the encrypted information
-      - ACME internal method
-    values:
-  ac-4.4_prm_2:
-    profile-values:
-      - ACME internal method
-    values:
-  ac-4.4_prm_3:
-    values:
 x-trestle-global:
   profile:
-    title: ACME Inc. official controls profile.
-  sort-id: ac-04.04
+    title: ACME Inc. internal controls profile.
 ---
 
-# ac-4.4 - \[Access Control\] Flow Control of Encrypted Information
+# cc-1 - \[Custom Controls\] Energy consumption
 
 ## Control Statement
 
-Prevent encrypted information from bypassing {{ insert: param, ac-4.4_prm_1 }} by {{ insert: param, ac-4.4_prm_2 }}.
-
-## Control guidance
-
-Flow control mechanisms include content checking, security policy filters, and data type identifiers. The term encryption is extended to cover encoded data not recognized by filtering mechanisms.
+All services should report energy consumed by their service.
 
 # Editable Content
 
