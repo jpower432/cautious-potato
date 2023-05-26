@@ -3,7 +3,7 @@
     "uuid": "96a701b8-f7be-44c1-ad21-3ae4d1ae45f9",
     "metadata": {
       "title": "REPLACE_ME",
-      "last-modified": "2023-05-26T17:34:14.843146-04:00",
+      "last-modified": "2023-05-26T17:57:40.214899-04:00",
       "version": "REPLACE_ME",
       "oscal-version": "1.0.4"
     },
@@ -15,11 +15,17 @@
           {
             "id": "cc-1",
             "title": "Energy consumption",
+            "params": [
+              {
+                "id": "cc-1_prm_1",
+                "label": "organization-defined frequency"
+              }
+            ],
             "parts": [
               {
                 "id": "cc-1_smt",
                 "name": "statement",
-                "prose": "All services should report energy consumed by their service at a {{ insert: param, ac-1_prm_1 }} cadence"
+                "prose": "All services should report energy consumed by their service at a {{ insert: param, cc-1_prm_1 }} cadence."
               }
             ]
           },

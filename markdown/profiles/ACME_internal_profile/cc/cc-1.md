@@ -2,13 +2,26 @@
 x-trestle-global:
   profile:
     title: ACME Inc. official controls profile.
+x-trestle-set-params:
+  # You may set values for parameters in the assembled Profile by adding
+  #
+  # profile-values:
+  #   - value 1
+  #   - value 2
+  #
+  # below a section of values:
+  # The values list refers to the values in the catalog, and the profile-values represent values
+  # in SetParameters of the Profile.
+  #
+  cc-1_prm_1:
+    values:
 ---
 
 # cc-1 - \[Custom Controls\] Energy consumption
 
 ## Control Statement
 
-All services should report energy consumed by their service.
+All services should report energy consumed by their service at a {{ insert: param, cc-1_prm_1 }} cadence.
 
 # Editable Content
 

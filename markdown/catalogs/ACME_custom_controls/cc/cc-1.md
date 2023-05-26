@@ -8,4 +8,4 @@ x-trestle-set-params:
 
 ## Control Statement
 
-All services should report energy consumed by their service at a {{ insert: param, ac-1_prm_1 }} cadence
+All services should report energy consumed by their service at a {{ insert: param, cc-1_prm_1 }} cadence.

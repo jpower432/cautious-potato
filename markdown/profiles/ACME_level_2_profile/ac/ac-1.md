@@ -2,7 +2,7 @@
 x-trestle-set-params:
   # You may set values for parameters in the assembled Profile by adding
   #
-  #  profile-values:
+  # profile-values:
   #   - value 1
   #   - value 2
   #
