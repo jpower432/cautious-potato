@@ -14,8 +14,10 @@ x-trestle-set-params:
     values:
   ac-1_prm_2:
     values:
+      - weekly
   ac-1_prm_3:
     values:
+      - hourly
   ac-1_prm_4:
     values:
   ac-1_prm_5:
@@ -26,7 +28,7 @@ x-trestle-set-params:
     values:
 x-trestle-global:
   profile:
-    title: ACME Inc. level 1 controls profile.
+    title: ACME_level_3_profile.
   sort-id: ac-01
 ---
 

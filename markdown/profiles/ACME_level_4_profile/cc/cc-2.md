@@ -1,12 +1,14 @@
 ---
 x-trestle-global:
   profile:
-    title: ACME Inc. internal controls profile.
+    title: ACME_level_4_profile.
 ---
 
-# pr-2 - \[Privilege Rating\] Registering exemptions to right to delete
+# cc-2 - \[Custom Controls\] Hosted build service
 
 ## Control Statement
+
+Requires using version control and a hosted build service
 
 # Editable Content
 

@@ -10,23 +10,27 @@ x-trestle-set-params:
   # The values list refers to the values in the catalog, and the profile-values represent values
   # in SetParameters of the Profile.
   #
-  ac-2.1_prm_1:
+  ac-4.4_prm_1:
+    values:
+  ac-4.4_prm_2:
+    values:
+  ac-4.4_prm_3:
     values:
 x-trestle-global:
   profile:
-    title: ACME Inc. level 2 controls profile.
-  sort-id: ac-02.01
+    title: ACME_level_4_profile.
+  sort-id: ac-04.04
 ---
 
-# ac-2.1 - \[Access Control\] Automated System Account Management
+# ac-4.4 - \[Access Control\] Flow Control of Encrypted Information
 
 ## Control Statement
 
-Support the management of system accounts using {{ insert: param, ac-2.1_prm_1 }}.
+Prevent encrypted information from bypassing {{ insert: param, ac-4.4_prm_1 }} by {{ insert: param, ac-4.4_prm_2 }}.
 
 ## Control guidance
 
-Automated system account management includes using automated mechanisms to create, enable, modify, disable, and remove accounts; notify account managers when an account is created, enabled, modified, disabled, or removed, or when users are terminated or transferred; monitor system account usage; and report atypical system account usage. Automated mechanisms can include internal system functions and email, telephonic, and text messaging notifications.
+Flow control mechanisms include content checking, security policy filters, and data type identifiers. The term encryption is extended to cover encoded data not recognized by filtering mechanisms.
 
 # Editable Content
 

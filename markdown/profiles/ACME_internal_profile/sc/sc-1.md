@@ -12,13 +12,10 @@ x-trestle-set-params:
   #
   sc-1_prm_1:
     values:
-      - assistants
   sc-1_prm_2:
     values:
-      - hourly
   sc-1_prm_3:
     values:
-      - bi-monthly
   sc-1_prm_4:
     values:
   sc-1_prm_5:

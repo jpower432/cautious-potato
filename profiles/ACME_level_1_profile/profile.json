@@ -2,15 +2,36 @@
   "profile": {
     "uuid": "1a5af54b-6fd4-4f86-ad9c-74881d4ea436",
     "metadata": {
-      "title": "ACME Inc. internal controls profile.",
+      "title": "ACME Inc. level 1 controls profile.",
       "last-modified": "2023-05-02T18:21:15.451155-04:00",
       "version": "0.0.1",
       "oscal-version": "1.0.4"
     },
     "imports": [
       {
-        "href": "trestle://profiles/ACME_internal_profile/profile.json",
-        "include-all": {}
+        "href": "trestle://catalogs/nist_rev5_800_53/catalog.json",
+        "include-controls": [
+          {
+            "with-ids": [
+              "ac-1",
+              "ac-2",
+              "ac-2.1",
+              "ac-4.4",
+              "sc-1",
+              "sc-2"
+            ]
+          }
+        ]
+      },
+      {
+        "href": "trestle://catalogs/ACME_custom_controls/catalog.json",
+        "include-controls": [
+          {
+            "with-ids": [
+              "cc-1"
+            ]
+          }
+        ]
       }
     ],
     "merge": {
@@ -20,6 +41,14 @@
       "as-is": true
     },
     "modify": {
+      "set-parameters": [
+        {
+          "param-id": "cc-1_prm_1",
+          "values": [
+            "1.0"
+          ]
+        }
+      ],
       "alters": []
     }
   }

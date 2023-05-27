@@ -1,7 +1,7 @@
 ---
 x-trestle-global:
   profile:
-    title: ACME Inc. internal controls profile.
+    title: ACME Inc. level 2 controls profile.
   sort-id: sc-02
 ---
 

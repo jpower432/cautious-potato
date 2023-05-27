@@ -1,14 +1,14 @@
 ---
 x-trestle-global:
   profile:
-    title: ACME Inc. internal controls profile.
+    title: ACME_level_3_profile.
 ---
 
-# cc-2 - \[Custom Controls\] Carbon reporting
+# cc-2 - \[Custom Controls\] Hosted build service
 
 ## Control Statement
 
-All services must calculate and report total scope 3 energy consumption.
+Requires using version control and a hosted build service
 
 # Editable Content
 

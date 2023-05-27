@@ -1,0 +1,45 @@
+{
+  "profile": {
+    "uuid": "4e85d9df-f51b-4bda-bcf1-64424edc111e",
+    "metadata": {
+      "title": "ACME_level_4_profile.",
+      "last-modified": "2023-05-27T14:26:04.695705-04:00",
+      "version": "0.0.0",
+      "oscal-version": "1.0.4"
+    },
+    "imports": [
+      {
+        "href": "trestle://profiles/ACME_level_3_profile/profile.json",
+        "include-all": {}
+      },
+      {
+        "href": "trestle://catalogs/ACME_custom_controls/catalog.json",
+        "include-controls": [
+          {
+            "with-ids": [
+              "cc-3",
+              "cc-4"
+            ]
+          }
+        ]
+      }
+    ],
+    "merge": {
+      "combine": {
+        "method": "merge"
+      },
+      "as-is": true
+    },
+    "modify": {
+      "set-parameters": [
+        {
+          "param-id": "cc-3_prm_1",
+          "values": [
+            "two"
+          ]
+        }
+      ],
+      "alters": []
+    }
+  }
+}

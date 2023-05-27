@@ -1,7 +1,7 @@
 ---
 x-trestle-global:
   profile:
-    title: ACME Inc. level 1 controls profile.
+    title: ACME_level_4_profile.
   sort-id: sc-02
 ---
 

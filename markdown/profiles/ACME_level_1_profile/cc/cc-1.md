@@ -1,7 +1,4 @@
 ---
-x-trestle-global:
-  profile:
-    title: ACME Inc. internal controls profile.
 x-trestle-set-params:
   # You may set values for parameters in the assembled Profile by adding
   #
@@ -15,13 +12,17 @@ x-trestle-set-params:
   #
   cc-1_prm_1:
     values:
+      - '1.0'
+x-trestle-global:
+  profile:
+    title: ACME Inc. level 1 controls profile.
 ---
 
-# cc-1 - \[Custom Controls\] Energy consumption
+# cc-1 - \[Custom Controls\] Build provenance
 
 ## Control Statement
 
-All services should report energy consumed by their service at a {{ insert: param, cc-1_prm_1 }} cadence.
+The build process must be fully scripted/automated and generate provenance compliant with SLSA schema version {{ insert: param, cc-1_prm_1 }}.
 
 # Editable Content
 

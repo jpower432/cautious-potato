@@ -1,22 +1,29 @@
 ---
+x-trestle-set-params:
+  # You may set values for parameters in the assembled Profile by adding
+  #
+  # profile-values:
+  #   - value 1
+  #   - value 2
+  #
+  # below a section of values:
+  # The values list refers to the values in the catalog, and the profile-values represent values
+  # in SetParameters of the Profile.
+  #
+  cc-3_prm_1:
+    profile-values:
+      - two
+    values:
 x-trestle-global:
   profile:
-    title: ACME Inc. internal controls profile.
+    title: ACME_level_4_profile.
 ---
 
-# pr-1 - \[Privilege Rating\] Right to access and deletion of records
+# cc-3 - \[Custom Controls\] Multiple reviews
 
 ## Control Statement
 
-Any service or offering MUST:
-
-- \[a\] Have a privacy focal to respond to deletion requests.
-
-- \[b\] Have an automated method for allowing users to access all of their data
-
-- \[c\] Have an automated method to allow users to request, and subsequently execute, deletion of personal records.
-
-- \[d\] The process must be documented.
+All changes must be reviewed by at least {{ insert: param, cc-3_prm_1 }} people.
 
 # Editable Content
 

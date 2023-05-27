@@ -12,16 +12,12 @@ x-trestle-set-params:
   #
   ac-2_prm_1:
     values:
-      - privileged
   ac-2_prm_2:
     values:
-      - ACME interal method
   ac-2_prm_3:
     values:
-      - standard operations
   ac-2_prm_4:
     values:
-      - daily
   ac-2_prm_5:
     values:
   ac-2_prm_6:
@@ -36,7 +32,7 @@ x-trestle-set-params:
     values:
 x-trestle-global:
   profile:
-    title: ACME Inc. internal controls profile.
+    title: ACME Inc. level 1 controls profile.
   sort-id: ac-02
 ---
 

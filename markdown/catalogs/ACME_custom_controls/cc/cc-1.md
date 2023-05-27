@@ -4,8 +4,8 @@ x-trestle-set-params:
     values:
 ---
 
-# cc-1 - \[Custom Controls\] Energy consumption
+# cc-1 - \[Custom Controls\] Build provenance
 
 ## Control Statement
 
-All services should report energy consumed by their service at a {{ insert: param, cc-1_prm_1 }} cadence.
+The build process must be fully scripted/automated and generate provenance compliant with SLSA schema version {{ insert: param, cc-1_prm_1 }}.
