@@ -12,13 +12,10 @@ x-trestle-set-params:
   #
   sc-1_prm_1:
     values:
-      - assistants
   sc-1_prm_2:
     values:
-      - hourly
   sc-1_prm_3:
     values:
-      - bi-monthly
   sc-1_prm_4:
     values:
   sc-1_prm_5:
@@ -29,7 +26,7 @@ x-trestle-set-params:
     values:
 x-trestle-global:
   profile:
-    title: ACME Inc. internal controls profile.
+    title: ACME Inc. level 1 controls profile.
     href: trestle://profiles/ACME_level_1_profile/profile.json
   sort-id: sc-01
 ---
@@ -38,16 +35,16 @@ x-trestle-global:
 
 ## Control Statement
 
-- \[a.\] Develop, document, and disseminate to [assistants]:
+- \[a.\] Develop, document, and disseminate to [organization-defined personnel or roles]:
 
-  - \[1.\] [hourly] system and communications protection policy that:
+  - \[1.\] [Organization-level; Mission/business process-level; System-level] system and communications protection policy that:
 
     - \[(a)\] Addresses purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance; and
     - \[(b)\] Is consistent with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines; and
 
   - \[2.\] Procedures to facilitate the implementation of the system and communications protection policy and the associated system and communications protection controls;
 
-- \[b.\] Designate an [bi-monthly] to manage the development, documentation, and dissemination of the system and communications protection policy and procedures; and
+- \[b.\] Designate an [organization-defined official] to manage the development, documentation, and dissemination of the system and communications protection policy and procedures; and
 
 - \[c.\] Review and update the current system and communications protection:
 
