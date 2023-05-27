@@ -1,4 +1,17 @@
 ---
+x-trestle-set-params:
+  # You may set values for parameters in the assembled SSP by adding
+  #
+  # ssp-values:
+  #   - value 1
+  #   - value 2
+  #
+  # below a section of values:
+  # The values list refers to the values in the resolved profile catalog, and the ssp-values represent new values
+  # to be placed in SetParameters of the SSP.
+  #
+  cc-1_prm_1:
+    values:
 x-trestle-global:
   profile:
     title: ACME Inc. internal controls profile.
@@ -9,7 +22,7 @@ x-trestle-global:
 
 ## Control Statement
 
-All services should report energy consumed by their service.
+All services should report energy consumed by their service at a [organization-defined frequency] cadence.
 
 ______________________________________________________________________
 
