@@ -1,15 +1,29 @@
 ---
+x-trestle-set-params:
+  # You may set values for parameters in the assembled SSP by adding
+  #
+  # ssp-values:
+  #   - value 1
+  #   - value 2
+  #
+  # below a section of values:
+  # The values list refers to the values in the resolved profile catalog, and the ssp-values represent new values
+  # to be placed in SetParameters of the SSP.
+  #
+  cc-1_prm_1:
+    values:
+      - '1.0'
 x-trestle-global:
   profile:
-    title: ACME Inc. internal controls profile.
+    title: ACME Inc. level 1 controls profile.
     href: trestle://profiles/ACME_level_1_profile/profile.json
 ---
 
-# cc-1 - \[Custom Controls\] Energy consumption
+# cc-1 - \[Custom Controls\] Build provenance
 
 ## Control Statement
 
-All services should report energy consumed by their service.
+The build process must be fully scripted/automated and generate provenance compliant with SLSA schema version [1.0].
 
 ______________________________________________________________________
 

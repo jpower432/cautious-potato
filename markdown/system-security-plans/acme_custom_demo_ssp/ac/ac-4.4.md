@@ -12,16 +12,13 @@ x-trestle-set-params:
   #
   ac-4.4_prm_1:
     values:
-      - blocking the flow of the encrypted information
-      - ACME internal method
   ac-4.4_prm_2:
     values:
-      - ACME internal method
   ac-4.4_prm_3:
     values:
 x-trestle-global:
   profile:
-    title: ACME Inc. internal controls profile.
+    title: ACME Inc. level 1 controls profile.
     href: trestle://profiles/ACME_level_1_profile/profile.json
   sort-id: ac-04.04
 ---
@@ -30,7 +27,7 @@ x-trestle-global:
 
 ## Control Statement
 
-Prevent encrypted information from bypassing [blocking the flow of the encrypted information, ACME internal method] by [ACME internal method].
+Prevent encrypted information from bypassing [organization-defined information flow control mechanisms] by [decrypting the information; blocking the flow of the encrypted information; terminating communications sessions attempting to pass encrypted information; [organization-defined procedure or method]].
 
 ## Control guidance
 
