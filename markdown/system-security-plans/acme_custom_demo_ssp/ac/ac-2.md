@@ -12,16 +12,12 @@ x-trestle-set-params:
   #
   ac-2_prm_1:
     values:
-      - privileged
   ac-2_prm_2:
     values:
-      - ACME internal method
   ac-2_prm_3:
     values:
-      - standard operations
   ac-2_prm_4:
     values:
-      - daily
   ac-2_prm_5:
     values:
   ac-2_prm_6:
@@ -36,7 +32,7 @@ x-trestle-set-params:
     values:
 x-trestle-global:
   profile:
-    title: ACME Inc. internal controls profile.
+    title: ACME Inc. level 1 controls profile.
     href: trestle://profiles/ACME_level_1_profile/profile.json
   sort-id: ac-02
 ---
@@ -49,17 +45,17 @@ x-trestle-global:
 
 - \[b.\] Assign account managers;
 
-- \[c.\] Require [privileged] for group and role membership;
+- \[c.\] Require [organization-defined prerequisites and criteria] for group and role membership;
 
 - \[d.\] Specify:
 
   - \[1.\] Authorized users of the system;
   - \[2.\] Group and role membership; and
-  - \[3.\] Access authorizations (i.e., privileges) and [ACME internal method] for each account;
+  - \[3.\] Access authorizations (i.e., privileges) and [organization-defined attributes (as required)] for each account;
 
-- \[e.\] Require approvals by [standard operations] for requests to create accounts;
+- \[e.\] Require approvals by [organization-defined personnel or roles] for requests to create accounts;
 
-- \[f.\] Create, enable, modify, disable, and remove accounts in accordance with [daily];
+- \[f.\] Create, enable, modify, disable, and remove accounts in accordance with [organization-defined policy, procedures, prerequisites, and criteria];
 
 - \[g.\] Monitor the use of accounts;
 
