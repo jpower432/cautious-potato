@@ -12,16 +12,12 @@ x-trestle-set-params:
   #
   ac-2_prm_1:
     values:
-      - privileged
   ac-2_prm_2:
     values:
-      - ACME internal method
   ac-2_prm_3:
     values:
-      - standard operations
   ac-2_prm_4:
     values:
-      - daily
   ac-2_prm_5:
     values:
   ac-2_prm_6:

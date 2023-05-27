@@ -10,23 +10,25 @@ x-trestle-set-params:
   # The values list refers to the values in the catalog, and the profile-values represent values
   # in SetParameters of the Profile.
   #
-  ac-2.1_prm_1:
+  cc-1_prm_1:
     values:
+      - '1.0'
+    profile-values:
+      - '1.1'
 x-trestle-global:
   profile:
-    title: ACME Inc. level 2 controls profile.
-  sort-id: ac-02.01
+    title: ACME_level_3_profile.
 ---
 
-# ac-2.1 - \[Access Control\] Automated System Account Management
+# cc-1 - \[Custom Controls\] Build provenance
 
 ## Control Statement
 
-Support the management of system accounts using {{ insert: param, ac-2.1_prm_1 }}.
+The build process must be fully scripted/automated and generate provenance compliant with SLSA schema version {{ insert: param, cc-1_prm_1 }}.
 
-## Control guidance
+## Control level_2_guidance
 
-Automated system account management includes using automated mechanisms to create, enable, modify, disable, and remove accounts; notify account managers when an account is created, enabled, modified, disabled, or removed, or when users are terminated or transferred; monitor system account usage; and report atypical system account usage. Automated mechanisms can include internal system functions and email, telephonic, and text messaging notifications.
+Provence data must be signed by a trusted identity (e.g a host build service)
 
 # Editable Content
 

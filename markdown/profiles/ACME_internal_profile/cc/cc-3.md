@@ -10,23 +10,18 @@ x-trestle-set-params:
   # The values list refers to the values in the catalog, and the profile-values represent values
   # in SetParameters of the Profile.
   #
-  ac-2.1_prm_1:
+  cc-3_prm_1:
     values:
 x-trestle-global:
   profile:
-    title: ACME Inc. level 2 controls profile.
-  sort-id: ac-02.01
+    title: ACME Inc. official controls profile.
 ---
 
-# ac-2.1 - \[Access Control\] Automated System Account Management
+# cc-3 - \[Custom Controls\] Multiple reviews
 
 ## Control Statement
 
-Support the management of system accounts using {{ insert: param, ac-2.1_prm_1 }}.
-
-## Control guidance
-
-Automated system account management includes using automated mechanisms to create, enable, modify, disable, and remove accounts; notify account managers when an account is created, enabled, modified, disabled, or removed, or when users are terminated or transferred; monitor system account usage; and report atypical system account usage. Automated mechanisms can include internal system functions and email, telephonic, and text messaging notifications.
+All changes must be reviewed by at least {{ insert: param, cc-3_prm_1 }} people.
 
 # Editable Content
 

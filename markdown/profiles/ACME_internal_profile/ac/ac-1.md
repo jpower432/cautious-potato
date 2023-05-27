@@ -12,13 +12,10 @@ x-trestle-set-params:
   #
   ac-1_prm_1:
     values:
-      - executives
   ac-1_prm_2:
     values:
-      - monthly
   ac-1_prm_3:
     values:
-      - weekly
   ac-1_prm_4:
     values:
   ac-1_prm_5:

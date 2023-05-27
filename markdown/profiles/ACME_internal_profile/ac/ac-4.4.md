@@ -12,11 +12,8 @@ x-trestle-set-params:
   #
   ac-4.4_prm_1:
     values:
-      - blocking the flow of the encrypted information
-      - ACME internal method
   ac-4.4_prm_2:
     values:
-      - ACME internal method
   ac-4.4_prm_3:
     values:
 x-trestle-global:

@@ -1,16 +1,26 @@
 {
   "profile": {
-    "uuid": "1a5af54b-6fd4-4f86-ad9c-74881d4ea436",
+    "uuid": "7a7c3d33-419b-4af8-8939-3ad2b2ef9781",
     "metadata": {
-      "title": "ACME Inc. internal controls profile.",
-      "last-modified": "2023-05-26T17:12:47.659055-04:00",
+      "title": "ACME Inc. level 2 controls profile.",
+      "last-modified": "2023-05-27T13:57:54.000377-04:00",
       "version": "0.0.1",
       "oscal-version": "1.0.4"
     },
     "imports": [
       {
-        "href": "trestle://profiles/ACME_internal_profile/profile.json",
+        "href": "trestle://profiles/ACME_level_1_profile/profile.json",
         "include-all": {}
+      },
+      {
+        "href": "trestle://catalogs/ACME_custom_controls/catalog.json",
+        "include-controls": [
+          {
+            "with-ids": [
+              "cc-2"
+            ]
+          }
+        ]
       }
     ],
     "merge": {
@@ -34,7 +44,23 @@
           ]
         }
       ],
-      "alters": []
+      "alters": [
+        {
+          "control-id": "cc-1",
+          "adds": [
+            {
+              "position": "ending",
+              "parts": [
+                {
+                  "id": "cc-1_level_2_guidance",
+                  "name": "level_2_guidance",
+                  "prose": "Provence data must be signed by a trusted identity (e.g a host build service)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   }
 }
