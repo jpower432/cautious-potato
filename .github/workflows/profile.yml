@@ -37,6 +37,7 @@ jobs:
   auto-update-cd:
     name: Regenerate compdef content
     runs-on: ubuntu-latest
+    needs: auto-update
     permissions:
       contents: write
       pull-requests: write
@@ -58,6 +59,7 @@ jobs:
   auto-update-ssp:
     name: Regenerate ssp content
     runs-on: ubuntu-latest
+    needs: auto-update
     permissions:
       contents: write
       pull-requests: write
