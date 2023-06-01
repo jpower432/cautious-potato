@@ -1,8 +1,11 @@
-name: Push to main
+name: SSP updates
 on:
   push:
     branches:
       - main
+    paths:
+      - 'system-security-plans/**'
+      - 'markdown/system-security-plans/**'
 jobs:
   auto-content-update:
     name: Autoupdate content
@@ -18,7 +21,8 @@ jobs:
     - name: Install Trestle
       run: make trestle-install
     - name: Automatically update content on push
-      run: make sanity
+      run: |
+        make assemble-ssps
     - name: commit and push changes
       id: commit
       uses: stefanzweifel/git-auto-commit-action@v4
