@@ -8,7 +8,7 @@ on:
       - 'markdown/system-security-plans/**'
 jobs:
   auto-content-update:
-    name: Autoupdate content
+    name: Assemble ssp content
     runs-on: ubuntu-latest
     permissions:
       contents: write

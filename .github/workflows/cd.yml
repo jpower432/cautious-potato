@@ -9,7 +9,7 @@ on:
 
 jobs:
   auto-update:
-    name: Regenerate content
+    name: Assemble compdef content
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -33,7 +33,7 @@ jobs:
           file_pattern: '*.json markdown/*'
   
   auto-update-ssp:
-    name: Regenerate content
+    name: Regenerate ssp content
     runs-on: ubuntu-latest
     permissions:
       contents: write
