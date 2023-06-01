@@ -23,7 +23,7 @@ x-trestle-global:
 
 ## Control Statement
 
-The build process must be fully automated and generate provenance compliant with SLSA schema version [1.0].
+The build process must be fully scripting/automated and generate provenance compliant with SLSA schema version [1.0].
 
 ______________________________________________________________________
 
