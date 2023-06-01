@@ -30,3 +30,4 @@ jobs:
           commit_message: Apply sanity changes
           branch: ${{ github.head_ref }}
           skip_checkout: true
+          create_branch: false
