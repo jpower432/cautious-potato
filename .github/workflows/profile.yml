@@ -12,7 +12,7 @@ jobs:
     name: Evaluate profiles
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
     steps:
       - uses: actions/checkout@v2
       - name: Set up Python 3.8
