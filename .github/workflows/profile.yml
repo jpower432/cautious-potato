@@ -9,12 +9,14 @@ on:
 
 jobs:
   auto-update:
-    name: Regenerate content
+    name: Assemble profile content
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
       - name: Set up Python 3.8
         uses: actions/setup-python@v2
         with:
@@ -33,13 +35,13 @@ jobs:
           file_pattern: '*.json markdown/*'
 
   auto-update-cd:
-    name: Regenerate content
+    name: Regenerate compdef content
     runs-on: ubuntu-latest
     permissions:
       contents: write
       pull-requests: write
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Set up Python 3.8
         uses: actions/setup-python@v2
         with:
@@ -54,7 +56,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   
   auto-update-ssp:
-    name: Regenerate content
+    name: Regenerate ssp content
     runs-on: ubuntu-latest
     permissions:
       contents: write
