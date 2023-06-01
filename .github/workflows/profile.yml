@@ -1,0 +1,89 @@
+name: Profile updates
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'profiles/**'
+      - 'markdown/profiles/**'
+
+jobs:
+  auto-update:
+    name: Regenerate content
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Install Trestle
+        run: make trestle-install
+      - name: Automatically update content on push
+        run: |
+          make assemble-profiles
+          make regenerate-profiles
+      - name: commit and push changes
+        id: commit
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: 'automated changes - assemble'
+          file_pattern: '*.json markdown/*'
+
+  auto-update-cd:
+    name: Regenerate content
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Install Trestle
+        run: make trestle-install
+      - name: Regenerate component-definitions
+        run: make regenerate-cd
+      - name: Update and PR
+        run: bash ./vendor/scripts/update.sh "Sync OSCAL component definitions"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Regenerate FedRAMP SSP
+        run: make generate-fedramp-ssp
+      - name: Regenerate custom SSP
+        run: make generate-custom-ssp
+      - name: Assemble ssps
+        run: make assemble-ssps
+      - name: Update and PR
+        run: bash ./vendor/scripts/update.sh "Sync OSCAL SSPs"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  
+  auto-update-ssp:
+    name: Regenerate content
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Install Trestle
+        run: make trestle-install
+      - name: Regenerate FedRAMP SSP
+        run: make generate-fedramp-ssp
+      - name: Regenerate custom SSP
+        run: make generate-custom-ssp
+      - name: Assemble ssps
+        run: make assemble-ssps
+      - name: Update and PR
+        run: bash ./vendor/scripts/update.sh "Sync OSCAL SSPs"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
