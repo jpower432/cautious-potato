@@ -16,7 +16,7 @@ jobs:
       with:
         python-version: 3.8
     - name: Install Trestle
-      run: make-trestle-install
+      run: make trestle-install
     - name: Automatically update content on push
       run: make-sanity
     - name: Push the changes
