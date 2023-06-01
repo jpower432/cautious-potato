@@ -9,7 +9,7 @@ on:
 
 jobs:
   auto-update:
-    name: Regenerate content
+    name: Assemble catalog content
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -39,7 +39,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   
   auto-update-profiles:
-    name: Regenerate content
+    name: Regenerate profile content
     runs-on: ubuntu-latest
     permissions:
       contents: write
