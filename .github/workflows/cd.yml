@@ -8,7 +8,7 @@ on:
       - 'markdown/components/**'
 
 jobs:
-  auto-update
+  auto-update:
     name: Regenerate content
     runs-on: ubuntu-latest
     permissions:
@@ -32,7 +32,7 @@ jobs:
           commit_message: 'automated changes - assemble'
           file_pattern: '*.json markdown/*'
   
-  auto-update-ssp
+  auto-update-ssp:
     name: Regenerate content
     runs-on: ubuntu-latest
     permissions:

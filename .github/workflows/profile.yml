@@ -52,16 +52,6 @@ jobs:
         run: bash ./vendor/scripts/update.sh "Sync OSCAL component definitions"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Regenerate FedRAMP SSP
-        run: make generate-fedramp-ssp
-      - name: Regenerate custom SSP
-        run: make generate-custom-ssp
-      - name: Assemble ssps
-        run: make assemble-ssps
-      - name: Update and PR
-        run: bash ./vendor/scripts/update.sh "Sync OSCAL SSPs"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   
   auto-update-ssp:
     name: Regenerate content
