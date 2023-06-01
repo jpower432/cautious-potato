@@ -22,4 +22,9 @@ jobs:
       - name: Install Trestle
         run: make trestle-install
       - name: Sanity check
-        run: make sanity-ssps
+        run: |
+          make assemble-ssps
+          make regenerate-ssps
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Apply sanity changes

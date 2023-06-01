@@ -22,4 +22,9 @@ jobs:
       - name: Install Trestle
         run: make trestle-install
       - name: Sanity check
-        run: make sanity-catalogs
+        run: |
+          make assemble-catalog
+          make regenerate-catalog
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Apply sanity changes
