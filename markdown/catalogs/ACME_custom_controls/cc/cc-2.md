@@ -2,4 +2,4 @@
 
 ## Control Statement
 
-Requires using version control and a hosted build service
+Requires using version control and a hosted build service(s).
