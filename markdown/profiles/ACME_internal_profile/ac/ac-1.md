@@ -73,4 +73,4 @@ Access control policy and procedures address the controls in the AC family that 
 
 ## Control acme_guidance
 
-Access control documentation should be at one centrally managed intranet site that is consistent across the corporation. Website should be indexed in intranet search engine.
+Access control documentation should be at one centrally managed intranet site that is consistent across the corporation. Website should be indexed in intranet search engines.
