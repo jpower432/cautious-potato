@@ -1,0 +1,15 @@
+name: Slash Command Dispatch
+on:
+  issue_comment:
+    types: [created]
+jobs:
+  slashCommandDispatch:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: read
+    steps:
+      - name: Slash Command Dispatch
+        uses: peter-evans/slash-command-dispatch@v3
+        with:
+          commands: create-ssp
+          repository: jpower432/cautious-potato
