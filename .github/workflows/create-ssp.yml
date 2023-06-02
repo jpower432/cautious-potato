@@ -6,8 +6,8 @@ jobs:
   create-ssp:
     runs-on: ubuntu-latest
     permissions:
-      pull-request: write
-      content: write
+      pull-requests: write
+      contents: write
       issues: write
     steps:
       # Get the args
