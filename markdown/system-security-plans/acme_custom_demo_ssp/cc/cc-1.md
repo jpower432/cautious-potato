@@ -25,6 +25,10 @@ x-trestle-global:
 
 The build process must be fully scripted/automated and generate provenance compliant with SLSA schema version [1.0].
 
+## Control extra
+
+extra
+
 ______________________________________________________________________
 
 ## What is the solution and how is it implemented?
