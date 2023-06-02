@@ -20,7 +20,7 @@ jobs:
           comps=${{ github.event.client_payload.slash_command.args.named.comps }}
           echo "comps=$comps" >> $GITHUB_OUTPUT
 
-          comps=${{ github.event.client_payload.slash_command.args.named.ouput }}
+          output=${{ github.event.client_payload.slash_command.args.named.ouput }}
           echo "output=$output" >> $GITHUB_OUTPUT
 
       - uses: actions/checkout@v3
