@@ -3,7 +3,7 @@
     "uuid": "1a5af54b-6fd4-4f86-ad9c-74881d4ea436",
     "metadata": {
       "title": "ACME Inc. level 1 controls profile.",
-      "last-modified": "2023-05-02T18:21:15.451155-04:00",
+      "last-modified": "2023-06-02T00:06:03.111676+00:00",
       "version": "0.0.1",
       "oscal-version": "1.0.4"
     },
@@ -49,7 +49,23 @@
           ]
         }
       ],
-      "alters": []
+      "alters": [
+        {
+          "control-id": "cc-1",
+          "adds": [
+            {
+              "position": "ending",
+              "parts": [
+                {
+                  "id": "cc-1_extra",
+                  "name": "extra",
+                  "prose": "extra"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   }
 }

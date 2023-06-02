@@ -22,7 +22,7 @@ x-trestle-global:
 
 ## Control Statement
 
-The build process must be fully automated and generate provenance compliant with SLSA schema version {{ insert: param, cc-1_prm_1 }}.
+The build process must be fully scripted/automated and generate provenance compliant with SLSA schema version {{ insert: param, cc-1_prm_1 }}.
 
 # Editable Content
 
@@ -32,7 +32,7 @@ The build process must be fully automated and generate provenance compliant with
 <!-- The above markdown may not be edited but you may edit the content below, and/or introduce new additions to be made by the profile. -->
 <!-- If there is a yaml header at the top, parameter values may be edited. Use --set-parameters to incorporate the changes during assembly. -->
 <!-- The content here will then replace what is in the profile for this control, after running profile-assemble. -->
-<!-- The current profile has no added parts for this control, but you may add new ones here. -->
+<!-- The added parts in the profile for this control are below.  You may edit them and/or add new ones. -->
 <!-- Each addition must have a heading either of the form ## Control my_addition_name -->
 <!-- or ## Part a. (where the a. refers to one of the control statement labels.) -->
 <!-- "## Control" parts are new parts added after the statement part. -->
