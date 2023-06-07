@@ -41,6 +41,6 @@ ______________________________________________________________________
 
 <!-- Add implementation prose for the main This System component for control: ac-2.1 -->
 
-#### Implementation Status: planned
+#### Implementation Status: partial
 
 ______________________________________________________________________
