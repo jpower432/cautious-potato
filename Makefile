@@ -66,14 +66,9 @@ bootstrap-workspace: import-fedramp
 ############################################################################
 generate-fedramp-ssp:
 	@source $(SCRIPTS_DIR)/trestle.sh && trestle author ssp-generate -p fedramp_rev4_moderate --compdefs hello-world-fedramp -o markdown/system-security-plans/acme_fedramp_demo_ssp -y extra/extra-ssp-metadata.yml -f
-.PHONY: generate-fedramp-ssp
-
-############################################################################
-### Assemble OSCAL SSP based on FedRAMP profile
-############################################################################
-assemble-fedramp-ssp:
 	@source $(SCRIPTS_DIR)/trestle.sh && trestle author ssp-assemble --name acme_fedramp_demo_ssp --markdown markdown/system-security-plans/acme_fedramp_demo_ssp -o  acme_fedramp_demo_ssp --compdefs hello-world-fedramp
-.PHONY: assemble-fedramp-ssp
+.PHONY: generate-fedramp-ssp
+	
 
 ############################################################################
 ### Generate single markdown file from Jinja template from OSCAL SSP
@@ -115,11 +110,8 @@ generate-hl-ssp-word: generate-hl-ssp-markdown
 ############################################################################
 generate-custom-ssp:
 	@source $(SCRIPTS_DIR)/trestle.sh && trestle author ssp-generate -p ACME_level_1_profile --compdefs hello-world-custom -o markdown/system-security-plans/acme_custom_demo_ssp -f
-.PHONY: generate-custom-ssp
-
-assemble-custom-ssp:
 	@source $(SCRIPTS_DIR)/trestle.sh && trestle author ssp-assemble --name acme_custom_demo_ssp --markdown markdown/system-security-plans/acme_custom_demo_ssp -o acme_custom_demo_ssp --compdefs hello-world-custom,hello-world-sso
-.PHONY: assemble-custom-ssp
+.PHONY: generate-custom-ssp
 
 ############################################################################
 ## Component Definition Custom tasks
@@ -141,9 +133,4 @@ update-cds:
 ## SSP Sanity checks
 ############################################################################
 
-assemble-ssps: assemble-fedramp-ssp assemble-custom-ssp
-.PHONY: assemble-ssps
 
-sanity-ssps: assemble-ssps
-	@git diff --exit-code
-.PHONY: sanity-ssps
