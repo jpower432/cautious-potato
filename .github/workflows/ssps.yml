@@ -27,7 +27,5 @@ jobs:
         make assemble-ssps
     - name: commit and push changes
       id: commit
-      uses: stefanzweifel/git-auto-commit-action@v4
-      with:
-        commit_message: 'automated changes - assemble'
-        file_pattern: '*.json markdown/*'
+      run: bash ./vendor/scripts/update-push.sh "'automated changes - assemble'"
+  
