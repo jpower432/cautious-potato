@@ -1,8 +1,13 @@
 #!/bin/bash
 
+set -eu
+
+# shellcheck disable=SC2128
 SCRIPT_DIR="$(realpath "$(dirname "$BASH_SOURCE")")"
 
+# shellcheck disable=SC1091
 source "$SCRIPT_DIR/logging.sh"
+# shellcheck disable=SC1091
 source "$SCRIPT_DIR/import.sh"
 
 function update_nist () {
@@ -11,6 +16,7 @@ function update_nist () {
   rm -rf "catalogs/nist_rev4_800_53"
   import_nist_rev5_catalog
   import_nist_rev4_catalog
+  # shellcheck disable=SC1091
   source "$SCRIPT_DIR/update.sh" "Sync NIST OSCAL content"
 }
 
