@@ -27,7 +27,7 @@ jobs:
         run: make assemble-catalogs
       - name: commit and push changes
         id: commit
-        run: bash ./vendor/scripts/update-push.sh -c "automated changes - assemble" "catalog/*"
+        run: bash ./vendor/scripts/update-push.sh -c "automated changes - assemble" "catalogs/*"
   
   auto-update-profiles:
     name: Regenerate profile content
