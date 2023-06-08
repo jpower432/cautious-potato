@@ -3,7 +3,7 @@
     "uuid": "7c6e9144-de3b-4262-931b-b379c0877d14",
     "metadata": {
       "title": "REPLACE_ME",
-      "last-modified": "2023-06-07T22:30:56.534324+00:00",
+      "last-modified": "2023-06-08T19:49:59.235350+00:00",
       "version": "REPLACE_ME",
       "oscal-version": "1.0.4"
     },
@@ -101,7 +101,7 @@
               "uuid": "58fcaedc-0062-49c7-9bae-51d61150a365",
               "description": "",
               "implementation-status": {
-                "state": "planned"
+                "state": "partial"
               }
             }
           ]
@@ -129,7 +129,7 @@
               "uuid": "ca3dfb7a-7090-462b-a2c1-ea42b5667153",
               "description": "",
               "implementation-status": {
-                "state": "planned"
+                "state": "partial"
               }
             }
           ]
