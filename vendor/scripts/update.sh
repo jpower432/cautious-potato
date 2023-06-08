@@ -38,6 +38,8 @@ function main() {
     # Get the required argument
     patterns=$1
 
+    echo "$patterns"
+
     # Check if patterns are provided
     if [ -z "$patterns" ]; then
       echo "$USAGE"
