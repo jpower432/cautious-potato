@@ -23,9 +23,8 @@ jobs:
     - name: Install Trestle
       run: make trestle-install
     - name: Automatically update content on push
-      run: |
-        make assemble-ssp
+      run: make assemble-ssp
     - name: commit and push changes
       id: commit
-      run: bash ./vendor/scripts/update-push.sh "'automated changes - assemble'"
+      run: bash ./vendor/scripts/update-push.sh -c "automated changes" "system-security-plans/*"
   

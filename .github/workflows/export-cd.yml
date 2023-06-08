@@ -24,6 +24,6 @@ jobs:
       - name: Regenerate component-definitions
         run: make regenerate-cd
       - name: Update and PR
-        run: bash ./vendor/scripts/update.sh "Export CD from Build"
+        run: bash ./vendor/scripts/update.sh -c "Export CD from Build" "component-definitions/*"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

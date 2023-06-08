@@ -24,12 +24,10 @@ jobs:
       - name: Install Trestle
         run: make trestle-install
       - name: Automatically update content on push
-        run: |
-          make assemble-catalogs
-          make regenerate-catalogs
+        run: make assemble-catalogs
       - name: commit and push changes
         id: commit
-        run: bash ./vendor/scripts/update-push.sh "'automated changes - assemble'"
+        run: bash ./vendor/scripts/update-push.sh -c "automated changes - assemble" "catalog/*"
   
   auto-update-profiles:
     name: Regenerate profile content
@@ -49,6 +47,6 @@ jobs:
       - name: Regenerate profiles
         run: make regenerate-profiles
       - name: Update and PR
-        run: bash ./vendor/scripts/update.sh "Sync OSCAL profiles"
+        run: bash ./vendor/scripts/update.sh -c "Sync OSCAL profiles" "markdown/*"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

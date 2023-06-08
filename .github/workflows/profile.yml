@@ -24,12 +24,32 @@ jobs:
       - name: Install Trestle
         run: make trestle-install
       - name: Automatically update content on push
-        run: |
-          make assemble-profiles
-          make regenerate-profiles
+        run: make assemble-profiles
       - name: commit and push changes
         id: commit
-        run: bash ./vendor/scripts/update-push.sh "'automated changes - assemble'"
+        run: bash ./vendor/scripts/update-push.sh -c "automated changes - assemble" "profiles/*"
+
+  auto-update-profiles:
+    name: Regenerate downstream content
+    runs-on: ubuntu-latest
+    needs: auto-update
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Install Trestle
+        run: make trestle-install
+      - name: Regenerate component-definitions
+        run: make regenerate-profiles
+      - name: Update and PR
+        run: bash ./vendor/scripts/update.sh -c "Sync OSCAL Profiles" "markdown/*"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 
   auto-update-cd:
@@ -50,7 +70,7 @@ jobs:
       - name: Regenerate component-definitions
         run: make regenerate-cd
       - name: Update and PR
-        run: bash ./vendor/scripts/update.sh "Sync OSCAL component definitions"
+        run: bash ./vendor/scripts/update.sh -c "Sync OSCAL CD" "markdown/*"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   
@@ -73,9 +93,7 @@ jobs:
         run: make generate-fedramp-ssp
       - name: Regenerate custom SSP
         run: make generate-custom-ssp
-      - name: Assemble ssps
-        run: make assemble-ssps
       - name: Update and PR
-        run: bash ./vendor/scripts/update.sh "Sync OSCAL SSPs"
+        run: bash ./vendor/scripts/update.sh -c "Sync OSCAL SSPs" "markdown/*"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
