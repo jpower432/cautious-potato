@@ -1,0 +1,238 @@
+{
+  "system-security-plan": {
+    "uuid": "53c50202-6d61-4251-8ed0-61a982acb884",
+    "metadata": {
+      "title": "REPLACE_ME",
+      "last-modified": "2023-06-12T20:35:19.583408+00:00",
+      "version": "REPLACE_ME",
+      "oscal-version": "1.0.4"
+    },
+    "import-profile": {
+      "href": "trestle://profiles/ACME_internal_profile/profile.json"
+    },
+    "system-characteristics": {
+      "system-ids": [
+        {
+          "id": "REPLACE_ME"
+        }
+      ],
+      "system-name": "REPLACE_ME",
+      "description": "REPLACE_ME",
+      "security-sensitivity-level": "REPLACE_ME",
+      "system-information": {
+        "information-types": [
+          {
+            "title": "REPLACE_ME",
+            "description": "REPLACE_ME",
+            "confidentiality-impact": {
+              "base": "REPLACE_ME"
+            },
+            "integrity-impact": {
+              "base": "REPLACE_ME"
+            },
+            "availability-impact": {
+              "base": "REPLACE_ME"
+            }
+          }
+        ]
+      },
+      "security-impact-level": {
+        "security-objective-confidentiality": "REPLACE_ME",
+        "security-objective-integrity": "REPLACE_ME",
+        "security-objective-availability": "REPLACE_ME"
+      },
+      "status": {
+        "state": "operational"
+      },
+      "authorization-boundary": {
+        "description": "REPLACE_ME"
+      }
+    },
+    "system-implementation": {
+      "users": [
+        {
+          "uuid": "872b7f7c-27c6-4c0b-aea3-b08592fad43b"
+        }
+      ],
+      "components": [
+        {
+          "uuid": "537aa0ea-5e6a-4326-a138-554d22f2c32f",
+          "type": "service",
+          "title": "Hello World",
+          "description": "Hello World Application",
+          "props": [
+            {
+              "name": "Rule_Id",
+              "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd",
+              "value": "Test-rule_001",
+              "remarks": "rule_set_0"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd",
+              "value": "Ensure all of the services are running this test",
+              "remarks": "rule_set_0"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "a224b35b-d496-485c-95dd-a981d8c32f8d",
+          "type": "this-system",
+          "title": "This System",
+          "description": "",
+          "status": {
+            "state": "operational"
+          }
+        }
+      ]
+    },
+    "control-implementation": {
+      "description": "This is the control implementation for the system.",
+      "implemented-requirements": [
+        {
+          "uuid": "71720912-8661-4e4c-b04c-b1071e88d72a",
+          "control-id": "ac-1",
+          "by-components": [
+            {
+              "component-uuid": "a224b35b-d496-485c-95dd-a981d8c32f8d",
+              "uuid": "606b35a4-833e-42dc-984f-542592b795ff",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "d6fc272c-03cd-4293-978f-ae9683d54817",
+          "control-id": "ac-2",
+          "by-components": [
+            {
+              "component-uuid": "a224b35b-d496-485c-95dd-a981d8c32f8d",
+              "uuid": "6c3d974a-e818-4e1e-9a9b-0f4e18d44160",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "4487f91d-c2a2-4757-af85-d91914380163",
+          "control-id": "ac-2.1",
+          "by-components": [
+            {
+              "component-uuid": "a224b35b-d496-485c-95dd-a981d8c32f8d",
+              "uuid": "f8d27431-ae60-48de-9fb7-494de299dac5",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "39b9b993-2c7a-4747-8dee-dd4634ec2374",
+          "control-id": "ac-4.4",
+          "by-components": [
+            {
+              "component-uuid": "a224b35b-d496-485c-95dd-a981d8c32f8d",
+              "uuid": "04a7e82f-c6f6-4df6-89b7-85a121e99f98",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "caa3a74c-ef3e-4336-85be-e39d23f559a6",
+          "control-id": "cc-3",
+          "by-components": [
+            {
+              "component-uuid": "a224b35b-d496-485c-95dd-a981d8c32f8d",
+              "uuid": "683c01f6-7183-4c95-b8c8-21cc3c2e5f2c",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "bb1e6647-19c5-4406-8dc3-3d4e51373e15",
+          "control-id": "cc-2",
+          "by-components": [
+            {
+              "component-uuid": "a224b35b-d496-485c-95dd-a981d8c32f8d",
+              "uuid": "11a607c8-649a-4bf4-b550-b193fcffbb3b",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "46357747-dc13-4ed3-a653-0506e231cb67",
+          "control-id": "cc-1",
+          "by-components": [
+            {
+              "component-uuid": "a224b35b-d496-485c-95dd-a981d8c32f8d",
+              "uuid": "19d8c20e-1993-4bc3-8f01-197194036a7e",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "1ed69d9d-994c-4044-83ad-e404c250510d",
+          "control-id": "cc-4",
+          "by-components": [
+            {
+              "component-uuid": "a224b35b-d496-485c-95dd-a981d8c32f8d",
+              "uuid": "2f65d006-0aa6-4147-bf02-bcc0d073422b",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "56c7e5c0-04ce-48b2-9c39-c97b8fce828d",
+          "control-id": "sc-1",
+          "by-components": [
+            {
+              "component-uuid": "a224b35b-d496-485c-95dd-a981d8c32f8d",
+              "uuid": "ffb2d3d2-0bb1-4dd7-bb00-6e29c56f2345",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "580793fe-032a-46a0-8e13-25362af169ec",
+          "control-id": "sc-2",
+          "by-components": [
+            {
+              "component-uuid": "a224b35b-d496-485c-95dd-a981d8c32f8d",
+              "uuid": "e9fc92ed-a856-491e-b3be-135e9582f291",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
