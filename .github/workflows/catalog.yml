@@ -54,4 +54,4 @@ jobs:
         env:
           ACTOR: "${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: bash ./vendor/scripts/update.sh -c "Sync OSCAL profiles" -a "$ACTOR" "markdown/*
+        run: bash ./vendor/scripts/update.sh -c "Sync OSCAL profiles" -a "$ACTOR" "markdown/*"
