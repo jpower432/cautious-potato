@@ -27,7 +27,9 @@ jobs:
         run: make assemble-profiles
       - name: commit and push changes
         id: commit
-        run: bash ./vendor/scripts/update-push.sh -c "automated changes - assemble" "profiles/*"
+        env:
+          ACTOR: "${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>"
+        run: bash ./vendor/scripts/update-push.sh -c "automated changes - assemble" -a "ACTOR" "profiles/*"
 
   auto-update-profiles:
     name: Regenerate downstream content
@@ -47,10 +49,9 @@ jobs:
       - name: Regenerate component-definitions
         run: make regenerate-profiles
       - name: Update and PR
-        run: bash ./vendor/scripts/update.sh -c "Sync OSCAL Profiles" "markdown/*"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
+          ACTOR: "${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>"
+        run: bash ./vendor/scripts/update.sh -c "Sync OSCAL Profiles" -a "ACTOR" "markdown/*"
 
   auto-update-cd:
     name: Regenerate compdef content
@@ -70,9 +71,9 @@ jobs:
       - name: Regenerate component-definitions
         run: make regenerate-cd
       - name: Update and PR
-        run: bash ./vendor/scripts/update.sh -c "Sync OSCAL CD" "markdown/*"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ACTOR: "${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>"
+        run: bash ./vendor/scripts/update.sh -c "Sync OSCAL CD" -a "ACTOR" "markdown/*"
   
   auto-update-ssp:
     name: Regenerate ssp content
@@ -83,6 +84,8 @@ jobs:
       pull-requests: write
     steps:
       - uses: actions/checkout@v2
+        with:
+          ref: "main"
       - name: Set up Python 3.8
         uses: actions/setup-python@v2
         with:
@@ -94,6 +97,6 @@ jobs:
       - name: Regenerate custom SSP
         run: make generate-custom-ssp
       - name: Update and PR
-        run: bash ./vendor/scripts/update.sh -c "Sync OSCAL SSPs" "markdown/*"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ACTOR: "${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>"
+        run: bash ./vendor/scripts/update.sh -c "Sync OSCAL SSPs" -a "ACTOR" "markdown/*"

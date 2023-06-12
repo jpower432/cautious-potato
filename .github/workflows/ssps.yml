@@ -26,5 +26,7 @@ jobs:
       run: make assemble-ssp
     - name: commit and push changes
       id: commit
-      run: bash ./vendor/scripts/update-push.sh -c "automated changes" "system-security-plans/*"
+      env:
+        ACTOR: "${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>"
+      run: bash ./vendor/scripts/update-push.sh -c "automated changes" -a "$ACTOR" "system-security-plans/*"
   

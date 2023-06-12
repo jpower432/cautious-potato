@@ -129,8 +129,4 @@ update-cds:
 	@source $(SCRIPTS_DIR)/trestle.sh && $(foreach f,$(CONFIGS),$(call update-cd,$(f)))
 .PHONY: update-cd
 
-############################################################################
-## SSP Sanity checks
-############################################################################
-
 

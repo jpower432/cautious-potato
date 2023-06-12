@@ -38,9 +38,9 @@ jobs:
         run: make create-ssp
 
       - name: Update and PR
-        run: bash ./vendor/scripts/update.sh -c "Adding new ssp" "system-security-plans/* markdown/*"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ACTOR: "${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>"
+        run: bash ./vendor/scripts/update.sh -c "Adding new ssp" -a "$ACTOR" "system-security-plans/* markdown/*"
 
       # Add reaction to the comment
       - name: Add reaction
@@ -49,3 +49,4 @@ jobs:
           repository: ${{ github.event.client_payload.github.payload.repository.full_name }}
           comment-id: ${{ github.event.client_payload.github.payload.comment.id }}
           reaction-type: hooray
+          

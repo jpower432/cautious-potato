@@ -27,7 +27,9 @@ jobs:
         run: make assemble-cd
       - name: commit and push changes
         id: commit
-        run: bash ./vendor/scripts/update-push.sh -c "automated changes - assemble" "component-definitions/*"
+        env:
+          ACTOR: "${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>"
+        run: bash ./vendor/scripts/update-push.sh -c "automated changes - assemble" -a "$ACTOR" "component-definitions/*"
         
   auto-update-ssp:
     name: Regenerate ssp content
@@ -38,6 +40,8 @@ jobs:
       pull-requests: write
     steps:
       - uses: actions/checkout@v3
+        with:
+          ref: "main"
       - name: Set up Python 3.8
         uses: actions/setup-python@v2
         with:
@@ -51,6 +55,6 @@ jobs:
       - name: Assemble ssps
         run: make assemble-ssps
       - name: Update and PR
-        run: bash ./vendor/scripts/update.sh -c "Sync OSCAL SSPs" "markdown/* system-security-plans/*"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ACTOR: "${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>"
+        run: bash ./vendor/scripts/update.sh -c "Sync OSCAL SSPs" -a "ACTOR" "markdown/* system-security-plans/*"

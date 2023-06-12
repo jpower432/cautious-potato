@@ -27,7 +27,9 @@ jobs:
         run: make assemble-catalogs
       - name: commit and push changes
         id: commit
-        run: bash ./vendor/scripts/update-push.sh -c "automated changes - assemble" "catalogs/*"
+        env:
+          ACTOR: "${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>"
+        run: bash ./vendor/scripts/update-push.sh -c "automated changes - assemble" -a "$ACTOR" "catalogs/*"
   
   auto-update-profiles:
     name: Regenerate profile content
@@ -38,6 +40,8 @@ jobs:
       pull-requests: write
     steps:
       - uses: actions/checkout@v3
+        with:
+          ref: "main"
       - name: Set up Python 3.8
         uses: actions/setup-python@v2
         with:
@@ -47,6 +51,6 @@ jobs:
       - name: Regenerate profiles
         run: make regenerate-profiles
       - name: Update and PR
-        run: bash ./vendor/scripts/update.sh -c "Sync OSCAL profiles" "markdown/*"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ACTOR: "${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>"
+        run: bash ./vendor/scripts/update.sh -c "Sync OSCAL profiles" -a "$ACTOR" "markdown/*
