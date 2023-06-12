@@ -40,6 +40,7 @@ jobs:
       - name: Update and PR
         env:
           ACTOR: "${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: bash ./vendor/scripts/update.sh -c "Adding new ssp" -a "$ACTOR" "system-security-plans/* markdown/*"
 
       # Add reaction to the comment
@@ -49,4 +50,3 @@ jobs:
           repository: ${{ github.event.client_payload.github.payload.repository.full_name }}
           comment-id: ${{ github.event.client_payload.github.payload.comment.id }}
           reaction-type: hooray
-          

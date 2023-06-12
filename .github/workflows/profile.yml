@@ -51,6 +51,7 @@ jobs:
       - name: Update and PR
         env:
           ACTOR: "${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: bash ./vendor/scripts/update.sh -c "Sync OSCAL Profiles" -a "ACTOR" "markdown/*"
 
   auto-update-cd:
@@ -73,6 +74,7 @@ jobs:
       - name: Update and PR
         env:
           ACTOR: "${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: bash ./vendor/scripts/update.sh -c "Sync OSCAL CD" -a "ACTOR" "markdown/*"
   
   auto-update-ssp:
@@ -99,4 +101,5 @@ jobs:
       - name: Update and PR
         env:
           ACTOR: "${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: bash ./vendor/scripts/update.sh -c "Sync OSCAL SSPs" -a "ACTOR" "markdown/*"
