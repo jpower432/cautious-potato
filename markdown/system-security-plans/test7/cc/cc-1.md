@@ -13,6 +13,8 @@ x-trestle-set-params:
   cc-1_prm_1:
     values:
       - '1.0'
+    ssp-values:
+      - '1.1'
 x-trestle-global:
   profile:
     title: ACME Inc. official controls profile.
