@@ -21,7 +21,6 @@ jobs:
         with:
           markdown_path: "markdown/profiles"
           assemble_model: "profile"
-          commit_message: "test"
           file_pattern: "*.json"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
