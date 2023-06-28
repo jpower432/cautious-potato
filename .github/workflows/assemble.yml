@@ -1,0 +1,26 @@
+name: Profile Assemble
+on:
+  push
+  
+jobs:
+  auto-update:
+    name: Assemble profile content
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Clone
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+      - name: Check if repo
+        run: git status
+      - name: Assemble profile
+        id: assemble-profile
+        uses: jpower432/trestle-bot@test-action
+        with:
+          markdown_path: "markdown/profiles"
+          assemble_model: "profile"
+          commit_message: "test"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
