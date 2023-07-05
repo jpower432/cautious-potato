@@ -3,7 +3,7 @@
     "uuid": "7a7c3d33-419b-4af8-8939-3ad2b2ef9781",
     "metadata": {
       "title": "ACME Inc. level 2 controls profile.",
-      "last-modified": "2023-05-27T13:57:54.000377-04:00",
+      "last-modified": "2023-07-05T18:05:35.915023+00:00",
       "version": "0.0.1",
       "oscal-version": "1.0.4"
     },
@@ -55,6 +55,11 @@
                   "id": "cc-1_level_2_guidance",
                   "name": "level_2_guidance",
                   "prose": "Provence data must be signed by a trusted identity (e.g a host build service)"
+                },
+                {
+                  "id": "cc-1_level_2_test",
+                  "name": "level_2_test",
+                  "prose": "More guidance"
                 }
               ]
             }
