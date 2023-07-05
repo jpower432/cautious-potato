@@ -24,6 +24,7 @@ jobs:
           markdown_path: "markdown/catalogs"
           oscal_model: "catalog"
           file_pattern: "*.json markdown/*"
+          commit_message: "test"
           check_only: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
