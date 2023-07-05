@@ -23,6 +23,7 @@ jobs:
           markdown_path: "markdown/system-security-plans"
           oscal_model: "ssp"
           file_pattern: "*.json,markdown/*"
+          branch: ${{ github.head_ref }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
