@@ -22,7 +22,7 @@ jobs:
         uses: jpower432/trestle-bot@feat/add-regenerate
         with:
           markdown_path: "markdown/components"
-          assemble_model: "compdef"
+          oscal_model: "compdef"
           file_pattern: "*.json markdown/*"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

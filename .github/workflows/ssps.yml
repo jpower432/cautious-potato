@@ -21,7 +21,7 @@ jobs:
         uses: jpower432/trestle-bot@feat/add-regenerate
         with:
           markdown_path: "markdown/system-security-plans"
-          assemble_model: "ssp"
+          oscal_model: "ssp"
           file_pattern: "*.json markdown/*"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
