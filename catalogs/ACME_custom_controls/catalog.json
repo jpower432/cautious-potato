@@ -3,7 +3,7 @@
     "uuid": "96a701b8-f7be-44c1-ad21-3ae4d1ae45f9",
     "metadata": {
       "title": "REPLACE_ME",
-      "last-modified": "2023-06-13T19:46:24.187816+00:00",
+      "last-modified": "2023-07-05T17:55:43.438816+00:00",
       "version": "REPLACE_ME",
       "oscal-version": "1.0.4"
     },
@@ -17,8 +17,7 @@
             "title": "Build provenance",
             "params": [
               {
-                "id": "cc-1_prm_1",
-                "label": "organization-defined schema version"
+                "id": "cc-1_prm_1"
               }
             ],
             "parts": [
@@ -45,8 +44,7 @@
             "title": "Multiple reviews",
             "params": [
               {
-                "id": "cc-3_prm_1",
-                "label": "organization-defined numeric value"
+                "id": "cc-3_prm_1"
               }
             ],
             "parts": [
