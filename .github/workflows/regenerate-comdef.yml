@@ -10,7 +10,6 @@ jobs:
   auto-update-profiles:
     name: Regenerate profile content
     runs-on: ubuntu-latest
-    needs: auto-update
     permissions:
       contents: write
       pull-requests: write
