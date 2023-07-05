@@ -1,0 +1,30 @@
+name: Catalog check
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'catalogs/**'
+      - 'markdown/catalogs/**'
+
+jobs:
+  auto-update:
+    name: Assemble catalog content
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+      - name: Check
+        id: check
+        uses: jpower432/trestle-bot@feat/add-regenerate
+        with:
+          markdown_path: "markdown/catalogs"
+          oscal_model: "catalog"
+          file_pattern: "*.json markdown/*"
+          check_only: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
