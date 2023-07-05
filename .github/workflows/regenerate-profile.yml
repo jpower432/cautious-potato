@@ -23,7 +23,7 @@ jobs:
           markdown_path: "markdown/profiles"
           oscal_model: "profile"
           file_pattern: "markdown/*"
-          branch: "autoupdate-${{ env.GITHUB_RUN_ID }}"
+          branch: "autoupdate-${{ github.run_id }}"
           skip_assemble: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
