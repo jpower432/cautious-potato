@@ -1,0 +1,29 @@
+name: Regenerate components
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'profiles/**'
+
+jobs:
+  auto-update-profiles:
+    name: Regenerate profile content
+    runs-on: ubuntu-latest
+    needs: auto-update
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v3
+      - name: Regenerate compdef
+        id: regenerate
+        uses: jpower432/trestle-bot@feat/add-regenerate
+        with:
+          markdown_path: "markdown/components"
+          assemble_model: "compdef"
+          file_pattern: "markdown/*"
+          branch: "autoupdate-${{ env.GITHUB_RUN_ID }}"
+          skip_assemble: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

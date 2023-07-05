@@ -7,26 +7,23 @@ on:
       - 'system-security-plans/**'
       - 'markdown/system-security-plans/**'
 jobs:
-  auto-content-update:
+  auto-update:
     name: Assemble ssp content
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
-    - uses: actions/checkout@v3
-      with:
+      - uses: actions/checkout@v3
+        with:
           ref: ${{ github.head_ref }}
-    - name: Set up Python 3.8
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.8
-    - name: Install Trestle
-      run: make trestle-install
-    - name: Automatically update content on push
-      run: make assemble-ssp
-    - name: commit and push changes
-      id: commit
-      env:
-        ACTOR: "${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>"
-      run: bash ./vendor/scripts/update-push.sh -c "automated changes" -a "$ACTOR" "system-security-plans/*"
+      - name: Assemble
+        id: assemble
+        uses: jpower432/trestle-bot@feat/add-regenerate
+        with:
+          markdown_path: "markdown/system-security-plans"
+          assemble_model: "ssp"
+          file_pattern: "*.json markdown/*"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
   
