@@ -23,7 +23,7 @@ jobs:
         with:
           markdown_path: "markdown/catalogs"
           oscal_model: "catalog"
-          file_pattern: "*.json markdown/*"
+          file_pattern: "*.json,markdown/*"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
