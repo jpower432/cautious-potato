@@ -24,6 +24,7 @@ jobs:
           markdown_path: "markdown/components"
           oscal_model: "compdef"
           file_pattern: "*.json,markdown/*"
+          branch: ${{ github.head_ref }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
