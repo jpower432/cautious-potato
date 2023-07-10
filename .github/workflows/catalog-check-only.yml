@@ -19,13 +19,11 @@ jobs:
           ref: ${{ github.head_ref }}
       - name: Check
         id: check
-        uses: jpower432/trestle-bot@feat/add-regenerate
+        uses: jpower432/trestle-bot@feat/add-gh-prs
         with:
           markdown_path: "markdown/catalogs"
           oscal_model: "catalog"
           file_pattern: "*.json markdown/*"
           commit_message: "test"
           check_only: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     

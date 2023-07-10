@@ -18,13 +18,12 @@ jobs:
           ref: ${{ github.head_ref }}
       - name: Assemble
         id: assemble
-        uses: jpower432/trestle-bot@feat/add-regenerate
+        uses: jpower432/trestle-bot@feat/add-gh-prs
         with:
           markdown_path: "markdown/system-security-plans"
           oscal_model: "ssp"
           file_pattern: "*.json,markdown/*"
           branch: ${{ github.head_ref }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
     
   

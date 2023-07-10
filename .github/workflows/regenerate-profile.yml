@@ -18,12 +18,12 @@ jobs:
       - uses: actions/checkout@v3
       - name: Regenerate profiles
         id: regenerate
-        uses: jpower432/trestle-bot@feat/add-regenerate
+        uses: jpower432/trestle-bot@feat/add-gh-prs
         with:
           markdown_path: "markdown/profiles"
           oscal_model: "profile"
           file_pattern: "markdown/*"
           branch: "autoupdate-${{ github.run_id }}"
           skip_assemble: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          target_branch: "main"
