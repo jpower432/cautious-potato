@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Regenerate compdef
         id: regenerate
-        uses: jpower432/trestle-bot@feat/ad-gh-prs
+        uses: jpower432/trestle-bot@feat/add-gh-prs
         with:
           markdown_path: "markdown/components"
           oscal_model: "compdef"
