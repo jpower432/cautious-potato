@@ -3,7 +3,7 @@
     "uuid": "f276f054-b3d2-499e-aa09-bfe8a376ef90",
     "metadata": {
       "title": "ACME_level_3_profile.",
-      "last-modified": "2023-05-27T14:26:03.704718-04:00",
+      "last-modified": "2023-07-10T21:46:59.840455+00:00",
       "version": "0.0.0",
       "oscal-version": "1.0.4"
     },
@@ -22,10 +22,100 @@
     "modify": {
       "set-parameters": [
         {
+          "param-id": "ac-1_prm_1"
+        },
+        {
+          "param-id": "ac-1_prm_2",
+          "values": [
+            "weekly"
+          ]
+        },
+        {
+          "param-id": "ac-1_prm_3",
+          "values": [
+            "hourly"
+          ]
+        },
+        {
+          "param-id": "ac-1_prm_4"
+        },
+        {
+          "param-id": "ac-1_prm_5"
+        },
+        {
+          "param-id": "ac-1_prm_6"
+        },
+        {
+          "param-id": "ac-1_prm_7"
+        },
+        {
+          "param-id": "ac-2_prm_1"
+        },
+        {
+          "param-id": "ac-2_prm_10"
+        },
+        {
+          "param-id": "ac-2_prm_2"
+        },
+        {
+          "param-id": "ac-2_prm_3"
+        },
+        {
+          "param-id": "ac-2_prm_4"
+        },
+        {
+          "param-id": "ac-2_prm_5"
+        },
+        {
+          "param-id": "ac-2_prm_6"
+        },
+        {
+          "param-id": "ac-2_prm_7"
+        },
+        {
+          "param-id": "ac-2_prm_8"
+        },
+        {
+          "param-id": "ac-2_prm_9"
+        },
+        {
+          "param-id": "ac-2.1_prm_1"
+        },
+        {
+          "param-id": "ac-4.4_prm_1"
+        },
+        {
+          "param-id": "ac-4.4_prm_2"
+        },
+        {
+          "param-id": "ac-4.4_prm_3"
+        },
+        {
           "param-id": "cc-1_prm_1",
           "values": [
             "1.1"
           ]
+        },
+        {
+          "param-id": "sc-1_prm_1"
+        },
+        {
+          "param-id": "sc-1_prm_2"
+        },
+        {
+          "param-id": "sc-1_prm_3"
+        },
+        {
+          "param-id": "sc-1_prm_4"
+        },
+        {
+          "param-id": "sc-1_prm_5"
+        },
+        {
+          "param-id": "sc-1_prm_6"
+        },
+        {
+          "param-id": "sc-1_prm_7"
         }
       ],
       "alters": []

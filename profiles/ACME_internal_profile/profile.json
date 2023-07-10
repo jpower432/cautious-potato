@@ -3,7 +3,7 @@
     "uuid": "7bd0c149-c1ce-4278-8709-84d8585af4ce",
     "metadata": {
       "title": "ACME Inc. official controls profile.",
-      "last-modified": "2023-06-02T15:49:25.943858+00:00",
+      "last-modified": "2023-07-10T21:46:59.214013+00:00",
       "version": "0.0.1",
       "oscal-version": "1.0.4",
       "remarks": "Abbreviated for demonstration purposes."
@@ -38,10 +38,97 @@
     "modify": {
       "set-parameters": [
         {
+          "param-id": "ac-1_prm_1"
+        },
+        {
+          "param-id": "ac-1_prm_2"
+        },
+        {
+          "param-id": "ac-1_prm_3"
+        },
+        {
+          "param-id": "ac-1_prm_4"
+        },
+        {
+          "param-id": "ac-1_prm_5"
+        },
+        {
+          "param-id": "ac-1_prm_6"
+        },
+        {
+          "param-id": "ac-1_prm_7"
+        },
+        {
+          "param-id": "ac-2_prm_1"
+        },
+        {
+          "param-id": "ac-2_prm_10"
+        },
+        {
+          "param-id": "ac-2_prm_2"
+        },
+        {
+          "param-id": "ac-2_prm_3"
+        },
+        {
+          "param-id": "ac-2_prm_4"
+        },
+        {
+          "param-id": "ac-2_prm_5"
+        },
+        {
+          "param-id": "ac-2_prm_6"
+        },
+        {
+          "param-id": "ac-2_prm_7"
+        },
+        {
+          "param-id": "ac-2_prm_8"
+        },
+        {
+          "param-id": "ac-2_prm_9"
+        },
+        {
+          "param-id": "ac-2.1_prm_1"
+        },
+        {
+          "param-id": "ac-4.4_prm_1"
+        },
+        {
+          "param-id": "ac-4.4_prm_2"
+        },
+        {
+          "param-id": "ac-4.4_prm_3"
+        },
+        {
           "param-id": "cc-1_prm_1",
           "values": [
             "1.0"
           ]
+        },
+        {
+          "param-id": "cc-3_prm_1"
+        },
+        {
+          "param-id": "sc-1_prm_1"
+        },
+        {
+          "param-id": "sc-1_prm_2"
+        },
+        {
+          "param-id": "sc-1_prm_3"
+        },
+        {
+          "param-id": "sc-1_prm_4"
+        },
+        {
+          "param-id": "sc-1_prm_5"
+        },
+        {
+          "param-id": "sc-1_prm_6"
+        },
+        {
+          "param-id": "sc-1_prm_7"
         }
       ],
       "alters": [
