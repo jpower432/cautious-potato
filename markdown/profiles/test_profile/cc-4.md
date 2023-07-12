@@ -1,7 +1,7 @@
 ---
 x-trestle-global:
   profile:
-    title: Generic profile created by trestle named test_profile.
+    title: My test profile
 ---
 
 # cc-4 - \[\] Hermetic build

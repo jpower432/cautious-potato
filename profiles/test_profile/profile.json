@@ -3,7 +3,7 @@
     "uuid": "0ce92170-a146-4f48-9310-e5115621558e",
     "metadata": {
       "title": "My test profile",
-      "last-modified": "2023-07-12T18:33:02.291312+00:00",
+      "last-modified": "2023-07-12T18:39:13.762810+00:00",
       "version": "0.0.0",
       "oscal-version": "1.0.4"
     },
@@ -11,6 +11,17 @@
       {
         "href": "trestle://catalogs/ACME_custom_controls/catalog.json"
       }
-    ]
+    ],
+    "modify": {
+      "set-parameters": [
+        {
+          "param-id": "cc-1_prm_1"
+        },
+        {
+          "param-id": "cc-3_prm_1"
+        }
+      ],
+      "alters": []
+    }
   }
 }

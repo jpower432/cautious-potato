@@ -14,7 +14,7 @@ x-trestle-set-params:
     values:
 x-trestle-global:
   profile:
-    title: Generic profile created by trestle named test_profile.
+    title: My test profile
 ---
 
 # cc-1 - \[\] Build provenance
