@@ -1,0 +1,16 @@
+{
+  "profile": {
+    "uuid": "757155c5-40c0-49c4-8a35-9761a5d40b4d",
+    "metadata": {
+      "title": "Generic profile created by trestle named test_profile.",
+      "last-modified": "2023-07-12T18:23:09.069394+00:00",
+      "version": "0.0.0",
+      "oscal-version": "1.0.4"
+    },
+    "imports": [
+      {
+        "href": "trestle://catalogs/nist_rev5_800_53/catalog.json"
+      }
+    ]
+  }
+}
