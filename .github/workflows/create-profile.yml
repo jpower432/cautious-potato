@@ -37,6 +37,10 @@ jobs:
           echo "Creating profile with name ${OUTPUT}"
           trestle create --type profile --output "${OUTPUT}"
           trestle href --name "${OUTPUT}" -hr "trestle://${IMPORT_TYPE}s/${IMPORT_NAME}/${IMPORT_TYPE}.json"
+
+          echo "Normalizing profile fields"
+          trestle create --type profile -e profile.imports.0.include-all -f "profiles/${OUTPUT}/profile.json"
+          python3 scripts/set_default_profile.py --profile_name "${OUTPUT}" --trestle_root .
         env:
           OUTPUT:  ${{ github.event.inputs.output }}
           IMPORT_NAME: ${{ github.event.inputs.import_name }}
