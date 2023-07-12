@@ -1,0 +1,16 @@
+{
+  "profile": {
+    "uuid": "9bd567b3-63e4-4993-b7a5-763070749994",
+    "metadata": {
+      "title": "Generic profile created by trestle named test_profile_profile_import.",
+      "last-modified": "2023-07-12T18:42:55.679826+00:00",
+      "version": "0.0.0",
+      "oscal-version": "1.0.4"
+    },
+    "imports": [
+      {
+        "href": "trestle://profiles/ACME_level_1_profile/profile.json"
+      }
+    ]
+  }
+}
