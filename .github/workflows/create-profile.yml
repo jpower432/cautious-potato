@@ -2,12 +2,12 @@ name: Profile Create
 on:
   workflow_dispatch:
    inputs:
-      name:
+      import_type:
         type: choice
         description: Import type
-        options: 
-        - profile
+        options:
         - catalog
+        - profile
       import_name:
         required: true
         description: Name of profile or catalog in trestle workspace to be imported
@@ -36,11 +36,11 @@ jobs:
         run: |
           echo "Creating profile with name ${OUTPUT}"
           trestle create --type profile --output "${OUTPUT}"
-          trestle href --name "${OUTPUT}" -hr "trestle://${INPUT_TYPE}s/${INPUT_NAME}/${INPUT_TYPE}.json"
+          trestle href --name "${OUTPUT}" -hr "trestle://${IMPORT_TYPE}s/${IMPORT_NAME}/${IMPORT_TYPE}.json"
         env:
           OUTPUT:  ${{ github.event.inputs.output }}
-          IMPORT_NAME: ${{ github.event.inputs.input_name }}
-          IMPORT_TYPE: ${{ github.event.inputs.input_type }}
+          IMPORT_NAME: ${{ github.event.inputs.import_name }}
+          IMPORT_TYPE: ${{ github.event.inputs.import_type }}
       - name: Generate and PR new profile
         id: generate-profile
         uses: jpower432/trestle-bot@feat/add-gh-prs
