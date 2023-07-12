@@ -1,0 +1,23 @@
+{
+  "profile": {
+    "uuid": "dc265e19-6b18-495e-9715-43b9c6aceb32",
+    "metadata": {
+      "title": "Generic profile created by trestle named test_profile.",
+      "last-modified": "2023-07-12T20:31:59.838704+00:00",
+      "version": "0.0.0",
+      "oscal-version": "1.0.4"
+    },
+    "imports": [
+      {
+        "href": "trestle://catalogs/ACME_custom_controls/catalog.json",
+        "include-all": {}
+      }
+    ],
+    "merge": {
+      "combine": {
+        "method": "merge"
+      },
+      "as-is": true
+    }
+  }
+}
