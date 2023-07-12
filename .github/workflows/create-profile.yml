@@ -1,0 +1,55 @@
+name: Profile Create
+on:
+  workflow_dispatch:
+   inputs:
+      name:
+        type: choice
+        description: Import type
+        options: 
+        - profile
+        - catalog
+      import_name:
+        required: true
+        description: Name of profile or catalog in trestle workspace to be imported
+      output:
+        required: true
+        description: Name of the profile to create
+     
+
+jobs:
+  create-profile:
+    name: Create profile
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull_request: write
+    steps:
+      - name: Clone
+        uses: actions/checkout@v3
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Install Trestle
+        run: make trestle-install
+      - name: Create new profile with imports
+        run: |
+          echo "Creating profile with name ${OUTPUT}"
+          trestle create --type profile --output "${OUTPUT}"
+          trestle href --name "${OUTPUT}" -hr "trestle://${INPUT_TYPE}s/${INPUT_NAME}/${INPUT_TYPE}.json"
+        env:
+          OUTPUT:  ${{ github.event.inputs.output }}
+          IMPORT_NAME: ${{ github.event.inputs.input_name }}
+          IMPORT_TYPE: ${{ github.event.inputs.input_type }}
+      - name: Generate and PR new profile
+        id: generate-profile
+        uses: jpower432/trestle-bot@feat/add-gh-prs
+        with:
+          markdown_path: "markdown/profiles"
+          oscal_model: "profile"
+          branch: "profile-create-${{ github.run_id }}"
+          target_branch: "main"
+          file_pattern: "*.json,markdown/*"
+          skip_items: "fedramp_rev5_high"
+          skip_assemble: true
+          github_token: ${{ secrets.GITHUB_TOKEN }}
