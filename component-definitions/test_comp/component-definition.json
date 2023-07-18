@@ -1,0 +1,63 @@
+{
+  "component-definition": {
+    "uuid": "2f504008-d406-4f93-9de4-a2445be6cbdf",
+    "metadata": {
+      "title": "Generic component-definition created by trestle named test_comp.",
+      "last-modified": "2023-07-18T21:46:18.651666+00:00",
+      "version": "0.0.0",
+      "oscal-version": "1.0.4"
+    },
+    "components": [
+      {
+        "uuid": "e84a0cbf-0c1f-407d-9583-3468a8b5f417",
+        "type": "service",
+        "title": "My Comp",
+        "description": "My testing comp",
+        "control-implementations": [
+          {
+            "uuid": "e0eddb28-6292-40ce-b864-29a2ad5e06ec",
+            "source": "profiles/ACME_level_1_profile/profile.json",
+            "description": "",
+            "implemented-requirements": [
+              {
+                "uuid": "50de46bd-1355-4c32-8fb8-39e21803dc20",
+                "control-id": "ac-1",
+                "description": ""
+              },
+              {
+                "uuid": "43b6ba0a-f988-49fd-a0b1-a7194d4c6cc9",
+                "control-id": "ac-2",
+                "description": ""
+              },
+              {
+                "uuid": "16e6b4ac-34d4-4840-a47b-15b46e604f59",
+                "control-id": "ac-2.1",
+                "description": ""
+              },
+              {
+                "uuid": "4fc8ecd2-df5e-486a-b408-5f0498a9f364",
+                "control-id": "ac-4.4",
+                "description": ""
+              },
+              {
+                "uuid": "2c6f8064-2aa1-4988-a069-de70176905e0",
+                "control-id": "sc-1",
+                "description": ""
+              },
+              {
+                "uuid": "b81cfa76-937b-4c04-9ef6-0983488d0546",
+                "control-id": "sc-2",
+                "description": ""
+              },
+              {
+                "uuid": "efdb4ca0-84b6-465b-b12e-1dce806ec568",
+                "control-id": "cc-1",
+                "description": ""
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
