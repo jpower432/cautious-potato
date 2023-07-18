@@ -36,8 +36,8 @@ jobs:
         run: |
           echo "Creating component definition with name ${OUTPUT}"
           trestle create --type component-definition --output "${OUTPUT}"
-          python3 scripts/set_default_comp.py --profile_name "profiles/${IMPORT_NAME}" \
-          --comp_path "component-definitions/${OUTPUT}" --comp_title "${COMP_NAME}" --comp_description "${COMP_DESCRIPTION}" --trestle_root .
+          python3 scripts/set_default_comp.py --profile_path "profiles/${IMPORT_NAME}" \
+          --compdef_path "component-definitions/${OUTPUT}" --comp_title "${COMP_NAME}" --comp_description "${COMP_DESCRIPTION}" --trestle_root .
         env:
           OUTPUT:  ${{ github.event.inputs.output }}
           IMPORT_NAME: ${{ github.event.inputs.import_name }}
