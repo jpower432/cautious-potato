@@ -1,0 +1,58 @@
+name: Component Definitions Create
+on:
+  workflow_dispatch:
+   inputs:
+      import_name:
+        required: true
+        description: Name of profile in trestle workspace to be imported
+      output:
+        required: true
+        description: Name of the profile to create
+      component_name:
+        required: true
+        description: Name of the component in the generated component definition
+      component_description:
+        required: true
+        description: Description of the component in the generated component definition
+     
+
+jobs:
+  create-component:
+    name: Create component definition
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Clone
+        uses: actions/checkout@v3
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Install Trestle
+        run: make trestle-install
+      - name: Create new component definition with imports
+        run: |
+          echo "Creating component definition with name ${OUTPUT}"
+          trestle create --type component-definition --output "${OUTPUT}"
+          python3 scripts/set_default_comp.py --profile_name "profiles/${IMPORT_NAME}" \
+          --comp_path "component-definitions/${OUTPUT}" --comp_title "${COMP_NAME}" --comp_description "${COMP_DESCRIPTION}" --trestle_root .
+        env:
+          OUTPUT:  ${{ github.event.inputs.output }}
+          IMPORT_NAME: ${{ github.event.inputs.import_name }}
+          COMP_NAME: ${{ github.event.inputs.component_name }}
+          COMP_DESCRIPTION: ${{ github.event.inputs.component_description }}
+      - name: Generate and PR new component definition
+        id: generate-cd
+        uses: RedHatProductSecurity/trestle-bot@main
+        with:
+          markdown_path: "markdown/components"
+          oscal_model: "compdef"
+          branch: "component-create-${{ github.run_id }}"
+          target_branch: "main"
+          file_pattern: "*.json,markdown/*"
+          skip_assemble: true
+          commit_user_name: "trestle-bot[bot]"
+          commit_user_email: "136850459+trestle-bot[bot]@users.noreply.github.com"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
