@@ -43,7 +43,7 @@ jobs:
           COMP_DESCRIPTION: ${{ github.event.inputs.component_description }}
       - name: Generate and PR new component definition
         id: generate-cd
-        uses: jpower432/trestle-bot@feat/add-compdef-create
+        uses: jpower432/trestle-bot@feat/custom-pull-request-title
         with:
           markdown_path: "markdown/components"
           oscal_model: "compdef"
@@ -53,4 +53,6 @@ jobs:
           skip_assemble: true
           commit_user_name: "trestle-bot[bot]"
           commit_user_email: "136850459+trestle-bot[bot]@users.noreply.github.com"
+          commit_message: "adds component  ${{ github.inputs.component_name }} in ${{ github.inputs.output }}"
+          pr_title: "Add component ${{ github.inputs.component_name }} to ${{ github.inputs.output }}"
           github_token: ${{ secrets.GITHUB_TOKEN }}
