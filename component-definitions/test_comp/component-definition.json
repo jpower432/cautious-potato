@@ -1,0 +1,63 @@
+{
+  "component-definition": {
+    "uuid": "67e8a561-f7b0-44e8-8005-bd73dc2100c7",
+    "metadata": {
+      "title": "REPLACE_ME",
+      "last-modified": "2023-07-21T17:46:09.341618+00:00",
+      "version": "REPLACE_ME",
+      "oscal-version": "1.0.4"
+    },
+    "components": [
+      {
+        "uuid": "34795a02-e4df-4422-a8b4-1db15fee94a1",
+        "type": "service",
+        "title": "My Comp",
+        "description": "My testing comp",
+        "control-implementations": [
+          {
+            "uuid": "32e6d3b5-4c04-40d5-8a3f-0d2a8eddf577",
+            "source": "profiles/ACME_level_1_profile/profile.json",
+            "description": "",
+            "implemented-requirements": [
+              {
+                "uuid": "c70be771-26f1-48c2-8670-01dc9eb34703",
+                "control-id": "ac-1",
+                "description": "REPLACE_ME"
+              },
+              {
+                "uuid": "d0420f95-f071-4c3b-bef1-32f26607295b",
+                "control-id": "ac-2",
+                "description": "REPLACE_ME"
+              },
+              {
+                "uuid": "c840ad83-0740-4dd8-ad46-06d8486d3f4b",
+                "control-id": "ac-2.1",
+                "description": "REPLACE_ME"
+              },
+              {
+                "uuid": "f18f0dd1-7c4a-4407-ab2a-769619a32a51",
+                "control-id": "ac-4.4",
+                "description": "REPLACE_ME"
+              },
+              {
+                "uuid": "a9e67a77-da1c-4934-bf11-77eef25f76ec",
+                "control-id": "sc-1",
+                "description": "REPLACE_ME"
+              },
+              {
+                "uuid": "ae5e166b-d895-4954-848d-4eaba2425a10",
+                "control-id": "sc-2",
+                "description": "REPLACE_ME"
+              },
+              {
+                "uuid": "95c1fa23-76f7-4ae5-a55d-8239203d3740",
+                "control-id": "cc-1",
+                "description": "REPLACE_ME"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
