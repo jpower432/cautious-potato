@@ -53,6 +53,6 @@ jobs:
           skip_assemble: true
           commit_user_name: "trestle-bot[bot]"
           commit_user_email: "136850459+trestle-bot[bot]@users.noreply.github.com"
-          commit_message: "adds component  ${{ github.inputs.component_name }} in ${{ github.inputs.output }}"
-          pr_title: "Add component ${{ github.inputs.component_name }} to ${{ github.inputs.output }}"
+          commit_message: "adds component  ${{ github.event.inputs.component_name }} in ${{ github.event.inputs.output }}"
+          pr_title: "Add component ${{ github.event.inputs.component_name }} to ${{ github.event.inputs.output }}"
           github_token: ${{ secrets.GITHUB_TOKEN }}
