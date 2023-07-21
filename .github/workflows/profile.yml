@@ -19,11 +19,10 @@ jobs:
           ref: ${{ github.head_ref }}
       - name: Assemble
         id: assemble
-        uses: jpower432/trestle-bot@feat/add-gh-prs
+        uses: jpower432/trestle-bot@PSCE-173
         with:
           markdown_path: "markdown/profiles"
           oscal_model: "profile"
           file_pattern: "*.json,markdown/*"
           branch: ${{ github.head_ref }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
     
