@@ -31,23 +31,18 @@ jobs:
         with:
           python-version: 3.8
       - name: Install Trestle
-        run: make trestle-install
+        run: make trestlebot-install
       - name: Create new profile with imports
         run: |
-          echo "Creating profile with name ${OUTPUT}"
-          trestle create --type profile --output "${OUTPUT}"
-          trestle href --name "${OUTPUT}" -hr "trestle://${IMPORT_TYPE}s/${IMPORT_NAME}/${IMPORT_TYPE}.json"
-
-          echo "Normalizing profile fields"
-          trestle create --type profile -e profile.imports.0.include-all -f "profiles/${OUTPUT}/profile.json"
-          python3 scripts/set_default_profile.py --profile_name "${OUTPUT}" --trestle_root .
+          python3 scripts/set_default_profile.py --import_path "${IMPORT_TYPE}s/${IMPORT_NAME}/${IMPORT_TYPE}.json" \
+          --profile_name "${OUTPUT}" --trestle_root .
         env:
           OUTPUT:  ${{ github.event.inputs.output }}
           IMPORT_NAME: ${{ github.event.inputs.import_name }}
           IMPORT_TYPE: ${{ github.event.inputs.import_type }}
       - name: Generate and PR new profile
         id: generate-profile
-        uses: jpower432/trestle-bot@feat/add-gh-prs
+        uses: jpower432/trestle-bot@PSCE-173
         with:
           markdown_path: "markdown/profiles"
           oscal_model: "profile"
@@ -56,4 +51,6 @@ jobs:
           file_pattern: "*.json,markdown/*"
           skip_items: "fedramp_rev5_high"
           skip_assemble: true
+          commit_message: "adds profile ${{ github.event.inputs.output }}"
+          pull_request_title: "Add profile ${{ github.event.inputs.output }}"
           github_token: ${{ secrets.GITHUB_TOKEN }}

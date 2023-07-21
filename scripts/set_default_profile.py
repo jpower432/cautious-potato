@@ -22,44 +22,25 @@ Author: Jenn Power <jpower@redhat.com>
 """
 
 import argparse
-import logging
-import pathlib
 
-import trestle.core.generators as gens
-import trestle.oscal.profile as prof
-from trestle.common.load_validate import load_validate_model_name
-from trestle.common.model_utils import ModelUtils
-from trestle.core.models.file_content_type import FileContentType
-
-
-logging.basicConfig(format="%(levelname)s: %(message)s", level=logging.INFO)
+from trestlebot.tasks.authored.profile import AuthoredProfile
 
 
 def main():
-    p = argparse.ArgumentParser(description="Set default profile field")
+    p = argparse.ArgumentParser(description="Set default component fields")
     p.add_argument("--profile_name", required=True)
+    p.add_argument("--import_path", required=True)
     p.add_argument("--trestle_root", required=True)
     args = p.parse_args()
 
-    trestle_root: pathlib.Path = pathlib.Path(args.trestle_root)
-    profile_data, _ = load_validate_model_name(
-        trestle_root, args.profile_name, prof.Profile
-    )
+    authored_profile = AuthoredProfile(args.trestle_root)
 
-    # Set up default values for merge settings.
-    merge_object: prof.Merge = gens.generate_sample_model(prof.Merge)
-    combine_object: prof.Combine = gens.generate_sample_model(prof.Combine)
-    combine_object.method = prof.Method.merge
-    merge_object.combine = combine_object
-    merge_object.as_is = True
-
-    profile_data.merge = merge_object
-
-    ModelUtils.update_last_modified(profile_data)
-    ModelUtils.save_top_level_model(
-        profile_data, trestle_root, args.profile_name, FileContentType.JSON
+    authored_profile.create_new_default(
+        args.import_path,
+        args.profile_name,
     )
 
 
 if __name__ == "__main__":
     main()
+

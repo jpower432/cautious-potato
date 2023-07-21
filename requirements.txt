@@ -181,7 +181,7 @@ toml==0.10.2
     # via datamodel-code-generator
 tomli==2.0.1
     # via black
-trestlebot @ git+https://github.com/jpower432/trestle-bot@feat/add-compdef-create
+trestlebot @ git+https://github.com/jpower432/trestle-bot@PSCE-173
     # via -r requirements.in
 typing-extensions==4.7.1
     # via
