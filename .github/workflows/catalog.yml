@@ -19,7 +19,7 @@ jobs:
           ref: ${{ github.head_ref }}
       - name: Assemble
         id: assemble
-        uses: jpower432/trestle-bot@feat/add-gh-prs
+        uses: jpower432/trestle-bot@PSCE-192
         with:
           markdown_path: "markdown/catalogs"
           oscal_model: "catalog"
