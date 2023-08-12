@@ -8,7 +8,7 @@ x-trestle-global:
 
 ## Control Statement
 
-Requires using version control and a hosted build service(s).
+Requires using version control and a hosted build service.
 
 # Editable Content
 
