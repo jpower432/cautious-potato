@@ -19,7 +19,7 @@ jobs:
           ref: ${{ github.head_ref }}
       - name: Check
         id: check
-        uses: jpower432/trestle-bot@PSCE-192
+        uses: jpower432/trestle-bot@PSCE-194
         with:
           markdown_path: "markdown/catalogs"
           oscal_model: "catalog"

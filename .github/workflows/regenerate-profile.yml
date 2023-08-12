@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Regenerate profiles
         id: regenerate
-        uses: jpower432/trestle-bot@PSCE-192
+        uses: jpower432/trestle-bot@PSCE-194
         with:
           markdown_path: "markdown/profiles"
           oscal_model: "profile"
