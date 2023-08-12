@@ -1,14 +1,36 @@
 ---
+x-trestle-set-params:
+  # You may set values for parameters in the assembled Profile by adding
+  #
+  # profile-values:
+  #   - value 1
+  #   - value 2
+  #
+  # below a section of values:
+  # The values list refers to the values in the catalog, and the profile-values represent values
+  # in SetParameters of the Profile.
+  #
+  ac-4.4_prm_1:
+    values:
+  ac-4.4_prm_2:
+    values:
+  ac-4.4_prm_3:
+    values:
 x-trestle-global:
   profile:
-    title: ACME_level_4_profile.
+    title: REPLACE_ME
+  sort-id: ac-04.04
 ---
 
-# cc-2 - \[Custom Controls\] Hosted build service
+# ac-4.4 - \[Access Control\] Flow Control of Encrypted Information
 
 ## Control Statement
 
-Requires using version control and a hosted build service.
+Prevent encrypted information from bypassing {{ insert: param, ac-4.4_prm_1 }} by {{ insert: param, ac-4.4_prm_2 }}.
+
+## Control guidance
+
+Flow control mechanisms include content checking, security policy filters, and data type identifiers. The term encryption is extended to cover encoded data not recognized by filtering mechanisms.
 
 # Editable Content
 
