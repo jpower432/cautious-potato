@@ -19,7 +19,7 @@ jobs:
           ref: ${{ github.head_ref }}
       - name: Assemble
         id: assemble
-        uses: jpower432/trestle-bot@PSCE-194
+        uses: RedHatProductSecuirty/trestle-bot@staging
         with:
           markdown_path: "markdown/catalogs"
           oscal_model: "catalog"

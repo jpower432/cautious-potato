@@ -42,7 +42,7 @@ jobs:
           IMPORT_TYPE: ${{ github.event.inputs.import_type }}
       - name: Generate and PR new profile
         id: generate-profile
-        uses: jpower432/trestle-bot@PSCE-194
+        uses: RedHatProductSecurity/trestle-bot@staging
         with:
           markdown_path: "markdown/profiles"
           oscal_model: "profile"
