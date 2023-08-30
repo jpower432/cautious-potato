@@ -1,14 +1,14 @@
 ---
 x-trestle-global:
   profile:
-    title: ACME_level_4_profile.
+    title: REPLACE_ME
 ---
 
-# cc-2 - \[Custom Controls\] Hosted build service
+# cc-4 - \[Custom Controls\] Hermetic build
 
 ## Control Statement
 
-Requires using version control and a hosted build service.
+All builds must completed be in a internet-disconnected environment. Hermetic builds guarantee that the provenance’s list of dependencies is complete.
 
 # Editable Content
 

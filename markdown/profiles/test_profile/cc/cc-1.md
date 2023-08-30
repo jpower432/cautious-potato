@@ -1,14 +1,27 @@
 ---
+x-trestle-set-params:
+  # You may set values for parameters in the assembled Profile by adding
+  #
+  # profile-values:
+  #   - value 1
+  #   - value 2
+  #
+  # below a section of values:
+  # The values list refers to the values in the catalog, and the profile-values represent values
+  # in SetParameters of the Profile.
+  #
+  cc-1_prm_1:
+    values:
 x-trestle-global:
   profile:
-    title: ACME_level_4_profile.
+    title: REPLACE_ME
 ---
 
-# cc-2 - \[Custom Controls\] Hosted build service
+# cc-1 - \[Custom Controls\] Build provenance
 
 ## Control Statement
 
-Requires using version control and a hosted build service.
+The build process must be fully automated and generate provenance compliant with SLSA schema version {{ insert: param, cc-1_prm_1 }}.
 
 # Editable Content
 

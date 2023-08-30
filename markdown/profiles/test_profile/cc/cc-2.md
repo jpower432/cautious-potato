@@ -1,7 +1,7 @@
 ---
 x-trestle-global:
   profile:
-    title: ACME_level_4_profile.
+    title: REPLACE_ME
 ---
 
 # cc-2 - \[Custom Controls\] Hosted build service
