@@ -19,7 +19,7 @@ jobs:
           ref: ${{ github.head_ref }}
       - name: Check
         id: check
-        uses: jpower432/trestle-bot@chore/update-to-ubi
+        uses: jpower432/trestle-bot@chore/update-logging
         with:
           markdown_path: "markdown/catalogs"
           oscal_model: "catalog"
