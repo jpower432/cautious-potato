@@ -19,7 +19,7 @@ jobs:
           ref: ${{ github.head_ref }}
       - name: Assemble
         id: assemble
-        uses: RedHatProductSecurity/trestle-bot@dependabot/pip/gitpython-3.1.35
+        uses: jpower432/trestle-bot@PSCE-251
         with:
           markdown_path: "markdown/catalogs"
           oscal_model: "catalog"
