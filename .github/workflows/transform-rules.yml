@@ -1,0 +1,23 @@
+name: Transform Rules 
+on:
+  push:
+    paths:
+      - 'rules/**'
+
+jobs:
+  transform-rules:
+    name: Transform rules content
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+      - name: Transform rules
+        id: transform
+        uses: jpower432/trestle-bot/actions/rules-transform@PSCE-249
+        with:
+          rules_view_path: "rules/"
+          file_pattern: "*.json,rules/*"
+          branch: ${{ github.head_ref }}

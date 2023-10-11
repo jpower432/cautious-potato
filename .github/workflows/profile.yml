@@ -19,7 +19,7 @@ jobs:
           ref: ${{ github.head_ref }}
       - name: Assemble
         id: assemble
-        uses: jpower432/trestle-bot@chore/update-to-ubi
+        uses: jpower432/trestle-bot/actions/autosync@PSCE-249
         with:
           markdown_path: "markdown/profiles"
           oscal_model: "profile"
