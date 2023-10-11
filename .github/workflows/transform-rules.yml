@@ -20,4 +20,3 @@ jobs:
         with:
           rules_view_path: "rules/"
           file_pattern: "*.json,rules/*"
-          branch: ${{ github.head_ref }}
