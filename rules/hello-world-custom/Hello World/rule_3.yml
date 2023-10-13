@@ -1,0 +1,12 @@
+x-trestle-rule-info:
+  name: example_rule_3
+  description: My rule description for example rule 3 with no rule parameter
+  profile:
+    description: My internal profile for testing
+    href: profiles/ACME_internal_profile/profile.json
+    include-controls:
+      - id: ac-2
+x-trestle-component-info:
+  name: Hello World
+  description: My hello world application
+  type: service
