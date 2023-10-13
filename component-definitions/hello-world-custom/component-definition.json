@@ -1,15 +1,15 @@
 {
   "component-definition": {
-    "uuid": "4fe03f1a-85a0-441c-ad44-bbafc04406bb",
+    "uuid": "7aa449d5-9d67-4766-9e7d-29101cd9b904",
     "metadata": {
       "title": "Component definition for hello-world-custom",
-      "last-modified": "2023-10-11T19:22:30+00:00",
+      "last-modified": "2023-10-13T16:11:18+00:00",
       "version": "1.0",
       "oscal-version": "1.0.4"
     },
     "components": [
       {
-        "uuid": "a3724811-b35e-41d6-ad80-70f2500da8e3",
+        "uuid": "ed5596be-a315-4b52-86ba-19feb323bf21",
         "type": "service",
         "title": "Hello World",
         "description": "My hello world application",
@@ -17,37 +17,61 @@
           {
             "name": "Rule_Id",
             "ns": "https://ibm.github.io/compliance-trestle/schemas/oscal",
-            "value": "example_rule_1",
+            "value": "example_rule_3",
             "remarks": "rule_set_0"
           },
           {
             "name": "Rule_Description",
             "ns": "https://ibm.github.io/compliance-trestle/schemas/oscal",
-            "value": "My rule description for example rule 1 with a param",
+            "value": "My rule description for example rule 3 with no rule parameter",
             "remarks": "rule_set_0"
+          },
+          {
+            "name": "Rule_Id",
+            "ns": "https://ibm.github.io/compliance-trestle/schemas/oscal",
+            "value": "example_rule_2",
+            "remarks": "rule_set_1"
+          },
+          {
+            "name": "Rule_Description",
+            "ns": "https://ibm.github.io/compliance-trestle/schemas/oscal",
+            "value": "My rule description for example rule 2 with no rule parameter",
+            "remarks": "rule_set_1"
+          },
+          {
+            "name": "Rule_Id",
+            "ns": "https://ibm.github.io/compliance-trestle/schemas/oscal",
+            "value": "example_rule_1",
+            "remarks": "rule_set_2"
+          },
+          {
+            "name": "Rule_Description",
+            "ns": "https://ibm.github.io/compliance-trestle/schemas/oscal",
+            "value": "My rule description for example rule 1 with a param",
+            "remarks": "rule_set_2"
           },
           {
             "name": "Parameter_Id",
             "ns": "https://ibm.github.io/compliance-trestle/schemas/oscal",
             "value": "prm_1",
-            "remarks": "rule_set_0"
+            "remarks": "rule_set_2"
           },
           {
             "name": "Parameter_Description",
             "ns": "https://ibm.github.io/compliance-trestle/schemas/oscal",
             "value": "prm_1 description",
-            "remarks": "rule_set_0"
+            "remarks": "rule_set_2"
           },
           {
             "name": "Parameter_Value_Alternatives",
             "ns": "https://ibm.github.io/compliance-trestle/schemas/oscal",
             "value": "{'default': '5%', '5pc': '5%', '10pc': '10%', '15pc': '15%', '20pc': '20%'}",
-            "remarks": "rule_set_0"
+            "remarks": "rule_set_2"
           }
         ],
         "control-implementations": [
           {
-            "uuid": "90702064-e16f-49de-b706-11b6a694f9f5",
+            "uuid": "1f31793f-9678-4eb0-afb5-e60d7fe5ea7f",
             "source": "profiles/ACME_internal_profile/profile.json",
             "description": "My internal profile for testing",
             "set-parameters": [
@@ -60,7 +84,24 @@
             ],
             "implemented-requirements": [
               {
-                "uuid": "879050d3-6003-48e3-ad1f-69cfaef9d3e3",
+                "uuid": "74e94b64-0265-486c-a129-d67575454064",
+                "control-id": "ac-2",
+                "description": "",
+                "props": [
+                  {
+                    "name": "Rule_Id",
+                    "ns": "https://ibm.github.io/compliance-trestle/schemas/oscal",
+                    "value": "example_rule_3"
+                  },
+                  {
+                    "name": "Rule_Id",
+                    "ns": "https://ibm.github.io/compliance-trestle/schemas/oscal",
+                    "value": "example_rule_2"
+                  }
+                ]
+              },
+              {
+                "uuid": "639c2114-eb88-482e-868f-8746acf248e8",
                 "control-id": "ac-1",
                 "description": "",
                 "props": [
