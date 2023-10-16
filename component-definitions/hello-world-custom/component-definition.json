@@ -3,7 +3,7 @@
     "uuid": "7aa449d5-9d67-4766-9e7d-29101cd9b904",
     "metadata": {
       "title": "Component definition for hello-world-custom",
-      "last-modified": "2023-10-13T16:11:18+00:00",
+      "last-modified": "2023-10-16T19:43:10.617453+00:00",
       "version": "1.0",
       "oscal-version": "1.0.4"
     },
@@ -97,6 +97,10 @@
                     "name": "Rule_Id",
                     "ns": "https://ibm.github.io/compliance-trestle/schemas/oscal",
                     "value": "example_rule_2"
+                  },
+                  {
+                    "name": "implementation-status",
+                    "value": "planned"
                   }
                 ]
               },
@@ -109,6 +113,10 @@
                     "name": "Rule_Id",
                     "ns": "https://ibm.github.io/compliance-trestle/schemas/oscal",
                     "value": "example_rule_1"
+                  },
+                  {
+                    "name": "implementation-status",
+                    "value": "planned"
                   }
                 ]
               }
