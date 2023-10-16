@@ -44,11 +44,3 @@ more extra
 <!-- Subparts may be added with nested hash levels of the form ### My Subpart Name -->
 <!-- underneath the parent ## Control or ## Part being added -->
 <!-- See https://ibm.github.io/compliance-trestle/tutorials/ssp_profile_catalog_authoring/ssp_profile_catalog_authoring for guidance. -->
-
-## Control level_2_guidance
-
-Provence data must be signed by a trusted identity (e.g a host build service)
-
-## Control level_2_test
-
-More guidance
