@@ -3,7 +3,7 @@
     "uuid": "d1f7608c-4761-4a9c-a3f5-1e700b342db2",
     "metadata": {
       "title": "Hello World FedRAMP Component Definition",
-      "last-modified": "2023-05-04T00:37:27.100876+00:00",
+      "last-modified": "2023-10-16T19:42:05.888938+00:00",
       "version": "1.0.0",
       "oscal-version": "1.0.4"
     },
@@ -45,7 +45,7 @@
                   },
                   {
                     "name": "implementation-status",
-                    "value": "planned"
+                    "value": "not-applicable"
                   }
                 ]
               }
