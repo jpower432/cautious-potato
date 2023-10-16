@@ -70,7 +70,3 @@ Access control policy and procedures address the controls in the AC family that 
 <!-- Subparts may be added with nested hash levels of the form ### My Subpart Name -->
 <!-- underneath the parent ## Control or ## Part being added -->
 <!-- See https://ibm.github.io/compliance-trestle/tutorials/ssp_profile_catalog_authoring/ssp_profile_catalog_authoring for guidance. -->
-
-## Control acme_guidance
-
-Access control documentation should be at one centrally managed intranet site that is consistent across the corporation. Website should be indexed in intranet search engines.
