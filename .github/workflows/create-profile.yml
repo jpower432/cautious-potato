@@ -54,3 +54,4 @@ jobs:
           commit_message: "adds profile ${{ github.event.inputs.output }}"
           pull_request_title: "Add profile ${{ github.event.inputs.output }}"
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          verbose: true
