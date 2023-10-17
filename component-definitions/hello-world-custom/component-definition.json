@@ -3,7 +3,7 @@
     "uuid": "14847cf1-4d61-4bc8-949a-dab8cb2768dd",
     "metadata": {
       "title": "Hello World Custom Component Definition",
-      "last-modified": "2023-05-04T00:37:26.369136+00:00",
+      "last-modified": "2023-10-17T21:52:23.367319+00:00",
       "version": "1.0.0",
       "oscal-version": "1.0.4"
     },
@@ -45,7 +45,7 @@
                   },
                   {
                     "name": "implementation-status",
-                    "value": "planned"
+                    "value": "partial"
                   }
                 ]
               }
