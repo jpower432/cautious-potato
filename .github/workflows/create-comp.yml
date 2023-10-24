@@ -7,7 +7,7 @@ on:
         description: Name of profile in trestle workspace to be imported
       output:
         required: true
-        description: Name of the profile to create
+        description: Name of the component definition to create
       component_name:
         required: true
         description: Name of the component in the generated component definition
@@ -30,9 +30,9 @@ jobs:
         id: generate-cd
         uses: jpower432/trestle-bot/actions/create-cd@PSCE-256-P2
         with:
-          profile_name: ${{ github.event.inputs.profile_name }}
-          component_definition_name: ${{ github.event.inputs.component_definition_name }}
-          component_title: ${{ github.event.inputs.component_title }}
+          profile_name: ${{ github.event.inputs.import_name }}
+          component_definition_name: ${{ github.event.inputs.output }}
+          component_title: ${{ github.event.inputs.component_name }}
           component_description: ${{ github.event.inputs.component_description }}
           markdown_path: "markdown/components"
           branch: "component-create-${{ github.run_id }}"
