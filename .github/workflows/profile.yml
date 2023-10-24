@@ -19,10 +19,11 @@ jobs:
           ref: ${{ github.head_ref }}
       - name: Assemble
         id: assemble
-        uses: RedHatProductSecurity/trestle-bot/actions/autosync@main
+        uses: jpowe432/trestle-bot/actions/autosync@PSCE-256-P2
         with:
           markdown_path: "markdown/profiles"
           oscal_model: "profile"
           file_pattern: "*.json,markdown/*"
           branch: ${{ github.head_ref }}
+          skip_items: "ACME_internal_profile"
     
