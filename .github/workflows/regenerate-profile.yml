@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Regenerate profiles
         id: regenerate
-        uses: jpower432/trestle-bot@refactor/update-to-repo-api
+        uses: jpower432/trestle-bot/actions/autosync@PSCE-256-P2
         with:
           markdown_path: "markdown/profiles"
           oscal_model: "profile"
@@ -27,3 +27,4 @@ jobs:
           skip_assemble: true
           github_token: ${{ secrets.GITHUB_TOKEN }}
           target_branch: "main"
+          skip_items: "ACME_internal_profile"
