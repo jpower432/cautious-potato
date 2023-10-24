@@ -12,6 +12,8 @@ x-trestle-set-params:
   #
   ac-1_prm_1:
     values:
+    profile-values:
+    - test1
   ac-1_prm_2:
     values:
   ac-1_prm_3:
