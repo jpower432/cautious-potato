@@ -16,7 +16,7 @@ jobs:
           ref: ${{ github.head_ref }}
       - name: Transform rules
         id: transform
-        uses: RedHatProductSecurity/trestle-bot/actions/rules-transform@main
+        uses: jpower432/trestle-bot/actions/rules-transform@bug/skip-logic
         with:
           file_pattern: "*.json,rules/*"
           branch: ${{ github.head_ref }}
