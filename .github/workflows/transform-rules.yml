@@ -19,4 +19,3 @@ jobs:
         uses: RedHatProductSecurity/trestle-bot/actions/rules-transform@main
         with:
           file_pattern: "*.json,rules/*"
-          branch: ${{ github.head_ref }}
