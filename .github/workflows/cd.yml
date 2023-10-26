@@ -19,7 +19,7 @@ jobs:
           ref: ${{ github.head_ref }}
       - name: Assemble
         id: assemble
-        uses: jpower432/trestle-bot/actions/rules-transform@bug/skip-logic
+        uses: jpower432/trestle-bot/actions/autosync@bug/skip-logic
         with:
           markdown_path: "markdown/components"
           oscal_model: "compdef"
