@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Regenerate ssp
         id: regenerate
-        uses: jpower432/trestle-bot@feat/add-gh-prs
+        uses: RedHatProductSecurity/trestle-bot/actions/autosync@main
         with:
           markdown_path: "markdown/system-security-plans"
           oscal_model: "ssp"
