@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Regenerate profiles
         id: regenerate
-        uses: RedHatProductSecurity/trestle-bot/actions/autosync@main
+        uses: jpower432/trestle-bot/actions/autosync@refactor/variable-names
         with:
           markdown_path: "markdown/profiles"
           oscal_model: "profile"
