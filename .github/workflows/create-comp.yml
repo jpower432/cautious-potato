@@ -28,7 +28,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Generate and PR new component definition
         id: generate-cd
-        uses: jpower432/trestle-bot/actions/create-cd@refactor/variable-names
+        uses: jpower432/trestle-bot/actions/create-cd@refactor/bot-function
         with:
           profile_name: ${{ github.event.inputs.import_name }}
           component_definition_name: ${{ github.event.inputs.output }}

@@ -19,7 +19,7 @@ jobs:
           ref: ${{ github.head_ref }}
       - name: Assemble
         id: assemble
-        uses: jpower432/trestle-bot/actions/autosync@refactor/variable-names
+        uses: jpower432/trestle-bot/actions/autosync@refactor/bot-function
         with:
           markdown_path: "markdown/catalogs"
           oscal_model: "catalog"
