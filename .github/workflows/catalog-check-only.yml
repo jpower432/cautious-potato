@@ -19,7 +19,7 @@ jobs:
           ref: ${{ github.head_ref }}
       - name: Check
         id: check
-        uses: jpower432/trestle-bot/actions/autosync@refactor/bot-function
+        uses: jpower432/trestle-bot/actions/autosync@PSCE-289
         with:
           markdown_path: "markdown/catalogs"
           oscal_model: "catalog"
