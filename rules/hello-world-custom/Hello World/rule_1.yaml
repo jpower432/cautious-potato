@@ -7,7 +7,7 @@ x-trestle-rule-info:
     alternative-values: {'default': '5%', '5pc': '5%', '10pc': '10%', '15pc': '15%', '20pc': '20%'}
     default-value: '5%'
   profile:
-    description: My internal profile for testing
+    description: My internal profile for testing things
     href: profiles/ACME_internal_profile/profile.json
     include-controls:
       - id: ac-1
