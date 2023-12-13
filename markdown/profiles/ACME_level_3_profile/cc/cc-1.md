@@ -26,18 +26,6 @@ x-trestle-global:
 
 The build process must be fully scripted/automated and generate provenance compliant with SLSA schema version {{ insert: param, cc-1_prm_1 }}.
 
-## Control extra
-
-more extra
-
-## Control level_2_guidance
-
-Provence data must be signed by a trusted identity (e.g a host build service)
-
-## Control level_2_test
-
-More guidance
-
 # Editable Content
 
 <!-- Make additions and edits below -->
