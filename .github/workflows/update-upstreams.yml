@@ -1,0 +1,23 @@
+name: Sync Upstreams
+
+on:
+  workflow_dispatch:
+
+jobs:
+  upstream-sync:
+    name: Sync upstream content
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+    - uses: actions/checkout@v4
+    - name: Run trestlebot
+      id: trestlebot
+      uses: RedHatProductSecurity/trestle-bot/actions/sync-upstreams@PSCE-309
+      with:
+        branch: "sync-upstream-${{ github.run_id }}"
+        target_branch: "main"
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        sources: |
+          https://github.com/RedHatProductSecurity/oscal-profiles@main
