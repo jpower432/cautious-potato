@@ -37,7 +37,7 @@ jobs:
           markdown_path: "markdown/components"
           branch: "component-create-${{ github.run_id }}"
           target_branch: "main"
-          file_pattern: "*.json,markdown/*"
+          file_pattern: "*.json,markdown/*,rules/*"
           commit_user_name: "trestle-bot[bot]"
           commit_user_email: "136850459+trestle-bot[bot]@users.noreply.github.com"
           commit_message: "adds component  ${{ github.event.inputs.component_name }} in ${{ github.event.inputs.output }}"
