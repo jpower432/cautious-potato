@@ -1,219 +1,191 @@
 {
   "component-definition": {
-    "uuid": "c32627c2-eff3-497a-a3cf-c68451b880c1",
+    "uuid": "6fe653da-ebea-452d-adfa-8436f506e813",
     "metadata": {
       "title": "Component definition for test_comp",
-      "last-modified": "2023-12-13T18:58:55.136293+00:00",
+      "last-modified": "2024-01-12T22:04:51+00:00",
       "version": "1.0",
       "oscal-version": "1.0.4"
     },
     "components": [
       {
-        "uuid": "60f2343a-da5d-467f-9242-a7e2b3395317",
+        "uuid": "aab3856a-d21b-4043-86d6-69caaed00ea0",
         "type": "service",
         "title": "My Comp",
         "description": "My testing comp",
         "props": [
           {
             "name": "Rule_Id",
-            "ns": "https://ibm.github.io/compliance-trestle/schemas/oscal",
-            "value": "rule-ac-4.4",
-            "remarks": "rule_set_0"
-          },
-          {
-            "name": "Rule_Description",
-            "ns": "https://ibm.github.io/compliance-trestle/schemas/oscal",
-            "value": "Rule for ac-4.4",
-            "remarks": "rule_set_0"
-          },
-          {
-            "name": "Rule_Id",
-            "ns": "https://ibm.github.io/compliance-trestle/schemas/oscal",
-            "value": "rule-cc-1",
-            "remarks": "rule_set_1"
-          },
-          {
-            "name": "Rule_Description",
-            "ns": "https://ibm.github.io/compliance-trestle/schemas/oscal",
-            "value": "Rule for cc-1",
-            "remarks": "rule_set_1"
-          },
-          {
-            "name": "Rule_Id",
-            "ns": "https://ibm.github.io/compliance-trestle/schemas/oscal",
-            "value": "rule-sc-2",
-            "remarks": "rule_set_2"
-          },
-          {
-            "name": "Rule_Description",
-            "ns": "https://ibm.github.io/compliance-trestle/schemas/oscal",
-            "value": "Rule for sc-2",
-            "remarks": "rule_set_2"
-          },
-          {
-            "name": "Rule_Id",
-            "ns": "https://ibm.github.io/compliance-trestle/schemas/oscal",
-            "value": "rule-sc-1",
-            "remarks": "rule_set_3"
-          },
-          {
-            "name": "Rule_Description",
-            "ns": "https://ibm.github.io/compliance-trestle/schemas/oscal",
-            "value": "Rule for sc-1",
-            "remarks": "rule_set_3"
-          },
-          {
-            "name": "Rule_Id",
-            "ns": "https://ibm.github.io/compliance-trestle/schemas/oscal",
-            "value": "rule-ac-1",
-            "remarks": "rule_set_4"
-          },
-          {
-            "name": "Rule_Description",
-            "ns": "https://ibm.github.io/compliance-trestle/schemas/oscal",
-            "value": "Rule for ac-1",
-            "remarks": "rule_set_4"
-          },
-          {
-            "name": "Rule_Id",
-            "ns": "https://ibm.github.io/compliance-trestle/schemas/oscal",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
             "value": "rule-ac-2",
+            "remarks": "rule_set_0"
+          },
+          {
+            "name": "Rule_Description",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
+            "value": "Rule for ac-2",
+            "remarks": "rule_set_0"
+          },
+          {
+            "name": "Rule_Id",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
+            "value": "rule-ac-2.1",
+            "remarks": "rule_set_1"
+          },
+          {
+            "name": "Rule_Description",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
+            "value": "Rule for ac-2.1",
+            "remarks": "rule_set_1"
+          },
+          {
+            "name": "Rule_Id",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
+            "value": "rule-ac-1",
+            "remarks": "rule_set_2"
+          },
+          {
+            "name": "Rule_Description",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
+            "value": "Rule for ac-1",
+            "remarks": "rule_set_2"
+          },
+          {
+            "name": "Rule_Id",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
+            "value": "rule-cc-1",
+            "remarks": "rule_set_3"
+          },
+          {
+            "name": "Rule_Description",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
+            "value": "Rule for cc-1",
+            "remarks": "rule_set_3"
+          },
+          {
+            "name": "Rule_Id",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
+            "value": "rule-sc-1",
+            "remarks": "rule_set_4"
+          },
+          {
+            "name": "Rule_Description",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
+            "value": "Rule for sc-1",
+            "remarks": "rule_set_4"
+          },
+          {
+            "name": "Rule_Id",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
+            "value": "rule-sc-2",
             "remarks": "rule_set_5"
           },
           {
             "name": "Rule_Description",
-            "ns": "https://ibm.github.io/compliance-trestle/schemas/oscal",
-            "value": "Rule for ac-2",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
+            "value": "Rule for sc-2",
             "remarks": "rule_set_5"
           },
           {
             "name": "Rule_Id",
-            "ns": "https://ibm.github.io/compliance-trestle/schemas/oscal",
-            "value": "rule-ac-2.1",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
+            "value": "rule-ac-4.4",
             "remarks": "rule_set_6"
           },
           {
             "name": "Rule_Description",
-            "ns": "https://ibm.github.io/compliance-trestle/schemas/oscal",
-            "value": "Rule for ac-2.1",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
+            "value": "Rule for ac-4.4",
             "remarks": "rule_set_6"
           }
         ],
         "control-implementations": [
           {
-            "uuid": "6d4ce7a1-a678-4e25-816e-2aa5ac16a61c",
+            "uuid": "a5f55585-8833-4d08-be80-e38cc87c8d43",
             "source": "trestle://profiles/ACME_level_1_profile/profile.json",
             "description": "ACME Inc. level 1 controls profile.",
             "implemented-requirements": [
               {
-                "uuid": "8b13b4b5-0553-4f9b-a587-9a7c4a0811b7",
-                "control-id": "ac-4.4",
-                "description": "",
-                "props": [
-                  {
-                    "name": "Rule_Id",
-                    "ns": "https://ibm.github.io/compliance-trestle/schemas/oscal",
-                    "value": "rule-ac-4.4"
-                  },
-                  {
-                    "name": "implementation-status",
-                    "value": "planned"
-                  }
-                ]
-              },
-              {
-                "uuid": "d181fe7b-6455-46ab-b1ce-ae304bea34a3",
-                "control-id": "cc-1",
-                "description": "",
-                "props": [
-                  {
-                    "name": "Rule_Id",
-                    "ns": "https://ibm.github.io/compliance-trestle/schemas/oscal",
-                    "value": "rule-cc-1"
-                  },
-                  {
-                    "name": "implementation-status",
-                    "value": "planned"
-                  }
-                ]
-              },
-              {
-                "uuid": "fe967d8d-bd73-475f-9edb-772ada6972fe",
-                "control-id": "sc-2",
-                "description": "",
-                "props": [
-                  {
-                    "name": "Rule_Id",
-                    "ns": "https://ibm.github.io/compliance-trestle/schemas/oscal",
-                    "value": "rule-sc-2"
-                  },
-                  {
-                    "name": "implementation-status",
-                    "value": "planned"
-                  }
-                ]
-              },
-              {
-                "uuid": "00707db0-35e7-45b2-a485-d42dc249be98",
-                "control-id": "sc-1",
-                "description": "",
-                "props": [
-                  {
-                    "name": "Rule_Id",
-                    "ns": "https://ibm.github.io/compliance-trestle/schemas/oscal",
-                    "value": "rule-sc-1"
-                  },
-                  {
-                    "name": "implementation-status",
-                    "value": "planned"
-                  }
-                ]
-              },
-              {
-                "uuid": "d46202df-f338-4a1c-b5e1-cb0aafcd13c3",
-                "control-id": "ac-1",
-                "description": "",
-                "props": [
-                  {
-                    "name": "Rule_Id",
-                    "ns": "https://ibm.github.io/compliance-trestle/schemas/oscal",
-                    "value": "rule-ac-1"
-                  },
-                  {
-                    "name": "implementation-status",
-                    "value": "planned"
-                  }
-                ]
-              },
-              {
-                "uuid": "9d107d40-213c-4a04-ae9a-303637b9f69c",
+                "uuid": "039d9baa-05ae-43f2-8651-a7249f19b292",
                 "control-id": "ac-2",
                 "description": "",
                 "props": [
                   {
                     "name": "Rule_Id",
-                    "ns": "https://ibm.github.io/compliance-trestle/schemas/oscal",
+                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
                     "value": "rule-ac-2"
-                  },
-                  {
-                    "name": "implementation-status",
-                    "value": "planned"
                   }
                 ]
               },
               {
-                "uuid": "7a286991-f2dd-4797-b8e6-a13ea975c7ed",
+                "uuid": "dc9fffbf-7652-482f-b7f6-8ebd9df482d1",
                 "control-id": "ac-2.1",
                 "description": "",
                 "props": [
                   {
                     "name": "Rule_Id",
-                    "ns": "https://ibm.github.io/compliance-trestle/schemas/oscal",
+                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
                     "value": "rule-ac-2.1"
-                  },
+                  }
+                ]
+              },
+              {
+                "uuid": "16d0cf2c-1805-4b02-b675-8b6acd3b1159",
+                "control-id": "ac-1",
+                "description": "",
+                "props": [
                   {
-                    "name": "implementation-status",
-                    "value": "planned"
+                    "name": "Rule_Id",
+                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
+                    "value": "rule-ac-1"
+                  }
+                ]
+              },
+              {
+                "uuid": "1cdfc79f-fec5-4194-af55-73d738441458",
+                "control-id": "cc-1",
+                "description": "",
+                "props": [
+                  {
+                    "name": "Rule_Id",
+                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
+                    "value": "rule-cc-1"
+                  }
+                ]
+              },
+              {
+                "uuid": "55077060-9e46-4531-9b58-a947f694401e",
+                "control-id": "sc-1",
+                "description": "",
+                "props": [
+                  {
+                    "name": "Rule_Id",
+                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
+                    "value": "rule-sc-1"
+                  }
+                ]
+              },
+              {
+                "uuid": "e5b2c673-289e-48f3-814d-cc4d7b0546a4",
+                "control-id": "sc-2",
+                "description": "",
+                "props": [
+                  {
+                    "name": "Rule_Id",
+                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
+                    "value": "rule-sc-2"
+                  }
+                ]
+              },
+              {
+                "uuid": "dc014bf9-23d8-4822-8ff2-942a1421ff27",
+                "control-id": "ac-4.4",
+                "description": "",
+                "props": [
+                  {
+                    "name": "Rule_Id",
+                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
+                    "value": "rule-ac-4.4"
                   }
                 ]
               }
