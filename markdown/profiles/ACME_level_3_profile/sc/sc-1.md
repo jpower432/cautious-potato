@@ -1,14 +1,30 @@
 ---
 x-trestle-set-params:
-  # You may set values for parameters in the assembled Profile by adding
+    # This section contains the parameters that are part of this control.
+  # Each parameter has properties. Only the profile-values and display-name properties are editable.
+  # The other properties are informational.
   #
-  # profile-values:
-  #   - value 1
-  #   - value 2
+  # The values property for a parameter represents values inherited from the OSCAL catalog.
+  # To override the catalog settings, use bullets under profile-values as shown below:
   #
-  # below a section of values:
-  # The values list refers to the values in the catalog, and the profile-values represent values
-  # in SetParameters of the Profile.
+  #   profile-values:
+  #     - value 1
+  #     - value 2
+  #
+  # If the "- <REPLACE_ME>" placeholder appears under profile-values, it is the same as if
+  # the profile-values property were left empty.
+  #
+  # Some parameters may show an aggregates property which lists other parameters. This means
+  # the parameter value is made up of the values from the other parameters. For parameters
+  # that aggregate, profile-values is not applicable.
+  #
+  # Property param-value-origin is meant for putting the origin from where that parameter comes from.
+  # In order to be changed in the current profile, profile-param-value-origin property will be displayed with
+  # the placeholder "<REPLACE_ME>" for you to be replaced. If a parameter already has a param-value-origin
+  # coming from an inherited profile, do no change this value, instead use profile-param-value-origin as follows:
+  #
+  #    param-value-origin: DO NOT REPLACE - this is the original value
+  #    profile-param-value-origin: <REPLACE_ME> - replace the new value required HERE
   #
   sc-1_prm_1:
     values:
@@ -24,6 +40,44 @@ x-trestle-set-params:
     values:
   sc-1_prm_7:
     values:
+  sc-01_odp.01:
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
+  sc-01_odp.02:
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
+  sc-01_odp.03:
+    alt-identifier: sc-1_prm_2
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
+  sc-01_odp.04:
+    alt-identifier: sc-1_prm_3
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
+  sc-01_odp.05:
+    alt-identifier: sc-1_prm_4
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
+  sc-01_odp.06:
+    alt-identifier: sc-1_prm_5
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
+  sc-01_odp.07:
+    alt-identifier: sc-1_prm_6
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
+  sc-01_odp.08:
+    alt-identifier: sc-1_prm_7
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
 x-trestle-global:
   profile:
     title: ACME_level_3_profile.
@@ -36,19 +90,55 @@ x-trestle-global:
 
 - \[a.\] Develop, document, and disseminate to {{ insert: param, sc-1_prm_1 }}:
 
-  - \[1.\] {{ insert: param, sc-1_prm_2 }} system and communications protection policy that:
+  - \[1.\] {{ insert: param, sc-01_odp.03 }} system and communications protection policy that:
 
     - \[(a)\] Addresses purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance; and
     - \[(b)\] Is consistent with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines; and
 
   - \[2.\] Procedures to facilitate the implementation of the system and communications protection policy and the associated system and communications protection controls;
 
-- \[b.\] Designate an {{ insert: param, sc-1_prm_3 }} to manage the development, documentation, and dissemination of the system and communications protection policy and procedures; and
+- \[b.\] Designate an {{ insert: param, sc-01_odp.04 }} to manage the development, documentation, and dissemination of the system and communications protection policy and procedures; and
 
 - \[c.\] Review and update the current system and communications protection:
 
-  - \[1.\] Policy {{ insert: param, sc-1_prm_4 }} and following {{ insert: param, sc-1_prm_5 }}; and
-  - \[2.\] Procedures {{ insert: param, sc-1_prm_6 }} and following {{ insert: param, sc-1_prm_7 }}.
+  - \[1.\] Policy {{ insert: param, sc-01_odp.05 }} and following {{ insert: param, sc-01_odp.06 }} ; and
+  - \[2.\] Procedures {{ insert: param, sc-01_odp.07 }} and following {{ insert: param, sc-01_odp.08 }}.
+
+## Control Assessment Objective
+
+- \[SC-01a.\]
+
+  - \[SC-01a.[01]\] a system and communications protection policy is developed and documented;
+  - \[SC-01a.[02]\] the system and communications protection policy is disseminated to {{ insert: param, sc-01_odp.01 }};
+  - \[SC-01a.[03]\] system and communications protection procedures to facilitate the implementation of the system and communications protection policy and associated system and communications protection controls are developed and documented;
+  - \[SC-01a.[04]\] the system and communications protection procedures are disseminated to {{ insert: param, sc-01_odp.02 }};
+  - \[SC-01a.01\]
+
+    - \[SC-01a.01(a)\]
+
+      - \[SC-01a.01(a)[01]\] the {{ insert: param, sc-01_odp.03 }} system and communications protection policy addresses purpose;
+      - \[SC-01a.01(a)[02]\] the {{ insert: param, sc-01_odp.03 }} system and communications protection policy addresses scope;
+      - \[SC-01a.01(a)[03]\] the {{ insert: param, sc-01_odp.03 }} system and communications protection policy addresses roles;
+      - \[SC-01a.01(a)[04]\] the {{ insert: param, sc-01_odp.03 }} system and communications protection policy addresses responsibilities;
+      - \[SC-01a.01(a)[05]\] the {{ insert: param, sc-01_odp.03 }} system and communications protection policy addresses management commitment;
+      - \[SC-01a.01(a)[06]\] the {{ insert: param, sc-01_odp.03 }} system and communications protection policy addresses coordination among organizational entities;
+      - \[SC-01a.01(a)[07]\] the {{ insert: param, sc-01_odp.03 }} system and communications protection policy addresses compliance;
+
+    - \[SC-01a.01(b)\] the {{ insert: param, sc-01_odp.03 }} system and communications protection policy is consistent with applicable laws, Executive Orders, directives, regulations, policies, standards, and guidelines;
+
+- \[SC-01b.\] the {{ insert: param, sc-01_odp.04 }} is designated to manage the development, documentation, and dissemination of the system and communications protection policy and procedures;
+
+- \[SC-01c.\]
+
+  - \[SC-01c.01\]
+
+    - \[SC-01c.01[01]\] the current system and communications protection policy is reviewed and updated {{ insert: param, sc-01_odp.05 }};
+    - \[SC-01c.01[02]\] the current system and communications protection policy is reviewed and updated following {{ insert: param, sc-01_odp.06 }};
+
+  - \[SC-01c.02\]
+
+    - \[SC-01c.02[01]\] the current system and communications protection procedures are reviewed and updated {{ insert: param, sc-01_odp.07 }};
+    - \[SC-01c.02[02]\] the current system and communications protection procedures are reviewed and updated following {{ insert: param, sc-01_odp.08 }}.
 
 ## Control guidance
 
@@ -69,4 +159,4 @@ System and communications protection policy and procedures address the controls 
 <!-- "## Part" parts are new parts added into the top-level statement part with that label. -->
 <!-- Subparts may be added with nested hash levels of the form ### My Subpart Name -->
 <!-- underneath the parent ## Control or ## Part being added -->
-<!-- See https://ibm.github.io/compliance-trestle/tutorials/ssp_profile_catalog_authoring/ssp_profile_catalog_authoring for guidance. -->
+<!-- See https://oscal-compass.github.io/compliance-trestle/tutorials/ssp_profile_catalog_authoring/ssp_profile_catalog_authoring for guidance. -->

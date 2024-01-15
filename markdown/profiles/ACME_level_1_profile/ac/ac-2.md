@@ -1,14 +1,30 @@
 ---
 x-trestle-set-params:
-  # You may set values for parameters in the assembled Profile by adding
+    # This section contains the parameters that are part of this control.
+  # Each parameter has properties. Only the profile-values and display-name properties are editable.
+  # The other properties are informational.
   #
-  # profile-values:
-  #   - value 1
-  #   - value 2
+  # The values property for a parameter represents values inherited from the OSCAL catalog.
+  # To override the catalog settings, use bullets under profile-values as shown below:
   #
-  # below a section of values:
-  # The values list refers to the values in the catalog, and the profile-values represent values
-  # in SetParameters of the Profile.
+  #   profile-values:
+  #     - value 1
+  #     - value 2
+  #
+  # If the "- <REPLACE_ME>" placeholder appears under profile-values, it is the same as if
+  # the profile-values property were left empty.
+  #
+  # Some parameters may show an aggregates property which lists other parameters. This means
+  # the parameter value is made up of the values from the other parameters. For parameters
+  # that aggregate, profile-values is not applicable.
+  #
+  # Property param-value-origin is meant for putting the origin from where that parameter comes from.
+  # In order to be changed in the current profile, profile-param-value-origin property will be displayed with
+  # the placeholder "<REPLACE_ME>" for you to be replaced. If a parameter already has a param-value-origin
+  # coming from an inherited profile, do no change this value, instead use profile-param-value-origin as follows:
+  #
+  #    param-value-origin: DO NOT REPLACE - this is the original value
+  #    profile-param-value-origin: <REPLACE_ME> - replace the new value required HERE
   #
   ac-2_prm_1:
     values:
@@ -30,6 +46,56 @@ x-trestle-set-params:
     values:
   ac-2_prm_10:
     values:
+  ac-02_odp.01:
+    alt-identifier: ac-2_prm_1
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
+  ac-02_odp.02:
+    alt-identifier: ac-2_prm_2
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
+  ac-02_odp.03:
+    alt-identifier: ac-2_prm_3
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
+  ac-02_odp.04:
+    alt-identifier: ac-2_prm_4
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
+  ac-02_odp.05:
+    alt-identifier: ac-2_prm_5
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
+  ac-02_odp.06:
+    alt-identifier: ac-2_prm_6
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
+  ac-02_odp.07:
+    alt-identifier: ac-2_prm_7
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
+  ac-02_odp.08:
+    alt-identifier: ac-2_prm_8
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
+  ac-02_odp.09:
+    alt-identifier: ac-2_prm_9
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
+  ac-02_odp.10:
+    alt-identifier: ac-2_prm_10
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
 x-trestle-global:
   profile:
     title: ACME Inc. level 1 controls profile.
@@ -44,37 +110,93 @@ x-trestle-global:
 
 - \[b.\] Assign account managers;
 
-- \[c.\] Require {{ insert: param, ac-2_prm_1 }} for group and role membership;
+- \[c.\] Require {{ insert: param, ac-02_odp.01 }} for group and role membership;
 
 - \[d.\] Specify:
 
   - \[1.\] Authorized users of the system;
   - \[2.\] Group and role membership; and
-  - \[3.\] Access authorizations (i.e., privileges) and {{ insert: param, ac-2_prm_2 }} for each account;
+  - \[3.\] Access authorizations (i.e., privileges) and {{ insert: param, ac-02_odp.02 }} for each account;
 
-- \[e.\] Require approvals by {{ insert: param, ac-2_prm_3 }} for requests to create accounts;
+- \[e.\] Require approvals by {{ insert: param, ac-02_odp.03 }} for requests to create accounts;
 
-- \[f.\] Create, enable, modify, disable, and remove accounts in accordance with {{ insert: param, ac-2_prm_4 }};
+- \[f.\] Create, enable, modify, disable, and remove accounts in accordance with {{ insert: param, ac-02_odp.04 }};
 
 - \[g.\] Monitor the use of accounts;
 
-- \[h.\] Notify account managers and {{ insert: param, ac-2_prm_5 }} within:
+- \[h.\] Notify account managers and {{ insert: param, ac-02_odp.05 }} within:
 
-  - \[1.\] {{ insert: param, ac-2_prm_6 }} when accounts are no longer required;
-  - \[2.\] {{ insert: param, ac-2_prm_7 }} when users are terminated or transferred; and
-  - \[3.\] {{ insert: param, ac-2_prm_8 }} when system usage or need-to-know changes for an individual;
+  - \[1.\] {{ insert: param, ac-02_odp.06 }} when accounts are no longer required;
+  - \[2.\] {{ insert: param, ac-02_odp.07 }} when users are terminated or transferred; and
+  - \[3.\] {{ insert: param, ac-02_odp.08 }} when system usage or need-to-know changes for an individual;
 
 - \[i.\] Authorize access to the system based on:
 
   - \[1.\] A valid access authorization;
   - \[2.\] Intended system usage; and
-  - \[3.\] {{ insert: param, ac-2_prm_9 }};
+  - \[3.\] {{ insert: param, ac-02_odp.09 }};
 
-- \[j.\] Review accounts for compliance with account management requirements {{ insert: param, ac-2_prm_10 }};
+- \[j.\] Review accounts for compliance with account management requirements {{ insert: param, ac-02_odp.10 }};
 
 - \[k.\] Establish and implement a process for changing shared or group account authenticators (if deployed) when individuals are removed from the group; and
 
 - \[l.\] Align account management processes with personnel termination and transfer processes.
+
+## Control Assessment Objective
+
+- \[AC-02a.\]
+
+  - \[AC-02a.[01]\] account types allowed for use within the system are defined and documented;
+  - \[AC-02a.[02]\] account types specifically prohibited for use within the system are defined and documented;
+
+- \[AC-02b.\] account managers are assigned;
+
+- \[AC-02c.\] {{ insert: param, ac-02_odp.01 }} for group and role membership are required;
+
+- \[AC-02d.\]
+
+  - \[AC-02d.01\] authorized users of the system are specified;
+  - \[AC-02d.02\] group and role membership are specified;
+  - \[AC-02d.03\]
+
+    - \[AC-02d.03[01]\] access authorizations (i.e., privileges) are specified for each account;
+    - \[AC-02d.03[02]\] {{ insert: param, ac-02_odp.02 }} are specified for each account;
+
+- \[AC-02e.\] approvals are required by {{ insert: param, ac-02_odp.03 }} for requests to create accounts;
+
+- \[AC-02f.\]
+
+  - \[AC-02f.[01]\] accounts are created in accordance with {{ insert: param, ac-02_odp.04 }};
+  - \[AC-02f.[02]\] accounts are enabled in accordance with {{ insert: param, ac-02_odp.04 }};
+  - \[AC-02f.[03]\] accounts are modified in accordance with {{ insert: param, ac-02_odp.04 }};
+  - \[AC-02f.[04]\] accounts are disabled in accordance with {{ insert: param, ac-02_odp.04 }};
+  - \[AC-02f.[05]\] accounts are removed in accordance with {{ insert: param, ac-02_odp.04 }};
+
+- \[AC-02g.\] the use of accounts is monitored; 
+
+- \[AC-02h.\]
+
+  - \[AC-02h.01\] account managers and {{ insert: param, ac-02_odp.05 }} are notified within {{ insert: param, ac-02_odp.06 }} when accounts are no longer required;
+  - \[AC-02h.02\] account managers and {{ insert: param, ac-02_odp.05 }} are notified within {{ insert: param, ac-02_odp.07 }} when users are terminated or transferred;
+  - \[AC-02h.03\] account managers and {{ insert: param, ac-02_odp.05 }} are notified within {{ insert: param, ac-02_odp.08 }} when system usage or the need to know changes for an individual;
+
+- \[AC-02i.\]
+
+  - \[AC-02i.01\] access to the system is authorized based on a valid access authorization;
+  - \[AC-02i.02\] access to the system is authorized based on intended system usage;
+  - \[AC-02i.03\] access to the system is authorized based on {{ insert: param, ac-02_odp.09 }};
+
+- \[AC-02j.\] accounts are reviewed for compliance with account management requirements {{ insert: param, ac-02_odp.10 }};
+
+- \[AC-02k.\]
+
+  - \[AC-02k.[01]\] a process is established for changing shared or group account authenticators (if deployed) when individuals are removed from the group;
+  - \[AC-02k.[02]\] a process is implemented for changing shared or group account authenticators (if deployed) when individuals are removed from the group;
+
+- \[AC-02l.\]
+
+  - \[AC-02l.[01]\] account management processes are aligned with personnel termination processes;
+  - \[AC-02l.[02]\] account management processes are aligned with personnel transfer processes.
 
 ## Control guidance
 
@@ -99,4 +221,4 @@ Temporary and emergency accounts are intended for short-term use. Organizations 
 <!-- "## Part" parts are new parts added into the top-level statement part with that label. -->
 <!-- Subparts may be added with nested hash levels of the form ### My Subpart Name -->
 <!-- underneath the parent ## Control or ## Part being added -->
-<!-- See https://ibm.github.io/compliance-trestle/tutorials/ssp_profile_catalog_authoring/ssp_profile_catalog_authoring for guidance. -->
+<!-- See https://oscal-compass.github.io/compliance-trestle/tutorials/ssp_profile_catalog_authoring/ssp_profile_catalog_authoring for guidance. -->

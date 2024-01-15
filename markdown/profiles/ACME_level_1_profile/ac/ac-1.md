@@ -1,14 +1,30 @@
 ---
 x-trestle-set-params:
-  # You may set values for parameters in the assembled Profile by adding
+    # This section contains the parameters that are part of this control.
+  # Each parameter has properties. Only the profile-values and display-name properties are editable.
+  # The other properties are informational.
   #
-  # profile-values:
-  #   - value 1
-  #   - value 2
+  # The values property for a parameter represents values inherited from the OSCAL catalog.
+  # To override the catalog settings, use bullets under profile-values as shown below:
   #
-  # below a section of values:
-  # The values list refers to the values in the catalog, and the profile-values represent values
-  # in SetParameters of the Profile.
+  #   profile-values:
+  #     - value 1
+  #     - value 2
+  #
+  # If the "- <REPLACE_ME>" placeholder appears under profile-values, it is the same as if
+  # the profile-values property were left empty.
+  #
+  # Some parameters may show an aggregates property which lists other parameters. This means
+  # the parameter value is made up of the values from the other parameters. For parameters
+  # that aggregate, profile-values is not applicable.
+  #
+  # Property param-value-origin is meant for putting the origin from where that parameter comes from.
+  # In order to be changed in the current profile, profile-param-value-origin property will be displayed with
+  # the placeholder "<REPLACE_ME>" for you to be replaced. If a parameter already has a param-value-origin
+  # coming from an inherited profile, do no change this value, instead use profile-param-value-origin as follows:
+  #
+  #    param-value-origin: DO NOT REPLACE - this is the original value
+  #    profile-param-value-origin: <REPLACE_ME> - replace the new value required HERE
   #
   ac-1_prm_1:
     values:
@@ -24,6 +40,44 @@ x-trestle-set-params:
     values:
   ac-1_prm_7:
     values:
+  ac-01_odp.01:
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
+  ac-01_odp.02:
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
+  ac-01_odp.03:
+    alt-identifier: ac-1_prm_2
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
+  ac-01_odp.04:
+    alt-identifier: ac-1_prm_3
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
+  ac-01_odp.05:
+    alt-identifier: ac-1_prm_4
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
+  ac-01_odp.06:
+    alt-identifier: ac-1_prm_5
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
+  ac-01_odp.07:
+    alt-identifier: ac-1_prm_6
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
+  ac-01_odp.08:
+    alt-identifier: ac-1_prm_7
+    profile-values:
+      - <REPLACE_ME>
+    profile-param-value-origin: <REPLACE_ME>
 x-trestle-global:
   profile:
     title: ACME Inc. level 1 controls profile.
@@ -36,19 +90,55 @@ x-trestle-global:
 
 - \[a.\] Develop, document, and disseminate to {{ insert: param, ac-1_prm_1 }}:
 
-  - \[1.\] {{ insert: param, ac-1_prm_2 }} access control policy that:
+  - \[1.\] {{ insert: param, ac-01_odp.03 }} access control policy that:
 
     - \[(a)\] Addresses purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance; and
     - \[(b)\] Is consistent with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines; and
 
   - \[2.\] Procedures to facilitate the implementation of the access control policy and the associated access controls;
 
-- \[b.\] Designate an {{ insert: param, ac-1_prm_3 }} to manage the development, documentation, and dissemination of the access control policy and procedures; and
+- \[b.\] Designate an {{ insert: param, ac-01_odp.04 }} to manage the development, documentation, and dissemination of the access control policy and procedures; and
 
 - \[c.\] Review and update the current access control:
 
-  - \[1.\] Policy {{ insert: param, ac-1_prm_4 }} and following {{ insert: param, ac-1_prm_5 }}; and
-  - \[2.\] Procedures {{ insert: param, ac-1_prm_6 }} and following {{ insert: param, ac-1_prm_7 }}.
+  - \[1.\] Policy {{ insert: param, ac-01_odp.05 }} and following {{ insert: param, ac-01_odp.06 }} ; and
+  - \[2.\] Procedures {{ insert: param, ac-01_odp.07 }} and following {{ insert: param, ac-01_odp.08 }}.
+
+## Control Assessment Objective
+
+- \[AC-01a.\]
+
+  - \[AC-01a.[01]\] an access control policy is developed and documented;
+  - \[AC-01a.[02]\] the access control policy is disseminated to {{ insert: param, ac-01_odp.01 }};
+  - \[AC-01a.[03]\] access control procedures to facilitate the implementation of the access control policy and associated controls are developed and documented;
+  - \[AC-01a.[04]\] the access control procedures are disseminated to {{ insert: param, ac-01_odp.02 }};
+  - \[AC-01a.01\]
+
+    - \[AC-01a.01(a)\]
+
+      - \[AC-01a.01(a)[01]\] the {{ insert: param, ac-01_odp.03 }} access control policy addresses purpose;
+      - \[AC-01a.01(a)[02]\] the {{ insert: param, ac-01_odp.03 }} access control policy addresses scope;
+      - \[AC-01a.01(a)[03]\] the {{ insert: param, ac-01_odp.03 }} access control policy addresses roles;
+      - \[AC-01a.01(a)[04]\] the {{ insert: param, ac-01_odp.03 }} access control policy addresses responsibilities;
+      - \[AC-01a.01(a)[05]\] the {{ insert: param, ac-01_odp.03 }} access control policy addresses management commitment;
+      - \[AC-01a.01(a)[06]\] the {{ insert: param, ac-01_odp.03 }} access control policy addresses coordination among organizational entities;
+      - \[AC-01a.01(a)[07]\] the {{ insert: param, ac-01_odp.03 }} access control policy addresses compliance;
+
+    - \[AC-01a.01(b)\] the {{ insert: param, ac-01_odp.03 }} access control policy is consistent with applicable laws, Executive Orders, directives, regulations, policies, standards, and guidelines;
+
+- \[AC-01b.\] the {{ insert: param, ac-01_odp.04 }} is designated to manage the development, documentation, and dissemination of the access control policy and procedures;
+
+- \[AC-01c.\]
+
+  - \[AC-01c.01\]
+
+    - \[AC-01c.01[01]\] the current access control policy is reviewed and updated {{ insert: param, ac-01_odp.05 }};
+    - \[AC-01c.01[02]\] the current access control policy is reviewed and updated following {{ insert: param, ac-01_odp.06 }};
+
+  - \[AC-01c.02\]
+
+    - \[AC-01c.02[01]\] the current access control procedures are reviewed and updated {{ insert: param, ac-01_odp.07 }};
+    - \[AC-01c.02[02]\] the current access control procedures are reviewed and updated following {{ insert: param, ac-01_odp.08 }}.
 
 ## Control guidance
 
@@ -69,4 +159,4 @@ Access control policy and procedures address the controls in the AC family that 
 <!-- "## Part" parts are new parts added into the top-level statement part with that label. -->
 <!-- Subparts may be added with nested hash levels of the form ### My Subpart Name -->
 <!-- underneath the parent ## Control or ## Part being added -->
-<!-- See https://ibm.github.io/compliance-trestle/tutorials/ssp_profile_catalog_authoring/ssp_profile_catalog_authoring for guidance. -->
+<!-- See https://oscal-compass.github.io/compliance-trestle/tutorials/ssp_profile_catalog_authoring/ssp_profile_catalog_authoring for guidance. -->
