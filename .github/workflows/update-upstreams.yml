@@ -14,9 +14,11 @@ jobs:
     - uses: actions/checkout@v4
     - name: Run trestlebot
       id: trestlebot
-      uses: RedHatProductSecurity/trestle-bot/actions/sync-upstreams@PSCE-309
+      uses: jpower432/trestle-bot/actions/sync-upstreams@main
       with:
         branch: "sync-upstream-${{ github.run_id }}"
         target_branch: "main"
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        sources: https://github.com/RedHatProductSecurity/oscal-profiles@main,https://github.com/RedHatProductSecurity/oscal-component-definitions@main
+        sources: |
+          https://github.com/RedHatProductSecurity/oscal-profiles@main
+          https://github.com/RedHatProductSecurity/oscal-component-definitions@main
