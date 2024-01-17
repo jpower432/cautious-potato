@@ -19,7 +19,7 @@ jobs:
           ref: ${{ github.head_ref }}
       - name: Assemble
         id: assemble
-        uses: RedHatProductSecurity/trestle-bot/actions/autosync@PSCE-309
+        uses: RedHatProductSecurity/trestle-bot/actions/autosync@main
         with:
           markdown_path: "markdown/components"
           oscal_model: "compdef"
