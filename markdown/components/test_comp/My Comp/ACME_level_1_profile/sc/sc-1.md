@@ -11,6 +11,14 @@ x-trestle-param-values:
   sc-1_prm_5:
   sc-1_prm_6:
   sc-1_prm_7:
+  sc-01_odp.01:
+  sc-01_odp.02:
+  sc-01_odp.03:
+  sc-01_odp.04:
+  sc-01_odp.05:
+  sc-01_odp.06:
+  sc-01_odp.07:
+  sc-01_odp.08:
 x-trestle-global:
   profile:
     title: ACME Inc. level 1 controls profile.
@@ -24,19 +32,55 @@ x-trestle-global:
 
 - \[a.\] Develop, document, and disseminate to {{ insert: param, sc-1_prm_1 }}:
 
-  - \[1.\] {{ insert: param, sc-1_prm_2 }} system and communications protection policy that:
+  - \[1.\] {{ insert: param, sc-01_odp.03 }} system and communications protection policy that:
 
     - \[(a)\] Addresses purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance; and
     - \[(b)\] Is consistent with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines; and
 
   - \[2.\] Procedures to facilitate the implementation of the system and communications protection policy and the associated system and communications protection controls;
 
-- \[b.\] Designate an {{ insert: param, sc-1_prm_3 }} to manage the development, documentation, and dissemination of the system and communications protection policy and procedures; and
+- \[b.\] Designate an {{ insert: param, sc-01_odp.04 }} to manage the development, documentation, and dissemination of the system and communications protection policy and procedures; and
 
 - \[c.\] Review and update the current system and communications protection:
 
-  - \[1.\] Policy {{ insert: param, sc-1_prm_4 }} and following {{ insert: param, sc-1_prm_5 }}; and
-  - \[2.\] Procedures {{ insert: param, sc-1_prm_6 }} and following {{ insert: param, sc-1_prm_7 }}.
+  - \[1.\] Policy {{ insert: param, sc-01_odp.05 }} and following {{ insert: param, sc-01_odp.06 }} ; and
+  - \[2.\] Procedures {{ insert: param, sc-01_odp.07 }} and following {{ insert: param, sc-01_odp.08 }}.
+
+## Control Assessment Objective
+
+- \[SC-01a.\]
+
+  - \[SC-01a.[01]\] a system and communications protection policy is developed and documented;
+  - \[SC-01a.[02]\] the system and communications protection policy is disseminated to {{ insert: param, sc-01_odp.01 }};
+  - \[SC-01a.[03]\] system and communications protection procedures to facilitate the implementation of the system and communications protection policy and associated system and communications protection controls are developed and documented;
+  - \[SC-01a.[04]\] the system and communications protection procedures are disseminated to {{ insert: param, sc-01_odp.02 }};
+  - \[SC-01a.01\]
+
+    - \[SC-01a.01(a)\]
+
+      - \[SC-01a.01(a)[01]\] the {{ insert: param, sc-01_odp.03 }} system and communications protection policy addresses purpose;
+      - \[SC-01a.01(a)[02]\] the {{ insert: param, sc-01_odp.03 }} system and communications protection policy addresses scope;
+      - \[SC-01a.01(a)[03]\] the {{ insert: param, sc-01_odp.03 }} system and communications protection policy addresses roles;
+      - \[SC-01a.01(a)[04]\] the {{ insert: param, sc-01_odp.03 }} system and communications protection policy addresses responsibilities;
+      - \[SC-01a.01(a)[05]\] the {{ insert: param, sc-01_odp.03 }} system and communications protection policy addresses management commitment;
+      - \[SC-01a.01(a)[06]\] the {{ insert: param, sc-01_odp.03 }} system and communications protection policy addresses coordination among organizational entities;
+      - \[SC-01a.01(a)[07]\] the {{ insert: param, sc-01_odp.03 }} system and communications protection policy addresses compliance;
+
+    - \[SC-01a.01(b)\] the {{ insert: param, sc-01_odp.03 }} system and communications protection policy is consistent with applicable laws, Executive Orders, directives, regulations, policies, standards, and guidelines;
+
+- \[SC-01b.\] the {{ insert: param, sc-01_odp.04 }} is designated to manage the development, documentation, and dissemination of the system and communications protection policy and procedures;
+
+- \[SC-01c.\]
+
+  - \[SC-01c.01\]
+
+    - \[SC-01c.01[01]\] the current system and communications protection policy is reviewed and updated {{ insert: param, sc-01_odp.05 }};
+    - \[SC-01c.01[02]\] the current system and communications protection policy is reviewed and updated following {{ insert: param, sc-01_odp.06 }};
+
+  - \[SC-01c.02\]
+
+    - \[SC-01c.02[01]\] the current system and communications protection procedures are reviewed and updated {{ insert: param, sc-01_odp.07 }};
+    - \[SC-01c.02[02]\] the current system and communications protection procedures are reviewed and updated following {{ insert: param, sc-01_odp.08 }}.
 
 ## Control guidance
 
