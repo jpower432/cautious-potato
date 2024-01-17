@@ -1,15 +1,15 @@
 {
   "component-definition": {
-    "uuid": "d0581586-60dc-4389-91c4-006e361f3285",
+    "uuid": "2346c924-f7e7-43ee-84d5-128a7737b25b",
     "metadata": {
       "title": "Component definition for test_comp",
-      "last-modified": "2024-01-17T16:43:03+00:00",
+      "last-modified": "2024-01-17T16:48:40+00:00",
       "version": "1.0",
       "oscal-version": "1.0.4"
     },
     "components": [
       {
-        "uuid": "df6d1529-0f53-4e36-bc31-f237ab06db2e",
+        "uuid": "83522922-17ab-417f-9a57-6b50fde15bab",
         "type": "service",
         "title": "My Comp",
         "description": "My testing comp",
@@ -47,7 +47,7 @@
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
-            "value": "Rule for ac-1",
+            "value": "Rule for ac-1 extra",
             "remarks": "rule_set_2"
           },
           {
@@ -101,12 +101,12 @@
         ],
         "control-implementations": [
           {
-            "uuid": "36f7bdf4-b588-4721-9133-8d1a2190ad21",
+            "uuid": "f9c3c78a-6078-4aca-8609-21f5ec392116",
             "source": "trestle://profiles/ACME_level_1_profile/profile.json",
             "description": "ACME Inc. level 1 controls profile.",
             "implemented-requirements": [
               {
-                "uuid": "ef89c081-baf5-4c92-a2fb-a11cc547bf88",
+                "uuid": "d10a5551-b662-43b0-9edd-75cf5521d768",
                 "control-id": "ac-2",
                 "description": "",
                 "props": [
@@ -118,7 +118,7 @@
                 ]
               },
               {
-                "uuid": "48401d74-a9bd-44aa-929f-94b0f52f9baf",
+                "uuid": "1dc79e3a-cd21-4273-9702-79d8bedad064",
                 "control-id": "ac-2.1",
                 "description": "",
                 "props": [
@@ -130,7 +130,7 @@
                 ]
               },
               {
-                "uuid": "56b6c471-3e83-4719-bd22-94987cf1e423",
+                "uuid": "cd6038b0-226d-49e9-9cb3-3cb7685e31d7",
                 "control-id": "ac-1",
                 "description": "",
                 "props": [
@@ -142,7 +142,7 @@
                 ]
               },
               {
-                "uuid": "0ae76fa1-1395-4614-84b2-d60ed628edc2",
+                "uuid": "266a1c1a-f70c-4111-b506-36c44849206f",
                 "control-id": "cc-1",
                 "description": "",
                 "props": [
@@ -154,7 +154,7 @@
                 ]
               },
               {
-                "uuid": "e5f13c1e-b9eb-4aad-a7a3-9c5b89b851c0",
+                "uuid": "2ef06026-e486-4114-99aa-b29dd80d1048",
                 "control-id": "sc-1",
                 "description": "",
                 "props": [
@@ -166,7 +166,7 @@
                 ]
               },
               {
-                "uuid": "20666e82-4518-486d-8794-da3ec0db9c19",
+                "uuid": "dee83c79-04c8-48ab-a1d8-de61fcb20693",
                 "control-id": "sc-2",
                 "description": "",
                 "props": [
@@ -178,7 +178,7 @@
                 ]
               },
               {
-                "uuid": "bcbb1128-5792-4f29-acbc-b2a1a89fdb5e",
+                "uuid": "ed9a8f14-aacd-4135-ba77-98cdf8c30d7e",
                 "control-id": "ac-4.4",
                 "description": "",
                 "props": [

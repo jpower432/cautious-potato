@@ -1,0 +1,104 @@
+{
+  "component-definition": {
+    "uuid": "87652088-b1c0-41e3-91e7-edb04fc2826c",
+    "metadata": {
+      "title": "Component definition for hello-world-custom",
+      "last-modified": "2024-01-17T16:48:40+00:00",
+      "version": "1.0",
+      "oscal-version": "1.0.4"
+    },
+    "components": [
+      {
+        "uuid": "c4216ffc-74b2-43a7-acf0-519147072905",
+        "type": "service",
+        "title": "Hello World",
+        "description": "My hello world application",
+        "props": [
+          {
+            "name": "Rule_Id",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
+            "value": "example_rule_2",
+            "remarks": "rule_set_0"
+          },
+          {
+            "name": "Rule_Description",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
+            "value": "My rule description for example rule 2 with no rule parameters",
+            "remarks": "rule_set_0"
+          },
+          {
+            "name": "Rule_Id",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
+            "value": "example_rule_1",
+            "remarks": "rule_set_1"
+          },
+          {
+            "name": "Rule_Description",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
+            "value": "My rule description for example rule 1",
+            "remarks": "rule_set_1"
+          },
+          {
+            "name": "Parameter_Id",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
+            "value": "prm_1",
+            "remarks": "rule_set_1"
+          },
+          {
+            "name": "Parameter_Description",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
+            "value": "prm_1 description",
+            "remarks": "rule_set_1"
+          },
+          {
+            "name": "Parameter_Value_Alternatives",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
+            "value": "{'default': '5%', '5pc': '5%', '10pc': '10%', '15pc': '15%', '20pc': '20%'}",
+            "remarks": "rule_set_1"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "3fcd0156-6e8f-4005-ba0c-f9ff6bcd6d8f",
+            "source": "profiles/ACME_internal_profile/profile.json",
+            "description": "My internal profile for testing",
+            "set-parameters": [
+              {
+                "param-id": "prm_1",
+                "values": [
+                  "5%"
+                ]
+              }
+            ],
+            "implemented-requirements": [
+              {
+                "uuid": "35addfe1-70b3-44c3-a256-69a5be2355a6",
+                "control-id": "ac-2",
+                "description": "",
+                "props": [
+                  {
+                    "name": "Rule_Id",
+                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
+                    "value": "example_rule_2"
+                  }
+                ]
+              },
+              {
+                "uuid": "86a87569-4fd0-40cd-be06-e687b0b62784",
+                "control-id": "ac-1",
+                "description": "",
+                "props": [
+                  {
+                    "name": "Rule_Id",
+                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
+                    "value": "example_rule_1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
