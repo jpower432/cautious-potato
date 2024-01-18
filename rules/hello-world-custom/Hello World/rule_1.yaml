@@ -1,6 +1,6 @@
 x-trestle-rule-info:
   name: example_rule_1
-  description: My rule description for example rule 1
+  description: My rule description for example rule 1 this description
   parameter:
     name: prm_1
     description: prm_1 description
