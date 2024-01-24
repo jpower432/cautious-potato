@@ -16,6 +16,6 @@ jobs:
           ref: ${{ github.head_ref }}
       - name: Transform rules
         id: transform
-        uses: RedHatProductSecurity/trestle-bot/actions/rules-transform@PSCE-309
+        uses: RedHatProductSecurity/trestle-bot/actions/rules-transform@main
         with:
           file_pattern: "*.json,rules/*"
