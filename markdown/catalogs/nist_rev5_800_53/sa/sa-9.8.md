@@ -3,7 +3,7 @@ x-trestle-global:
   sort-id: sa-09.08
 ---
 
-# sa-9.8 - \[System and Services Acquisition\] Processing and Storage Location — U.s. Jurisdiction
+# sa-9.8 - \[System and Services Acquisition\] Processing and Storage Location — U.S. Jurisdiction
 
 ## Control Statement
 

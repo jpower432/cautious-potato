@@ -3,7 +3,7 @@ x-trestle-global:
   sort-id: ia-02
 ---
 
-# ia-2 - \[Identification and Authentication\] Identification and Authentication (organizational Users)
+# ia-2 - \[Identification and Authentication\] Identification and Authentication (Organizational Users)
 
 ## Control Statement
 
