@@ -5,6 +5,9 @@ x-trestle-component-info:
 x-trestle-rule-info:
   description: Rule for ac-2.1
   name: rule-ac-2.1
+  check:
+    name: my_check
+    description: compliance checks rock
   profile:
     description: ACME Inc. level 1 controls profile.
     href: trestle://profiles/ACME_level_1_profile/profile.json
