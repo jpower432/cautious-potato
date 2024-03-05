@@ -1,15 +1,15 @@
 {
   "component-definition": {
-    "uuid": "397997b0-7b45-4518-be91-bcfcaada0a6f",
+    "uuid": "baa5c265-a826-45e0-9743-a2b4343575f2",
     "metadata": {
       "title": "Component definition for hello-world-custom",
-      "last-modified": "2024-03-05T14:57:01.757860+00:00",
+      "last-modified": "2024-03-05T15:00:49+00:00",
       "version": "1.0",
       "oscal-version": "1.0.4"
     },
     "components": [
       {
-        "uuid": "a951ee62-9895-4d61-b191-f8d638bc3e1b",
+        "uuid": "07482559-fedf-4c82-b7f5-734e21d76f89",
         "type": "service",
         "title": "Hello World",
         "description": "My hello world application",
@@ -59,7 +59,7 @@
         ],
         "control-implementations": [
           {
-            "uuid": "cf7e14a5-ee07-4f61-aa39-bee45096dd4b",
+            "uuid": "b273e0ae-7740-4b22-9eee-6f024e9a76e5",
             "source": "profiles/ACME_internal_profile/profile.json",
             "description": "My internal profile for testing",
             "set-parameters": [
@@ -72,7 +72,7 @@
             ],
             "implemented-requirements": [
               {
-                "uuid": "f57bcb19-3145-4883-9d23-cb4930ba04ac",
+                "uuid": "a869e41b-b8c0-48f5-81ba-0f304c5625c3",
                 "control-id": "ac-2",
                 "description": "",
                 "props": [
@@ -80,15 +80,11 @@
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
                     "value": "example_rule_2"
-                  },
-                  {
-                    "name": "implementation-status",
-                    "value": "planned"
                   }
                 ]
               },
               {
-                "uuid": "ba3af952-95cf-4ea1-9baa-23de3182166b",
+                "uuid": "723e96e4-04e5-43a7-9f28-53ac9e1d9735",
                 "control-id": "ac-1",
                 "description": "",
                 "props": [
@@ -96,10 +92,6 @@
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
                     "value": "example_rule_1"
-                  },
-                  {
-                    "name": "implementation-status",
-                    "value": "planned"
                   }
                 ]
               }
