@@ -3,7 +3,7 @@
     "uuid": "397997b0-7b45-4518-be91-bcfcaada0a6f",
     "metadata": {
       "title": "Component definition for hello-world-custom",
-      "last-modified": "2024-01-18T21:39:10+00:00",
+      "last-modified": "2024-03-05T14:57:01.757860+00:00",
       "version": "1.0",
       "oscal-version": "1.0.4"
     },
@@ -80,6 +80,10 @@
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
                     "value": "example_rule_2"
+                  },
+                  {
+                    "name": "implementation-status",
+                    "value": "planned"
                   }
                 ]
               },
@@ -92,6 +96,10 @@
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
                     "value": "example_rule_1"
+                  },
+                  {
+                    "name": "implementation-status",
+                    "value": "planned"
                   }
                 ]
               }
