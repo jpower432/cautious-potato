@@ -1,0 +1,12 @@
+x-trestle-component-info:
+  description: My testing comp 2
+  name: My Comp
+  type: service
+x-trestle-rule-info:
+  description: Rule for ac-4.4
+  name: rule-ac-4.4
+  profile:
+    description: ACME Inc. level 1 controls profile.
+    href: trestle://profiles/ACME_level_1_profile/profile.json
+    include-controls:
+    - id: ac-4.4
