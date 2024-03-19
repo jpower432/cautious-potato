@@ -5,6 +5,7 @@ x-trestle-comp-def-rules:
       description: Rule for ac-2.1
 x-trestle-param-values:
   ac-2.1_prm_1:
+  ac-02.01_odp:
 x-trestle-global:
   profile:
     title: ACME Inc. level 1 controls profile.
@@ -16,7 +17,11 @@ x-trestle-global:
 
 ## Control Statement
 
-Support the management of system accounts using {{ insert: param, ac-2.1_prm_1 }}.
+Support the management of system accounts using {{ insert: param, ac-02.01_odp }}.
+
+## Control Assessment Objective
+
+the management of system accounts is supported using {{ insert: param, ac-02.01_odp }}.
 
 ## Control guidance
 
