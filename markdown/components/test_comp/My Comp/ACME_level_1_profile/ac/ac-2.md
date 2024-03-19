@@ -14,6 +14,16 @@ x-trestle-param-values:
   ac-2_prm_8:
   ac-2_prm_9:
   ac-2_prm_10:
+  ac-02_odp.01:
+  ac-02_odp.02:
+  ac-02_odp.03:
+  ac-02_odp.04:
+  ac-02_odp.05:
+  ac-02_odp.06:
+  ac-02_odp.07:
+  ac-02_odp.08:
+  ac-02_odp.09:
+  ac-02_odp.10:
 x-trestle-global:
   profile:
     title: ACME Inc. level 1 controls profile.
@@ -29,37 +39,93 @@ x-trestle-global:
 
 - \[b.\] Assign account managers;
 
-- \[c.\] Require {{ insert: param, ac-2_prm_1 }} for group and role membership;
+- \[c.\] Require {{ insert: param, ac-02_odp.01 }} for group and role membership;
 
 - \[d.\] Specify:
 
   - \[1.\] Authorized users of the system;
   - \[2.\] Group and role membership; and
-  - \[3.\] Access authorizations (i.e., privileges) and {{ insert: param, ac-2_prm_2 }} for each account;
+  - \[3.\] Access authorizations (i.e., privileges) and {{ insert: param, ac-02_odp.02 }} for each account;
 
-- \[e.\] Require approvals by {{ insert: param, ac-2_prm_3 }} for requests to create accounts;
+- \[e.\] Require approvals by {{ insert: param, ac-02_odp.03 }} for requests to create accounts;
 
-- \[f.\] Create, enable, modify, disable, and remove accounts in accordance with {{ insert: param, ac-2_prm_4 }};
+- \[f.\] Create, enable, modify, disable, and remove accounts in accordance with {{ insert: param, ac-02_odp.04 }};
 
 - \[g.\] Monitor the use of accounts;
 
-- \[h.\] Notify account managers and {{ insert: param, ac-2_prm_5 }} within:
+- \[h.\] Notify account managers and {{ insert: param, ac-02_odp.05 }} within:
 
-  - \[1.\] {{ insert: param, ac-2_prm_6 }} when accounts are no longer required;
-  - \[2.\] {{ insert: param, ac-2_prm_7 }} when users are terminated or transferred; and
-  - \[3.\] {{ insert: param, ac-2_prm_8 }} when system usage or need-to-know changes for an individual;
+  - \[1.\] {{ insert: param, ac-02_odp.06 }} when accounts are no longer required;
+  - \[2.\] {{ insert: param, ac-02_odp.07 }} when users are terminated or transferred; and
+  - \[3.\] {{ insert: param, ac-02_odp.08 }} when system usage or need-to-know changes for an individual;
 
 - \[i.\] Authorize access to the system based on:
 
   - \[1.\] A valid access authorization;
   - \[2.\] Intended system usage; and
-  - \[3.\] {{ insert: param, ac-2_prm_9 }};
+  - \[3.\] {{ insert: param, ac-02_odp.09 }};
 
-- \[j.\] Review accounts for compliance with account management requirements {{ insert: param, ac-2_prm_10 }};
+- \[j.\] Review accounts for compliance with account management requirements {{ insert: param, ac-02_odp.10 }};
 
 - \[k.\] Establish and implement a process for changing shared or group account authenticators (if deployed) when individuals are removed from the group; and
 
 - \[l.\] Align account management processes with personnel termination and transfer processes.
+
+## Control Assessment Objective
+
+- \[AC-02a.\]
+
+  - \[AC-02a.[01]\] account types allowed for use within the system are defined and documented;
+  - \[AC-02a.[02]\] account types specifically prohibited for use within the system are defined and documented;
+
+- \[AC-02b.\] account managers are assigned;
+
+- \[AC-02c.\] {{ insert: param, ac-02_odp.01 }} for group and role membership are required;
+
+- \[AC-02d.\]
+
+  - \[AC-02d.01\] authorized users of the system are specified;
+  - \[AC-02d.02\] group and role membership are specified;
+  - \[AC-02d.03\]
+
+    - \[AC-02d.03[01]\] access authorizations (i.e., privileges) are specified for each account;
+    - \[AC-02d.03[02]\] {{ insert: param, ac-02_odp.02 }} are specified for each account;
+
+- \[AC-02e.\] approvals are required by {{ insert: param, ac-02_odp.03 }} for requests to create accounts;
+
+- \[AC-02f.\]
+
+  - \[AC-02f.[01]\] accounts are created in accordance with {{ insert: param, ac-02_odp.04 }};
+  - \[AC-02f.[02]\] accounts are enabled in accordance with {{ insert: param, ac-02_odp.04 }};
+  - \[AC-02f.[03]\] accounts are modified in accordance with {{ insert: param, ac-02_odp.04 }};
+  - \[AC-02f.[04]\] accounts are disabled in accordance with {{ insert: param, ac-02_odp.04 }};
+  - \[AC-02f.[05]\] accounts are removed in accordance with {{ insert: param, ac-02_odp.04 }};
+
+- \[AC-02g.\] the use of accounts is monitored; 
+
+- \[AC-02h.\]
+
+  - \[AC-02h.01\] account managers and {{ insert: param, ac-02_odp.05 }} are notified within {{ insert: param, ac-02_odp.06 }} when accounts are no longer required;
+  - \[AC-02h.02\] account managers and {{ insert: param, ac-02_odp.05 }} are notified within {{ insert: param, ac-02_odp.07 }} when users are terminated or transferred;
+  - \[AC-02h.03\] account managers and {{ insert: param, ac-02_odp.05 }} are notified within {{ insert: param, ac-02_odp.08 }} when system usage or the need to know changes for an individual;
+
+- \[AC-02i.\]
+
+  - \[AC-02i.01\] access to the system is authorized based on a valid access authorization;
+  - \[AC-02i.02\] access to the system is authorized based on intended system usage;
+  - \[AC-02i.03\] access to the system is authorized based on {{ insert: param, ac-02_odp.09 }};
+
+- \[AC-02j.\] accounts are reviewed for compliance with account management requirements {{ insert: param, ac-02_odp.10 }};
+
+- \[AC-02k.\]
+
+  - \[AC-02k.[01]\] a process is established for changing shared or group account authenticators (if deployed) when individuals are removed from the group;
+  - \[AC-02k.[02]\] a process is implemented for changing shared or group account authenticators (if deployed) when individuals are removed from the group;
+
+- \[AC-02l.\]
+
+  - \[AC-02l.[01]\] account management processes are aligned with personnel termination processes;
+  - \[AC-02l.[02]\] account management processes are aligned with personnel transfer processes.
 
 ## Control guidance
 
