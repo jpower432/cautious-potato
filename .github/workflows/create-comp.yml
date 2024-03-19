@@ -34,7 +34,6 @@ jobs:
           component_definition_name: ${{ github.event.inputs.output }}
           component_title: ${{ github.event.inputs.component_name }}
           component_description: ${{ github.event.inputs.component_description }}
-          component_type: "software"
           markdown_path: "markdown/components"
           branch: "component-create-${{ github.run_id }}"
           target_branch: "main"
