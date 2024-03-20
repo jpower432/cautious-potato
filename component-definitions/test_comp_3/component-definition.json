@@ -1,15 +1,15 @@
 {
   "component-definition": {
-    "uuid": "5c527ba2-5027-4264-8f5a-2fd663e7e090",
+    "uuid": "546aabc6-3703-4613-bbb2-f7c73f017fa7",
     "metadata": {
       "title": "Component definition for test_comp_3",
-      "last-modified": "2024-03-20T18:51:54+00:00",
+      "last-modified": "2024-03-20T18:59:18+00:00",
       "version": "1.0",
       "oscal-version": "1.0.4"
     },
     "components": [
       {
-        "uuid": "8a00bacd-c40e-40c8-9199-d35cce8acd0e",
+        "uuid": "6ca972cf-d061-46f8-8388-911694a9b852",
         "type": "service",
         "title": "My Comp 3",
         "description": "My testing comp 3",
@@ -35,7 +35,25 @@
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
-            "value": "Rule for ac-2.1",
+            "value": "Rule for ac-2.1 updates",
+            "remarks": "rule_set_1"
+          },
+          {
+            "name": "Parameter_Id",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
+            "value": "prm_1",
+            "remarks": "rule_set_1"
+          },
+          {
+            "name": "Parameter_Description",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
+            "value": "prm_1 description",
+            "remarks": "rule_set_1"
+          },
+          {
+            "name": "Parameter_Value_Alternatives",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
+            "value": "{'default': '5%', '5pc': '5%', '10pc': '10%', '15pc': '15%', '20pc': '20%'}",
             "remarks": "rule_set_1"
           },
           {
@@ -101,12 +119,20 @@
         ],
         "control-implementations": [
           {
-            "uuid": "8ac28c81-d2b2-46de-a428-67bd97856d77",
+            "uuid": "cd4f9ffc-56b6-40d7-897b-6047961b40de",
             "source": "trestle://profiles/ACME_level_1_profile/profile.json",
             "description": "ACME Inc. level 1 controls profile.",
+            "set-parameters": [
+              {
+                "param-id": "prm_1",
+                "values": [
+                  "5%"
+                ]
+              }
+            ],
             "implemented-requirements": [
               {
-                "uuid": "ce768635-d2cd-4097-805a-7192e9c60a24",
+                "uuid": "1772b699-2a60-4bf0-9b87-7c6e3e7ba739",
                 "control-id": "sc-1",
                 "description": "",
                 "props": [
@@ -118,7 +144,7 @@
                 ]
               },
               {
-                "uuid": "91bbda32-40d8-420e-83c9-2d0217d2759f",
+                "uuid": "bdbc0a90-5bb2-4b40-b130-ff20731254d4",
                 "control-id": "ac-2.1",
                 "description": "",
                 "props": [
@@ -130,7 +156,7 @@
                 ]
               },
               {
-                "uuid": "eb323b37-c1d1-4c4e-b553-51eee3aa0597",
+                "uuid": "5443304e-21fa-4ce3-b29a-e5b09bbd4609",
                 "control-id": "sc-2",
                 "description": "",
                 "props": [
@@ -142,7 +168,7 @@
                 ]
               },
               {
-                "uuid": "a6fb92c2-6799-439d-959a-1b5f843b85f2",
+                "uuid": "e6ca6f18-3be9-4620-8f42-321b8891f4d3",
                 "control-id": "ac-2",
                 "description": "",
                 "props": [
@@ -154,7 +180,7 @@
                 ]
               },
               {
-                "uuid": "17df123f-3c2b-4d9b-9b2f-8efc77771be7",
+                "uuid": "5e88a461-34a2-4da2-95b7-d39055a59704",
                 "control-id": "ac-1",
                 "description": "",
                 "props": [
@@ -166,7 +192,7 @@
                 ]
               },
               {
-                "uuid": "e06ef940-07c6-4cc0-b6b8-8d42b45ede1c",
+                "uuid": "a5b09d7f-c16c-4e9c-acb0-264349537304",
                 "control-id": "cc-1",
                 "description": "",
                 "props": [
@@ -178,7 +204,7 @@
                 ]
               },
               {
-                "uuid": "0d77575d-0e33-463a-83af-6360dffdb63d",
+                "uuid": "d640a228-e848-4b7b-9a83-bc6230c29d38",
                 "control-id": "ac-4.4",
                 "description": "",
                 "props": [

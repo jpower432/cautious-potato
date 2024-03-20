@@ -1,15 +1,15 @@
 {
   "component-definition": {
-    "uuid": "7d047bb2-2026-4147-a682-1cd24ac51a75",
+    "uuid": "bcb5a778-e7c4-4b61-aa12-a2fb8c571159",
     "metadata": {
       "title": "Component definition for hello-world-custom",
-      "last-modified": "2024-03-20T18:51:54+00:00",
+      "last-modified": "2024-03-20T18:59:18+00:00",
       "version": "1.0",
       "oscal-version": "1.0.4"
     },
     "components": [
       {
-        "uuid": "064f9515-e716-46c2-a572-c5a8656b8d1e",
+        "uuid": "90a48f66-2441-4a85-aa34-04ec58adbdcf",
         "type": "service",
         "title": "Hello World",
         "description": "My hello world application",
@@ -59,7 +59,7 @@
         ],
         "control-implementations": [
           {
-            "uuid": "2b669003-6d1b-4fa3-8b39-6611f5c4f9ef",
+            "uuid": "d8c7d9b1-7861-413d-a164-c724a947fbeb",
             "source": "profiles/ACME_internal_profile/profile.json",
             "description": "My internal profile for testing",
             "set-parameters": [
@@ -72,7 +72,7 @@
             ],
             "implemented-requirements": [
               {
-                "uuid": "3d419310-80dc-4091-a80e-cd43c418708a",
+                "uuid": "30d856ec-efea-4d00-9d2c-2a780efbd700",
                 "control-id": "ac-1",
                 "description": "",
                 "props": [
@@ -84,7 +84,7 @@
                 ]
               },
               {
-                "uuid": "eb4c443f-5080-4375-b40d-0ba25f6ae081",
+                "uuid": "5c38b9fe-e0db-4409-82ee-585b2ef4e5d3",
                 "control-id": "ac-2",
                 "description": "",
                 "props": [
