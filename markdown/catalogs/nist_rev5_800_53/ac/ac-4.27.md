@@ -3,7 +3,7 @@ x-trestle-global:
   sort-id: ac-04.27
 ---
 
-# ac-4.27 - \[Access Control\] Redundant/independent Filtering Mechanisms
+# ac-4.27 - \[Access Control\] Redundant/Independent Filtering Mechanisms
 
 ## Control Statement
 
