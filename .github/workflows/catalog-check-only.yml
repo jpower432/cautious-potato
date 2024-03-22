@@ -23,7 +23,6 @@ jobs:
         with:
           markdown_path: "markdown/catalogs"
           oscal_model: "catalog"
-          file_pattern: "*.json markdown/*"
           commit_message: "test"
           dry_run: "true"
       - name: Fail
