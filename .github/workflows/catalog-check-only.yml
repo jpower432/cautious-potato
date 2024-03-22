@@ -22,6 +22,7 @@ jobs:
         uses: RedHatProductSecurity/trestle-bot/actions/autosync@feat/replace-check-only
         with:
           markdown_path: "markdown/catalogs"
+          file_pattern: "*.json,markdown/*"
           oscal_model: "catalog"
           commit_message: "test"
           dry_run: "true"
