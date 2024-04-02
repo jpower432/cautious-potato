@@ -12,6 +12,6 @@ x-trestle-rule-info:
     default-value: '5%'
   profile:
     description: ACME Inc. level 1 controls profile.
-    href: trestle://profiles/ACME_level_1_profile/profile.json
+    href: profiles/ACME_level_profile/profile.json
     include-controls:
     - id: ac-2.1
