@@ -43,4 +43,5 @@ jobs:
           commit_message: "adds component  ${{ github.event.inputs.component_name }} in ${{ github.event.inputs.output }}"
           pull_request_title: "Add component ${{ github.event.inputs.component_name }} to ${{ github.event.inputs.output }}"
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          dry_run: true
           
