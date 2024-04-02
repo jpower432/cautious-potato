@@ -1,15 +1,15 @@
 {
   "component-definition": {
-    "uuid": "8550fefc-820b-4572-8bcd-48844eb3a9d2",
+    "uuid": "28e12309-d79e-40b2-ad4b-70f000349d01",
     "metadata": {
       "title": "Component definition for test_comp_3",
-      "last-modified": "2024-04-02T12:54:19+00:00",
+      "last-modified": "2024-04-02T17:53:36+00:00",
       "version": "1.0",
       "oscal-version": "1.0.4"
     },
     "components": [
       {
-        "uuid": "b44b9b50-655e-4e88-85fa-528f7a1a44ba",
+        "uuid": "1a4b9eb2-b563-4d65-bcef-0ef5c1545910",
         "type": "service",
         "title": "My Comp 3",
         "description": "My testing comp 3",
@@ -53,7 +53,7 @@
           {
             "name": "Parameter_Value_Alternatives",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
-            "value": "{'default': '5%', '5pc': '5%', '10pc': '10%', '15pc': '15%', '20pc': '20%'}",
+            "value": "{\"default\": \"5%\", \"5pc\": \"5%\", \"10pc\": \"10%\", \"20pc\": \"20%\"}",
             "remarks": "rule_set_1"
           },
           {
@@ -119,12 +119,20 @@
         ],
         "control-implementations": [
           {
-            "uuid": "a89aa591-5c61-4910-90f6-b76b172d63ad",
+            "uuid": "44a06ca7-d36e-4328-8542-2b18a0779c54",
             "source": "trestle://profiles/ACME_level_1_profile/profile.json",
             "description": "ACME Inc. level 1 controls profile.",
+            "set-parameters": [
+              {
+                "param-id": "prm_1",
+                "values": [
+                  "5%"
+                ]
+              }
+            ],
             "implemented-requirements": [
               {
-                "uuid": "68fa177a-3fca-48ca-b011-b5c117fea9ba",
+                "uuid": "056b133e-6ae3-46c3-982e-d71e47a34fd7",
                 "control-id": "sc-1",
                 "description": "",
                 "props": [
@@ -136,7 +144,19 @@
                 ]
               },
               {
-                "uuid": "0cdc5c54-1a72-496a-a1df-c8cfca9b0eb4",
+                "uuid": "8897df5a-3e6a-4472-a758-2c8e8011c41a",
+                "control-id": "ac-2.1",
+                "description": "",
+                "props": [
+                  {
+                    "name": "Rule_Id",
+                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
+                    "value": "rule-ac-2.1"
+                  }
+                ]
+              },
+              {
+                "uuid": "8ffa77be-30d3-4ae3-a44d-50f099cbd0ab",
                 "control-id": "sc-2",
                 "description": "",
                 "props": [
@@ -148,7 +168,7 @@
                 ]
               },
               {
-                "uuid": "4534aa17-804d-438a-8ec6-e0647efbce97",
+                "uuid": "6b88d7dd-28e3-4e0f-9f3d-b0f8610bba7d",
                 "control-id": "ac-2",
                 "description": "",
                 "props": [
@@ -160,7 +180,7 @@
                 ]
               },
               {
-                "uuid": "aa663b79-985a-48a9-8cd7-d51f8ba15e21",
+                "uuid": "b317cdaa-fdd9-48db-9d21-fe6c016a8a32",
                 "control-id": "cc-1",
                 "description": "",
                 "props": [
@@ -172,7 +192,7 @@
                 ]
               },
               {
-                "uuid": "de24aeb0-b205-485b-b911-27289fef824f",
+                "uuid": "12d95474-6e60-4c1f-aa97-64015d5e619b",
                 "control-id": "ac-4.4",
                 "description": "",
                 "props": [
@@ -186,39 +206,12 @@
             ]
           },
           {
-            "uuid": "aec4388a-3374-40db-826b-3fa18a5f146f",
-            "source": "profiles/ACME_level_profile/profile.json",
-            "description": "ACME Inc. level 1 controls profile.",
-            "set-parameters": [
-              {
-                "param-id": "prm_1",
-                "values": [
-                  "5%"
-                ]
-              }
-            ],
-            "implemented-requirements": [
-              {
-                "uuid": "5e5463a5-3e01-409d-acd7-a882b2ec18e3",
-                "control-id": "ac-2.1",
-                "description": "",
-                "props": [
-                  {
-                    "name": "Rule_Id",
-                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
-                    "value": "rule-ac-2.1"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "uuid": "2706e294-2b88-48e7-b774-e71b242d7829",
+            "uuid": "221cc8ad-7739-460c-a3df-b993b3746dce",
             "source": "profiles/ACME_level_1_profile/profile.json",
             "description": "ACME Inc. level 1 controls profile.",
             "implemented-requirements": [
               {
-                "uuid": "d3bf65c7-7838-454c-940f-90ba3ae2ceb4",
+                "uuid": "9c9d7c46-474a-449e-8440-885a2245def6",
                 "control-id": "ac-1",
                 "description": "",
                 "props": [
