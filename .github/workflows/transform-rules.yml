@@ -16,6 +16,6 @@ jobs:
           ref: ${{ github.head_ref }}
       - name: Transform rules
         id: transform
-        uses: jpower432/trestle-bot/actions/rules-transform@feat/rule-validations
+        uses: jpower432/trestle-bot/actions/rules-transform@refactor/rule-validations
         with:
           file_pattern: "*.json,rules/*"
