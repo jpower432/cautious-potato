@@ -3,7 +3,7 @@
     "uuid": "96a701b8-f7be-44c1-ad21-3ae4d1ae45f9",
     "metadata": {
       "title": "REPLACE_ME",
-      "last-modified": "2024-03-27T18:35:30.395674+00:00",
+      "last-modified": "2024-04-02T16:54:42.941026+00:00",
       "version": "REPLACE_ME",
       "oscal-version": "1.0.4"
     },
@@ -24,7 +24,7 @@
               {
                 "id": "cc-1_smt",
                 "name": "statement",
-                "prose": "The build process must be fully scripted/automated and generate provenance compliant with SLSA schema version {{ insert: param, cc-1_prm_1 }}."
+                "prose": "The build process must be fully scripted and generate provenance compliant with SLSA schema version {{ insert: param, cc-1_prm_1 }}."
               }
             ]
           },
