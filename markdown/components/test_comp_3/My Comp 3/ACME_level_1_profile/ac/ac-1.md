@@ -13,6 +13,12 @@ x-trestle-param-values:
   ac-01_odp.06:
   ac-01_odp.07:
   ac-01_odp.08:
+  ac-1_prm_2:
+  ac-1_prm_3:
+  ac-1_prm_4:
+  ac-1_prm_5:
+  ac-1_prm_6:
+  ac-1_prm_7:
 x-trestle-global:
   profile:
     title: ACME Inc. level 1 controls profile.
@@ -26,55 +32,19 @@ x-trestle-global:
 
 - \[a.\] Develop, document, and disseminate to {{ insert: param, ac-1_prm_1 }}:
 
-  - \[1.\] {{ insert: param, ac-01_odp.03 }} access control policy that:
+  - \[1.\] {{ insert: param, ac-1_prm_2 }} access control policy that:
 
     - \[(a)\] Addresses purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance; and
     - \[(b)\] Is consistent with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines; and
 
   - \[2.\] Procedures to facilitate the implementation of the access control policy and the associated access controls;
 
-- \[b.\] Designate an {{ insert: param, ac-01_odp.04 }} to manage the development, documentation, and dissemination of the access control policy and procedures; and
+- \[b.\] Designate an {{ insert: param, ac-1_prm_3 }} to manage the development, documentation, and dissemination of the access control policy and procedures; and
 
 - \[c.\] Review and update the current access control:
 
-  - \[1.\] Policy {{ insert: param, ac-01_odp.05 }} and following {{ insert: param, ac-01_odp.06 }} ; and
-  - \[2.\] Procedures {{ insert: param, ac-01_odp.07 }} and following {{ insert: param, ac-01_odp.08 }}.
-
-## Control Assessment Objective
-
-- \[AC-01a.\]
-
-  - \[AC-01a.[01]\] an access control policy is developed and documented;
-  - \[AC-01a.[02]\] the access control policy is disseminated to {{ insert: param, ac-01_odp.01 }};
-  - \[AC-01a.[03]\] access control procedures to facilitate the implementation of the access control policy and associated controls are developed and documented;
-  - \[AC-01a.[04]\] the access control procedures are disseminated to {{ insert: param, ac-01_odp.02 }};
-  - \[AC-01a.01\]
-
-    - \[AC-01a.01(a)\]
-
-      - \[AC-01a.01(a)[01]\] the {{ insert: param, ac-01_odp.03 }} access control policy addresses purpose;
-      - \[AC-01a.01(a)[02]\] the {{ insert: param, ac-01_odp.03 }} access control policy addresses scope;
-      - \[AC-01a.01(a)[03]\] the {{ insert: param, ac-01_odp.03 }} access control policy addresses roles;
-      - \[AC-01a.01(a)[04]\] the {{ insert: param, ac-01_odp.03 }} access control policy addresses responsibilities;
-      - \[AC-01a.01(a)[05]\] the {{ insert: param, ac-01_odp.03 }} access control policy addresses management commitment;
-      - \[AC-01a.01(a)[06]\] the {{ insert: param, ac-01_odp.03 }} access control policy addresses coordination among organizational entities;
-      - \[AC-01a.01(a)[07]\] the {{ insert: param, ac-01_odp.03 }} access control policy addresses compliance;
-
-    - \[AC-01a.01(b)\] the {{ insert: param, ac-01_odp.03 }} access control policy is consistent with applicable laws, Executive Orders, directives, regulations, policies, standards, and guidelines;
-
-- \[AC-01b.\] the {{ insert: param, ac-01_odp.04 }} is designated to manage the development, documentation, and dissemination of the access control policy and procedures;
-
-- \[AC-01c.\]
-
-  - \[AC-01c.01\]
-
-    - \[AC-01c.01[01]\] the current access control policy is reviewed and updated {{ insert: param, ac-01_odp.05 }};
-    - \[AC-01c.01[02]\] the current access control policy is reviewed and updated following {{ insert: param, ac-01_odp.06 }};
-
-  - \[AC-01c.02\]
-
-    - \[AC-01c.02[01]\] the current access control procedures are reviewed and updated {{ insert: param, ac-01_odp.07 }};
-    - \[AC-01c.02[02]\] the current access control procedures are reviewed and updated following {{ insert: param, ac-01_odp.08 }}.
+  - \[1.\] Policy {{ insert: param, ac-1_prm_4 }} and following {{ insert: param, ac-1_prm_5 }}; and
+  - \[2.\] Procedures {{ insert: param, ac-1_prm_6 }} and following {{ insert: param, ac-1_prm_7 }}.
 
 ## Control guidance
 
