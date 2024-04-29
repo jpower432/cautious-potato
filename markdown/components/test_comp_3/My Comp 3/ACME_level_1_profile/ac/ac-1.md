@@ -24,6 +24,27 @@ x-trestle-global:
     title: ACME Inc. level 1 controls profile.
     href: trestle://profiles/ACME_level_1_profile/profile.json
   sort-id: ac-01
+x-trestle-rules-params:
+  My Comp 3:
+    - name: prm_1
+      description: prm_1 description
+      options: '{"5pc": "5%", "10pc": "10%", "default": "5%"}'
+      rule-id: rule-ac-1
+x-trestle-comp-def-rules-param-vals:
+  # You may set new values for rule parameters by adding
+  #
+  # component-values:
+  #   - value 1
+  #   - value 2
+  #
+  # below a section of values:
+  # The values list refers to the values as set by the components, and the component-values are the new values
+  # to be placed in SetParameters of the component definition.
+  #
+  My Comp 3:
+    - name: prm_1
+      values:
+        - 5%
 ---
 
 # ac-1 - \[Access Control\] Policy and Procedures
