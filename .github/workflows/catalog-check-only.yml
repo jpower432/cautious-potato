@@ -19,7 +19,7 @@ jobs:
           ref: ${{ github.head_ref }}
       - name: Check
         id: check
-        uses: jpower432/trestle-bot/actions/autosync@feat/replace-check-only
+        uses: RedHatProductSecurity/trestle-bot/actions/autosync@main
         with:
           markdown_path: "markdown/catalogs"
           file_pattern: "*.json,markdown/*"
