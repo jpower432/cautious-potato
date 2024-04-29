@@ -1,15 +1,15 @@
 {
   "component-definition": {
-    "uuid": "0c01f046-e160-4c88-83a0-26d6962c5f61",
+    "uuid": "d7c59690-97af-408b-9a93-006aea0d63f8",
     "metadata": {
       "title": "Component definition for hello-world-custom",
-      "last-modified": "2024-04-29T16:45:16.490912+00:00",
+      "last-modified": "2024-04-29T16:58:13+00:00",
       "version": "1.0",
       "oscal-version": "1.0.4"
     },
     "components": [
       {
-        "uuid": "596362ac-f8fb-4f8d-bef9-81ab59145cb8",
+        "uuid": "15b81095-2c8d-4c20-a0f0-0d28d4c31403",
         "type": "service",
         "title": "Hello World",
         "description": "My hello world application",
@@ -41,7 +41,7 @@
           {
             "name": "Parameter_Value_Alternatives",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
-            "value": "{'default': '5%', '5pc': '5%', '10pc': '10%', '15pc': '15%', '20pc': '20%'}",
+            "value": "{\"default\": \"5%\", \"5pc\": \"5%\", \"10pc\": \"10%\", \"15pc\": \"15%\", \"20pc\": \"20%\"}",
             "remarks": "rule_set_0"
           },
           {
@@ -59,7 +59,7 @@
         ],
         "control-implementations": [
           {
-            "uuid": "7406a1f0-5052-48a1-bb7b-4667e9f9c47c",
+            "uuid": "f74a46e9-5118-4738-9902-09afcaf441c5",
             "source": "profiles/ACME_internal_profile/profile.json",
             "description": "My internal profile for testing",
             "set-parameters": [
@@ -72,7 +72,7 @@
             ],
             "implemented-requirements": [
               {
-                "uuid": "d66e1209-0722-4406-a474-867caf7bf4e8",
+                "uuid": "02e68497-431f-44dc-9d23-4ce734e7e9af",
                 "control-id": "ac-1",
                 "description": "",
                 "props": [
@@ -80,15 +80,11 @@
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
                     "value": "example_rule_1"
-                  },
-                  {
-                    "name": "implementation-status",
-                    "value": "planned"
                   }
                 ]
               },
               {
-                "uuid": "fda570cd-9340-402b-bad9-aef68f7879df",
+                "uuid": "08ceb91b-1062-40dd-a67e-ddd445d1c402",
                 "control-id": "ac-2",
                 "description": "",
                 "props": [
@@ -96,10 +92,6 @@
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
                     "value": "example_rule_2"
-                  },
-                  {
-                    "name": "implementation-status",
-                    "value": "planned"
                   }
                 ]
               }
