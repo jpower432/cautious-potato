@@ -5,6 +5,14 @@ x-trestle-component-info:
 x-trestle-rule-info:
   description: Rule for ac-1
   name: rule-ac-1
+  parameter:
+    name: prm_1
+    description: prm_1 description
+    alternative-values:
+      default: 5%
+      5pc: 5%
+      10pc: 10%
+    default-value: '20%'
   profile:
     description: ACME Inc. level 1 controls profile.
     href: trestle://profiles/ACME_level_1_profile/profile.json
