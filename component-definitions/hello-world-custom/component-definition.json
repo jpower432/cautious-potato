@@ -1,15 +1,15 @@
 {
   "component-definition": {
-    "uuid": "0c01f046-e160-4c88-83a0-26d6962c5f61",
+    "uuid": "de3ea645-afe6-4bfe-853d-38c4658353a1",
     "metadata": {
       "title": "Component definition for hello-world-custom",
-      "last-modified": "2024-03-20T19:04:23+00:00",
+      "last-modified": "2024-05-03T23:51:00+00:00",
       "version": "1.0",
       "oscal-version": "1.0.4"
     },
     "components": [
       {
-        "uuid": "596362ac-f8fb-4f8d-bef9-81ab59145cb8",
+        "uuid": "1de9d227-b994-442f-9f5e-e72c4733ce53",
         "type": "service",
         "title": "Hello World",
         "description": "My hello world application",
@@ -41,7 +41,7 @@
           {
             "name": "Parameter_Value_Alternatives",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal",
-            "value": "{'default': '5%', '5pc': '5%', '10pc': '10%', '15pc': '15%', '20pc': '20%'}",
+            "value": "{\"default\": \"5%\", \"5pc\": \"5%\", \"10pc\": \"10%\", \"15pc\": \"15%\", \"20pc\": \"20%\"}",
             "remarks": "rule_set_0"
           },
           {
@@ -59,7 +59,7 @@
         ],
         "control-implementations": [
           {
-            "uuid": "7406a1f0-5052-48a1-bb7b-4667e9f9c47c",
+            "uuid": "7bccd225-4e57-4e23-85ab-a1dca5929320",
             "source": "profiles/ACME_internal_profile/profile.json",
             "description": "My internal profile for testing",
             "set-parameters": [
@@ -72,7 +72,7 @@
             ],
             "implemented-requirements": [
               {
-                "uuid": "d66e1209-0722-4406-a474-867caf7bf4e8",
+                "uuid": "43dd9f4e-9045-459f-b5f1-0c8b25cb6d0b",
                 "control-id": "ac-1",
                 "description": "",
                 "props": [
@@ -84,7 +84,7 @@
                 ]
               },
               {
-                "uuid": "fda570cd-9340-402b-bad9-aef68f7879df",
+                "uuid": "00fc4ffb-75a4-4b6d-8911-bf7c7f4d5d01",
                 "control-id": "ac-2",
                 "description": "",
                 "props": [
