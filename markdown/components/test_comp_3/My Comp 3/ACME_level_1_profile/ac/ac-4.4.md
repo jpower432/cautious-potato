@@ -7,6 +7,9 @@ x-trestle-param-values:
   ac-04.04_odp.01:
   ac-04.04_odp.02:
   ac-04.04_odp.03:
+  ac-4.4_prm_1:
+  ac-4.4_prm_2:
+  ac-4.4_prm_3:
 x-trestle-global:
   profile:
     title: ACME Inc. level 1 controls profile.
@@ -18,11 +21,7 @@ x-trestle-global:
 
 ## Control Statement
 
-Prevent encrypted information from bypassing {{ insert: param, ac-04.04_odp.01 }} by {{ insert: param, ac-04.04_odp.02 }}.
-
-## Control Assessment Objective
-
-encrypted information is prevented from bypassing {{ insert: param, ac-04.04_odp.01 }} by {{ insert: param, ac-04.04_odp.02 }}.
+Prevent encrypted information from bypassing {{ insert: param, ac-4.4_prm_1 }} by {{ insert: param, ac-4.4_prm_2 }}.
 
 ## Control guidance
 

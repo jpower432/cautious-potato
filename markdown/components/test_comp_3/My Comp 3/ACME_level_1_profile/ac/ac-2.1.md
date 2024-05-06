@@ -5,22 +5,41 @@ x-trestle-comp-def-rules:
       description: Rule for ac-2.1
 x-trestle-param-values:
   ac-02.01_odp:
+  ac-2.1_prm_1:
 x-trestle-global:
   profile:
     title: ACME Inc. level 1 controls profile.
     href: trestle://profiles/ACME_level_1_profile/profile.json
   sort-id: ac-02.01
+x-trestle-rules-params:
+  My Comp 3:
+    - name: prm_1
+      description: prm_1 description
+      options: "{'default': '5%', '5pc': '5%', '10pc': '10%', '15pc': '15%', '20pc':
+        '20%'}"
+      rule-id: rule-ac-2.1
+x-trestle-comp-def-rules-param-vals:
+  # You may set new values for rule parameters by adding
+  #
+  # component-values:
+  #   - value 1
+  #   - value 2
+  #
+  # below a section of values:
+  # The values list refers to the values as set by the components, and the component-values are the new values
+  # to be placed in SetParameters of the component definition.
+  #
+  My Comp 3:
+    - name: prm_1
+      values:
+        - 5%
 ---
 
 # ac-2.1 - \[Access Control\] Automated System Account Management
 
 ## Control Statement
 
-Support the management of system accounts using {{ insert: param, ac-02.01_odp }}.
-
-## Control Assessment Objective
-
-the management of system accounts is supported using {{ insert: param, ac-02.01_odp }}.
+Support the management of system accounts using {{ insert: param, ac-2.1_prm_1 }}.
 
 ## Control guidance
 
