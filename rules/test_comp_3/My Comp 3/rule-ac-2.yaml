@@ -3,7 +3,7 @@ x-trestle-component-info:
   name: My Comp 3
   type: service
 x-trestle-rule-info:
-  description: Rule for ac-2
+  description: Rule for ac-2 extra
   name: rule-ac-2
   profile:
     description: ACME Inc. level 1 controls profile.
