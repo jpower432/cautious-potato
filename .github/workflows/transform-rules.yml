@@ -16,6 +16,6 @@ jobs:
           ref: ${{ github.head_ref }}
       - name: Transform rules
         id: transform
-        uses: RedHatProductSecurity/trestle-bot/actions/rules-transform@main
+        uses: RedHatProductSecurity/trestle-bot/actions/rules-transform@add/add-git-provider-flags
         with:
           file_pattern: "*.json,rules/*"
